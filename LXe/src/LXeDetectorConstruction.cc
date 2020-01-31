@@ -173,7 +173,7 @@ void LXeDetectorConstruction::DefineMaterials(){
   fLXe_mt->AddConstProperty("YIELDRATIO",1.0);
   fLXe->SetMaterialPropertiesTable(fLXe_mt);
 
-  // Set the Birks Constant for the LXe scintillator
+  // Set the Birks Constant for the Plastic scintillator
 
   fLXe->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
  
@@ -403,13 +403,13 @@ void LXeDetectorConstruction::SetDefaults() {
   //Resets to default values
   fD_mtl=0.0635*cm;
 
-  fScint_x = 1.2*cm;
-  fScint_y = 1.2*cm;
-  fScint_z = 1.2*cm;
+  fScint_x = 1.65*cm;
+  fScint_y = 3.2*cm;
+  fScint_z = 6.5*cm;
 
   fNx = 1;//2
-  fNy = 1;//3
-  fNz = 0;//3
+  fNy = 2;//3
+  fNz = 1;//3
 
   fOuterRadius_pmt = 2.53*cm;
 

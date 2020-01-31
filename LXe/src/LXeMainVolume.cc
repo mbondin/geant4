@@ -120,6 +120,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   G4double dz = fScint_z/fNz;
  
   G4double x,y,z;
+  y=fScint_y/4.0;
   G4double xmin = -fScint_x/2. - dx/2.;
   G4double ymin = -fScint_y/2. - dy/2.;
   G4double zmin = -fScint_z/2. - dz/2.;
@@ -128,12 +129,12 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   z = -fScint_z/2. - height_pmt;      //front
   PlacePMTs(fPmt_log,0,x,y,dx,dy,xmin,ymin,fNx,fNy,x,y,z,k);
 
-  G4RotationMatrix* rm_z = new G4RotationMatrix();
+  /*G4RotationMatrix* rm_z = new G4RotationMatrix();
   rm_z->rotateY(180*deg);
   z = fScint_z/2. + height_pmt;       //back
-  PlacePMTs(fPmt_log,rm_z,x,y,dx,dy,xmin,ymin,fNx,fNy,x,y,z,k);
+  PlacePMTs(fPmt_log,rm_z,x,y,dx,dy,xmin,ymin,fNx,fNy,x,y,z,k);*/
  
-  /*unnecessary for my purposes*/
+  /*unnecessary for my purposes
   G4RotationMatrix* rm_y1 = new G4RotationMatrix();
   rm_y1->rotateY(-90*deg);
   x = -fScint_x/2. - height_pmt;      //left
@@ -152,7 +153,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   G4RotationMatrix* rm_x2 = new G4RotationMatrix();
   rm_x2->rotateX(-90*deg);
   y = fScint_y/2. + height_pmt;      //top
-  PlacePMTs(fPmt_log,rm_x2,x,z,dx,dz,xmin,zmin,fNx,fNz,x,y,z,k);
+  PlacePMTs(fPmt_log,rm_x2,x,z,dx,dz,xmin,zmin,fNx,fNz,x,y,z,k);*/
  
 
   VisAttributes();
@@ -208,6 +209,7 @@ void LXeMainVolume::PlacePMTs(G4LogicalVolume* pmt_log,
                         fHousing_log,false,k);
       fPmtPositions.push_back(G4ThreeVector(x,y,z));
       k++;
+      y=-(fScint_y/4.0);
     }
   }
 }

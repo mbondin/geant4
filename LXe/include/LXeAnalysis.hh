@@ -24,33 +24,14 @@
 // ********************************************************************
 //
 //
-/// \file optical/LXe/include/LXePrimaryGeneratorAction.hh
-/// \brief Definition of the LXePrimaryGeneratorAction class
-//
-//
-#ifndef LXePrimaryGeneratorAction_h
-#define LXePrimaryGeneratorAction_h 1
+/// \file B4Analysis.hh
+/// \brief Selection of the analysis technology
 
-#include "G4VUserPrimaryGeneratorAction.hh"
+#ifndef LXeAnalysis_h
+#define LXeAnalysis_h 1
 
-class G4ParticleGun;
-//class G4GeneralParticleSource;
-class G4Event;
-
-class LXePrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
-{
-  public:
-
-    LXePrimaryGeneratorAction();
-    virtual ~LXePrimaryGeneratorAction();
- 
-  public:
-
-    virtual void GeneratePrimaries(G4Event* anEvent);
-
-  private:
-
-    G4ParticleGun* fParticleGun;
-};
+#include "g4root.hh"
+//#include "g4csv.hh"
+//#include "g4xml.hh"
 
 #endif

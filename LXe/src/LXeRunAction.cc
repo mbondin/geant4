@@ -30,21 +30,43 @@
 //
 #include "LXeRunAction.hh"
 #include "LXeRun.hh"
-#include "LXeHistoManager.hh"
+#include "LXeAnalysis.hh"
+#include "G4RunManager.hh"
+//#include "LXeHistoManager.hh"
+#include "G4SystemOfUnits.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-LXeRunAction::LXeRunAction() : fRun(nullptr), fHistoManager(nullptr)
+LXeRunAction::LXeRunAction() : fRun(nullptr)//, fHistoManager(nullptr)
 {
   // Book predefined histograms
-  fHistoManager = new LXeHistoManager();
+  //fHistoManager = new LXeHistoManager();
+  // set printing event number per each event
+  G4RunManager::GetRunManager()->SetPrintProgress(1);
+
+  // Create analysis manager
+  // The choice of analysis technology is done via selectin of a namespace
+  // in B4Analysis.hh
+  G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
+  
+
+  // Create directories
+  //analysisManager->SetHistoDirectoryName("histograms");
+  //analysisManager->SetNtupleDirectoryName("ntuple");
+  analysisManager->SetVerboseLevel(1);
+  
+  
+  // Creating histograms
+  analysisManager->CreateH1("EScint","Edep in scintillator", 100, 0., 1000*keV);
+  
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 LXeRunAction::~LXeRunAction()
 {
-  delete fHistoManager;
+  //delete fHistoManager;
+  delete G4AnalysisManager::Instance();
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -58,10 +80,11 @@ G4Run* LXeRunAction::GenerateRun()
 
 void LXeRunAction::BeginOfRunAction(const G4Run*)
 {
-  G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
-  if (analysisManager->IsActive()) {
-    analysisManager->OpenFile();
-  }
+  // Get analysis manager
+  auto analysisManager = G4AnalysisManager::Instance();
+  //if (analysisManager->IsActive()) {
+  analysisManager->OpenFile("lxe");
+  //}
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -70,9 +93,9 @@ void LXeRunAction::EndOfRunAction(const G4Run*){
   if (isMaster) fRun->EndOfRun();
 
   // save histograms
-  G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
-  if (analysisManager->IsActive()) {
-    analysisManager->Write();
-    analysisManager->CloseFile();
-  }
+  auto analysisManager = G4AnalysisManager::Instance();
+
+  analysisManager->Write();
+  analysisManager->CloseFile();
+  
 }

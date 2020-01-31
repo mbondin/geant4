@@ -33,7 +33,8 @@
 #include "LXePMTHit.hh"
 #include "LXeTrajectory.hh"
 #include "LXeRun.hh"
-#include "LXeHistoManager.hh"
+//#include "LXeHistoManager.hh"
+#include "LXeAnalysis.hh"
 #include "LXeDetectorConstruction.hh"
 
 #include "G4EventManager.hh"
@@ -151,7 +152,9 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
       }
     }
     
-    G4AnalysisManager::Instance()->FillH1(7, fTotE);
+    auto analysisManager = G4AnalysisManager::Instance();
+    //int id= analysisManager->GetH1Id("EScinct");
+    analysisManager->FillH1(0, fTotE);
     
     if(fTotE == 0.){
       if(fVerbose>0)G4cout<<"No hits in the scintillator this event."<<G4endl;
@@ -186,8 +189,8 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
       }
     }
 
-    G4AnalysisManager::Instance()->FillH1(1, fHitCount);
-    G4AnalysisManager::Instance()->FillH1(2, fPMTsAboveThreshold);
+    //G4AnalysisManager::Instance()->FillH1(1, fHitCount);
+    //G4AnalysisManager::Instance()->FillH1(2, fPMTsAboveThreshold);
 
     if(fHitCount > 0) {//dont bother unless there were hits
       reconPos/=fHitCount;
@@ -200,10 +203,10 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
     pmtHC->DrawAllHits();
   }
 
-  G4AnalysisManager::Instance()->FillH1(3, fPhotonCount_Scint);
-  G4AnalysisManager::Instance()->FillH1(4, fPhotonCount_Ceren);
-  G4AnalysisManager::Instance()->FillH1(5, fAbsorptionCount);
-  G4AnalysisManager::Instance()->FillH1(6, fBoundaryAbsorptionCount);
+  //G4AnalysisManager::Instance()->FillH1(3, fPhotonCount_Scint);
+  //G4AnalysisManager::Instance()->FillH1(4, fPhotonCount_Ceren);
+  //G4AnalysisManager::Instance()->FillH1(5, fAbsorptionCount);
+  //G4AnalysisManager::Instance()->FillH1(6, fBoundaryAbsorptionCount);
 
   if(fVerbose>0){
     //End of event output. later to be controlled by a verbose level
