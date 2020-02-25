@@ -56,6 +56,10 @@ class LXeRun : public G4Run
       fTotE  += dep;
       fTotE2 += dep*dep;
     }
+    void IncEDepPM(G4double deppm){
+      fTotEPM += deppm;
+      fTotEPM2 += deppm*deppm;
+    }
     void IncAbsorption(G4int count) {
       fAbsorptionCount  += count;
       fAbsorptionCount2 += count*count;
@@ -87,6 +91,7 @@ class LXeRun : public G4Run
     G4int fPMTsAboveThreshold, fPMTsAboveThreshold2;
 
     G4double fTotE, fTotE2;
+    G4double fTotEPM, fTotEPM2;
 };
 
 #endif // LXeRun_h

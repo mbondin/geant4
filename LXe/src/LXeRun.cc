@@ -45,6 +45,7 @@ LXeRun::LXeRun() : G4Run()
   fPMTsAboveThreshold      = fPMTsAboveThreshold2      = 0;
 
   fTotE = fTotE2 = 0.0;
+  fTotEPM = fTotEPM2 = 0.0;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -72,6 +73,8 @@ void LXeRun::Merge(const G4Run* run)
   fBoundaryAbsorptionCount2 += localRun->fBoundaryAbsorptionCount2;
   fTotE                     += localRun->fTotE;
   fTotE2                    += localRun->fTotE2;
+  fTotEPM                   += localRun->fTotEPM;
+  fTotEPM2                  += localRun->fTotEPM2;
 
   G4Run::Merge(run);
 }
@@ -86,14 +89,14 @@ void LXeRun::EndOfRun()
 
   G4int n_evt = numberOfEvent;
   G4cout << "The run was " << n_evt << " events." << G4endl;
- 
+
   G4cout.precision(4);
   G4double hits = G4double(fHitCount)/n_evt;
   G4double hits2 = G4double(fHitCount2)/n_evt;
   G4double rms_hits = hits2 - hits*hits;
   if (rms_hits > 0.) rms_hits = std::sqrt(rms_hits/n_evt);
   else rms_hits = 0.;
-  G4cout << "Number of hits per event:\t " << hits << " +- " << rms_hits 
+  G4cout << "Number of hits per event:\t " << hits << " +- " << rms_hits
          << G4endl;
 
   G4double hitsAbove = G4double(fPMTsAboveThreshold)/n_evt;
@@ -102,7 +105,7 @@ void LXeRun::EndOfRun()
   if (rms_hitsAbove > 0.) rms_hitsAbove = std::sqrt(rms_hitsAbove/n_evt);
   else rms_hitsAbove = 0.;
 
-  G4cout << "Number of hits per event above threshold:\t " << hitsAbove 
+  G4cout << "Number of hits per event above threshold:\t " << hitsAbove
          << " +- " << rms_hitsAbove << G4endl;
 
   G4double scint = G4double(fPhotonCount_Scint)/n_evt;
@@ -120,7 +123,7 @@ void LXeRun::EndOfRun()
   if (rms_ceren > 0.) rms_ceren = std::sqrt(rms_ceren/n_evt);
   else rms_ceren = 0.;
 
-  G4cout << "Number of Cerenkov photons per event:\t " << ceren << " +- " 
+  G4cout << "Number of Cerenkov photons per event:\t " << ceren << " +- "
          << rms_ceren << G4endl;
 
   G4double absorb = G4double(fAbsorptionCount)/n_evt;
@@ -129,7 +132,7 @@ void LXeRun::EndOfRun()
   if (rms_absorb > 0.) rms_absorb = std::sqrt(rms_absorb/n_evt);
   else rms_absorb = 0.;
 
-  G4cout << "Number of absorbed photons per event :\t " << absorb << " +- " 
+  G4cout << "Number of absorbed photons per event :\t " << absorb << " +- "
          << rms_absorb << G4endl;
 
   G4double bdry = G4double(fBoundaryAbsorptionCount)/n_evt;
@@ -138,7 +141,7 @@ void LXeRun::EndOfRun()
   if (rms_bdry > 0.) rms_bdry = std::sqrt(rms_bdry/n_evt);
   else rms_bdry = 0.;
 
-  G4cout << "Number of photons absorbed at boundary per event:\t " << bdry 
+  G4cout << "Number of photons absorbed at boundary per event:\t " << bdry
          << " +- " << rms_bdry << G4endl;
   //G4cout << "Number of unaccounted for photons: " << G4endl;
 
@@ -148,8 +151,18 @@ void LXeRun::EndOfRun()
   if (rms_en > 0.) rms_en = std::sqrt(rms_en/n_evt);
   else rms_en = 0.;
 
-  G4cout << "Total energy deposition in scintillator per event:\t " << en/keV 
+  G4cout << "Total energy deposition in scintillator per event:\t " << en/keV
          << " +- " << rms_en/keV << " keV." << G4endl;
+
+ G4double enpm = fTotEPM/n_evt;
+ G4double enpm2 = fTotEPM2/n_evt;
+ G4double rms_enpm = enpm2 - enpm*enpm;
+ if (rms_enpm > 0.) rms_enpm = std::sqrt(rms_enpm/n_evt);
+ else rms_enpm = 0.;
+
+G4cout << "Total energy deposition in SiPM per event:\t " << enpm/keV
+       << " +- " << rms_enpm/keV << " keV." << G4endl;
+
 
   G4cout << G4endl;
   G4cout.precision(prec);

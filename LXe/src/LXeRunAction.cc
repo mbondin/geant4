@@ -48,17 +48,18 @@ LXeRunAction::LXeRunAction() : fRun(nullptr)//, fHistoManager(nullptr)
   // The choice of analysis technology is done via selectin of a namespace
   // in B4Analysis.hh
   G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
-  
+
 
   // Create directories
   //analysisManager->SetHistoDirectoryName("histograms");
   //analysisManager->SetNtupleDirectoryName("ntuple");
   analysisManager->SetVerboseLevel(1);
-  
-  
+
+
   // Creating histograms
-  analysisManager->CreateH1("EScint","Edep in scintillator", 100, 0., 1000*keV);
-  
+  analysisManager->CreateH1("EScint","Edep in scintillator", 100, 0., 700*keV);
+  analysisManager->CreateH1("ESiPM","Edep in SiPM",100,0.,8*eV);
+
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -97,5 +98,5 @@ void LXeRunAction::EndOfRunAction(const G4Run*){
 
   analysisManager->Write();
   analysisManager->CloseFile();
-  
+
 }

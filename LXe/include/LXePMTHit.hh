@@ -47,7 +47,7 @@ class G4VTouchable;
 class LXePMTHit : public G4VHit
 {
   public:
- 
+
     LXePMTHit();
     virtual ~LXePMTHit();
     LXePMTHit(const LXePMTHit &right);
@@ -57,7 +57,7 @@ class LXePMTHit : public G4VHit
 
     inline void *operator new(size_t);
     inline void operator delete(void *aHit);
- 
+
     virtual void Draw();
     virtual void Print();
 
@@ -66,6 +66,10 @@ class LXePMTHit : public G4VHit
 
     inline void IncPhotonCount(){fPhotons++;}
     inline G4int GetPhotonCount(){return fPhotons;}
+
+    inline void SetEdepPM(G4double de) { fEdepPM = de; }
+    inline void AddEdepPM(G4double de) { fEdepPM += de; }
+    inline G4double GetEdepPM() { return fEdepPM; }
 
     inline void SetPMTNumber(G4int n) { fPmtNumber = n; }
     inline G4int GetPMTNumber() { return fPmtNumber; }
@@ -76,7 +80,7 @@ class LXePMTHit : public G4VHit
     inline void SetPMTPos(G4double x,G4double y,G4double z){
       fPos=G4ThreeVector(x,y,z);
     }
- 
+
     inline G4ThreeVector GetPMTPos(){return fPos;}
 
   private:
@@ -84,6 +88,7 @@ class LXePMTHit : public G4VHit
     G4int fPmtNumber;
     G4int fPhotons;
     G4ThreeVector fPos;
+    G4double fEdepPM;
     G4VPhysicalVolume* fPhysVol;
     G4bool fDrawit;
 

@@ -56,7 +56,7 @@ LXeSteppingAction::LXeSteppingAction(LXeEventAction* ea)
     fEventAction(ea)
 {
   fSteppingMessenger = new LXeSteppingMessenger(this);
-
+  rate=0;
   fExpectedNextStatus = Undefined;
 }
 
@@ -71,7 +71,7 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
   G4Track* theTrack = theStep->GetTrack();
 
   if ( theTrack->GetCurrentStepNumber() == 1 ) fExpectedNextStatus = Undefined;
- 
+
   LXeUserTrackInformation* trackInformation
     =(LXeUserTrackInformation*)theTrack->GetUserInformation();
 
@@ -101,7 +101,7 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 
   if(theTrack->GetParentID()==0){
     //This is a primary track
- 
+
     G4TrackVector* fSecondary=fpSteppingManager->GetfSecondary();
     G4int tN2ndariesTot = fpSteppingManager->GetfN2ndariesAtRestDoIt()
       + fpSteppingManager->GetfN2ndariesAlongStepDoIt()
@@ -109,12 +109,21 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 
     //If we havent already found the conversion position and there were
     //secondaries generated, then search for it
+    //G4cout << "Num of 2: " << tN2ndariesTot << G4endl;
+    //G4cout << "ITER of 2: " << G4int((*fSecondary).size()-tN2ndariesTot) << G4endl;
     if(!fEventAction->IsConvPosSet() && tN2ndariesTot>0 ){
       for(size_t lp1=(*fSecondary).size()-tN2ndariesTot;
           lp1<(*fSecondary).size(); lp1++){
         const G4VProcess* creator=(*fSecondary)[lp1]->GetCreatorProcess();
         if(creator){
           G4String creatorName=creator->GetProcessName();
+          /*G4cout << "Creator Name: " << creatorName << G4endl;
+
+          if (creatorName=="Scintillation"){
+            rate += 1;
+            G4cout <<rate<<G4endl;
+          }*/
+
           if(creatorName=="phot"||creatorName=="compt"||creatorName=="conv"){
             //since this is happening before the secondary is being tracked
             //the Vertex position has not been set yet(set in initial step)

@@ -149,7 +149,7 @@ void LXeDetectorConstruction::DefineMaterials(){
   fPethylene2 = new G4Material("Pethylene2", density=1400*kg/m3,2);
   fPethylene2->AddElement(fH,nH_eth);
   fPethylene2->AddElement(fC,nC_eth);
- 
+
   //***Material properties tables
 
   G4double lxe_Energy[]    = { 7.0*eV , 7.07*eV, 7.14*eV };
@@ -176,7 +176,7 @@ void LXeDetectorConstruction::DefineMaterials(){
   // Set the Birks Constant for the Plastic scintillator
 
   fLXe->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
- 
+
   G4double glass_RIND[]={1.49,1.49,1.49};
   assert(sizeof(glass_RIND) == sizeof(lxe_Energy));
   G4double glass_AbsLength[]={420.*cm,420.*cm,420.*cm};
@@ -197,7 +197,7 @@ void LXeDetectorConstruction::DefineMaterials(){
 
   G4double wls_Energy[] = {2.00*eV,2.87*eV,2.90*eV,3.47*eV};
   const G4int wlsnum = sizeof(wls_Energy)/sizeof(G4double);
- 
+
   G4double rIndexPstyrene[]={ 1.5, 1.5, 1.5, 1.5};
   assert(sizeof(rIndexPstyrene) == sizeof(wls_Energy));
   G4double absorption1[]={2.*cm, 2.*cm, 2.*cm, 2.*cm};
@@ -284,11 +284,11 @@ G4VPhysicalVolume* LXeDetectorConstruction::Construct(){
 
     //Surface properties for the WLS slab
     G4OpticalSurface* scintWrap = new G4OpticalSurface("ScintWrap");
- 
+
     new G4LogicalBorderSurface("ScintWrap", slab,
                                fExperimentalHall_phys,
                                scintWrap);
- 
+
     scintWrap->SetType(dielectric_metal);
     scintWrap->SetFinish(polished);
     scintWrap->SetModel(glisur);
@@ -299,8 +299,8 @@ G4VPhysicalVolume* LXeDetectorConstruction::Construct(){
     assert(sizeof(reflectivity) == sizeof(pp));
     G4double efficiency[] = {0.0, 0.0};
     assert(sizeof(efficiency) == sizeof(pp));
-    
-    G4MaterialPropertiesTable* scintWrapProperty 
+
+    G4MaterialPropertiesTable* scintWrapProperty
       = new G4MaterialPropertiesTable();
 
     scintWrapProperty->AddProperty("REFLECTIVITY",pp,reflectivity,num);
@@ -360,7 +360,7 @@ void LXeDetectorConstruction::SetDimensions(G4ThreeVector dims) {
   fScint_z=dims[2];
   G4RunManager::GetRunManager()->ReinitializeGeometry();
 }
- 
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeDetectorConstruction::SetHousingThickness(G4double d_mtl) {
@@ -403,12 +403,12 @@ void LXeDetectorConstruction::SetDefaults() {
   //Resets to default values
   fD_mtl=0.0635*cm;
 
-  fScint_x = 1.65*cm;
-  fScint_y = 3.2*cm;
-  fScint_z = 6.5*cm;
+  fScint_x = 2.5*cm;
+  fScint_y = 2.5*cm;
+  fScint_z = 18.75*cm;
 
   fNx = 1;//2
-  fNy = 2;//3
+  fNy = 1;//3
   fNz = 1;//3
 
   fOuterRadius_pmt = 2.53*cm;
@@ -472,7 +472,7 @@ void LXeDetectorConstruction::SetMainScintYield(G4double y) {
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
- 
+
 void LXeDetectorConstruction::SetWLSScintYield(G4double y) {
   fMPTPStyrene->AddConstProperty("SCINTILLATIONYIELD",y/MeV);
 }

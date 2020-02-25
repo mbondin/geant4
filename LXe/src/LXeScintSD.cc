@@ -71,12 +71,12 @@ void LXeScintSD::Initialize(G4HCofThisEvent* hitsCE){
 G4bool LXeScintSD::ProcessHits(G4Step* aStep,G4TouchableHistory* ){
   G4double edep = aStep->GetTotalEnergyDeposit();
   if(edep==0.) return false; //No edep so dont count as hit
-
+  //G4cout << "Energy: " << edep << G4endl;
   G4StepPoint* thePrePoint = aStep->GetPreStepPoint();
   G4TouchableHistory* theTouchable =
     (G4TouchableHistory*)(aStep->GetPreStepPoint()->GetTouchable());
   G4VPhysicalVolume* thePrePV = theTouchable->GetVolume();
- 
+
   G4StepPoint* thePostPoint = aStep->GetPostStepPoint();
 
   //Get the average position of the hit
@@ -99,12 +99,12 @@ void LXeScintSD::EndOfEvent(G4HCofThisEvent* ) {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void LXeScintSD::clear() {} 
+void LXeScintSD::clear() {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void LXeScintSD::DrawAll() {} 
+void LXeScintSD::DrawAll() {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void LXeScintSD::PrintAll() {} 
+void LXeScintSD::PrintAll() {}

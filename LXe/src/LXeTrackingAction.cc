@@ -73,6 +73,7 @@ void LXeTrackingAction::PostUserTrackingAction(const G4Track* aTrack){
   if(aTrack->GetDefinition()==G4OpticalPhoton::OpticalPhotonDefinition()){
 
     const G4VProcess* creator=aTrack->GetCreatorProcess();
+    //G4cout << "Creator Process Name: "<< G4String(creator->GetProcessName()) << G4endl;
     if(creator && creator->GetProcessName()=="OpWLS"){
       trajectory->WLS();
       trajectory->SetDrawTrajectory(true);
@@ -89,8 +90,8 @@ void LXeTrackingAction::PostUserTrackingAction(const G4Track* aTrack){
         trajectory->SetDrawTrajectory(true);
     }
   }
-  else //draw all other trajectories
-    trajectory->SetDrawTrajectory(true);
+  /*else //draw all other trajectories
+    trajectory->SetDrawTrajectory(true);*/
 
   if(trackInformation->GetForceDrawTrajectory())
     trajectory->SetDrawTrajectory(true);

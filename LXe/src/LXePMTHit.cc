@@ -52,6 +52,7 @@ LXePMTHit::~LXePMTHit() {}
 LXePMTHit::LXePMTHit(const LXePMTHit &right) : G4VHit()
 {
   fPmtNumber=right.fPmtNumber;
+  fEdepPM=right.fEdepPM;
   fPhotons=right.fPhotons;
   fPhysVol=right.fPhysVol;
   fDrawit=right.fDrawit;
@@ -64,6 +65,7 @@ const LXePMTHit& LXePMTHit::operator=(const LXePMTHit &right){
   fPhotons=right.fPhotons;
   fPhysVol=right.fPhysVol;
   fDrawit=right.fDrawit;
+  fEdepPM=right.fEdepPM;
   return *this;
 }
 

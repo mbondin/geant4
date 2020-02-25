@@ -98,7 +98,11 @@ G4bool LXePMTSD::ProcessHits_constStep(const G4Step* aStep,
   //need to know if this is an optical photon
   if(aStep->GetTrack()->GetDefinition()
      != G4OpticalPhoton::OpticalPhotonDefinition()) return false;
- 
+
+  G4double edepPM = aStep->GetTotalEnergyDeposit();
+  if(edepPM==0.) return false; //No edep so dont count as hit
+
+  //G4cout<< "Energy deposited on SiPM: " <<edepPM << G4endl;
   //User replica number 1 since photocathode is a daughter volume
   //to the pmt which was replicated
   G4int pmtNumber=
@@ -115,18 +119,19 @@ G4bool LXePMTSD::ProcessHits_constStep(const G4Step* aStep,
       break;
     }
   }
- 
+
   if (hit == nullptr) {//this pmt wasnt previously hit in this event
     hit = new LXePMTHit(); //so create new hit
     hit->SetPMTNumber(pmtNumber);
     hit->SetPMTPhysVol(physVol);
+    hit->SetEdepPM(edepPM);
     fPMTHitCollection->insert(hit);
     hit->SetPMTPos((*fPMTPositionsX)[pmtNumber],(*fPMTPositionsY)[pmtNumber],
                    (*fPMTPositionsZ)[pmtNumber]);
   }
 
   hit->IncPhotonCount(); //increment hit for the selected pmt
- 
+
   if(!LXeDetectorConstruction::GetSphereOn()){
     hit->SetDrawit(true);
     //If the sphere is disabled then this hit is automaticaly drawn

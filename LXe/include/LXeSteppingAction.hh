@@ -49,9 +49,9 @@ class LXeSteppingAction : public G4UserSteppingAction
 
     void SetOneStepPrimaries(G4bool b){fOneStepPrimaries=b;}
     G4bool GetOneStepPrimaries(){return fOneStepPrimaries;}
- 
-  private:
 
+  private:
+    G4int rate;
     G4bool fOneStepPrimaries;
     LXeSteppingMessenger* fSteppingMessenger;
     LXeEventAction*       fEventAction;
