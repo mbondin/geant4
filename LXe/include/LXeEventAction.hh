@@ -64,6 +64,7 @@ class LXeEventAction : public G4UserEventAction
     void IncAbsorption(){fAbsorptionCount++;}
     void IncBoundaryAbsorption(){fBoundaryAbsorptionCount++;}
     void IncHitCount(G4int i=1){fHitCount+=i;}
+
     void IncEDepPM(G4double deppm){fTotEPM+=deppm;}
 
     void SetEWeightPos(const G4ThreeVector& p){fEWeightPos=p;}
@@ -111,6 +112,7 @@ class LXeEventAction : public G4UserEventAction
     G4bool fForcenophotons;
 
     G4int fHitCount;
+    
     G4int fPhotonCount_Scint;
     G4int fPhotonCount_Ceren;
     G4int fAbsorptionCount;

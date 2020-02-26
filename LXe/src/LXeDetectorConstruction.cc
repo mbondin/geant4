@@ -152,14 +152,14 @@ void LXeDetectorConstruction::DefineMaterials(){
 
   //***Material properties tables
 
-  G4double lxe_Energy[]    = { 7.0*eV , 7.07*eV, 7.14*eV };
+  G4double lxe_Energy[]    = { 2.66*eV , 3.01*eV, 3.36*eV };
   const G4int lxenum = sizeof(lxe_Energy)/sizeof(G4double);
 
   G4double lxe_SCINT[] = { 0.1, 1.0, 0.1 };
   assert(sizeof(lxe_SCINT) == sizeof(lxe_Energy));
-  G4double lxe_RIND[]  = { 1.59 , 1.57, 1.54 };
+  G4double lxe_RIND[]  = { 1.59 , 1.59, 1.59 };
   assert(sizeof(lxe_RIND) == sizeof(lxe_Energy));
-  G4double lxe_ABSL[]  = { 35.*cm, 35.*cm, 35.*cm};
+  G4double lxe_ABSL[]  = { 18.*cm, 18.*cm, 18.*cm};
   assert(sizeof(lxe_ABSL) == sizeof(lxe_Energy));
   fLXe_mt = new G4MaterialPropertiesTable();
   fLXe_mt->AddProperty("FASTCOMPONENT", lxe_Energy, lxe_SCINT, lxenum);
@@ -168,8 +168,8 @@ void LXeDetectorConstruction::DefineMaterials(){
   fLXe_mt->AddProperty("ABSLENGTH",     lxe_Energy, lxe_ABSL,  lxenum);
   fLXe_mt->AddConstProperty("SCINTILLATIONYIELD",8600./MeV);
   fLXe_mt->AddConstProperty("RESOLUTIONSCALE",1.0);
-  fLXe_mt->AddConstProperty("FASTTIMECONSTANT",20.*ns);
-  fLXe_mt->AddConstProperty("SLOWTIMECONSTANT",45.*ns);
+  fLXe_mt->AddConstProperty("FASTTIMECONSTANT",13.*ns);
+  fLXe_mt->AddConstProperty("SLOWTIMECONSTANT",35.*ns);
   fLXe_mt->AddConstProperty("YIELDRATIO",1.0);
   fLXe->SetMaterialPropertiesTable(fLXe_mt);
 
@@ -405,7 +405,7 @@ void LXeDetectorConstruction::SetDefaults() {
 
   fScint_x = 2.5*cm;
   fScint_y = 2.5*cm;
-  fScint_z = 18.75*cm;
+  fScint_z = 7.5*cm;
 
   fNx = 1;//2
   fNy = 1;//3

@@ -72,6 +72,7 @@ class LXeRun : public G4Run
       fHitCount  += count;
       fHitCount2 += count*count;
     }
+
     void IncHitsAboveThreshold(G4int count) {
       fPMTsAboveThreshold  += count;
       fPMTsAboveThreshold2 += count*count;
@@ -84,6 +85,7 @@ class LXeRun : public G4Run
 
   private:
     G4int fHitCount, fHitCount2;
+    
     G4int fPhotonCount_Scint, fPhotonCount_Scint2;
     G4int fPhotonCount_Ceren, fPhotonCount_Ceren2;
     G4int fAbsorptionCount, fAbsorptionCount2;

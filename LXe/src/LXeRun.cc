@@ -38,6 +38,7 @@
 LXeRun::LXeRun() : G4Run()
 {
   fHitCount                = fHitCount2                = 0;
+
   fPhotonCount_Scint       = fPhotonCount_Scint2       = 0;
   fPhotonCount_Ceren       = fPhotonCount_Ceren2       = 0;
   fAbsorptionCount         = fAbsorptionCount2         = 0;
@@ -76,6 +77,7 @@ void LXeRun::Merge(const G4Run* run)
   fTotEPM                   += localRun->fTotEPM;
   fTotEPM2                  += localRun->fTotEPM2;
 
+
   G4Run::Merge(run);
 }
 
@@ -110,12 +112,14 @@ void LXeRun::EndOfRun()
 
   G4double scint = G4double(fPhotonCount_Scint)/n_evt;
   G4double scint2 = G4double(fPhotonCount_Scint2)/n_evt;
+
   G4double rms_scint = scint2 - scint*scint;
   if (rms_scint > 0.) rms_scint = std::sqrt(rms_scint/n_evt);
   else rms_scint = 0.;
 
   G4cout << "Number of scintillation photons per event :\t " << scint << " +- "
          << rms_scint << G4endl;
+  
 
   G4double ceren = G4double(fPhotonCount_Ceren)/n_evt;
   G4double ceren2 = G4double(fPhotonCount_Ceren2)/n_evt;

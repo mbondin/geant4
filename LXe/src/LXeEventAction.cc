@@ -58,6 +58,7 @@ LXeEventAction::LXeEventAction(const LXeDetectorConstruction* det)
   fEventMessenger = new LXeEventMessenger(this);
 
   fHitCount = 0;
+
   fPhotonCount_Scint = 0;
   fPhotonCount_Ceren = 0;
   fAbsorptionCount = 0;
@@ -80,6 +81,7 @@ LXeEventAction::~LXeEventAction(){}
 void LXeEventAction::BeginOfEventAction(const G4Event*) {
 
   fHitCount = 0;
+
   fPhotonCount_Scint = 0;
   fPhotonCount_Ceren = 0;
   fAbsorptionCount = 0;
@@ -179,6 +181,7 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
   if(pmtHC){
     G4ThreeVector reconPos(0.,0.,0.);
     G4int pmts=pmtHC->entries();
+    //G4cout<<"Num of Hits per event: " << pmts<<G4endl;
     G4double edepPM;
     //Gather info from all PMTs
     for(G4int i=0;i<pmts;i++){
@@ -186,16 +189,20 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
       fTotEPM += edepPM;
       fHitCount += (*pmtHC)[i]->GetPhotonCount();
       reconPos+=(*pmtHC)[i]->GetPMTPos()*(*pmtHC)[i]->GetPhotonCount();
+      //G4cout<<"Photon Count per hit: " << (*pmtHC)[i]->GetPhotonCount() << G4endl;
       if((*pmtHC)[i]->GetPhotonCount()>=fPMTThreshold){
         fPMTsAboveThreshold++;
       }
       else{//wasnt above the threshold, turn it back off
+
         (*pmtHC)[i]->SetDrawit(false);
       }
     }
+    //G4cout<<"Edep: "<<fTotEPM<<G4endl;
+    //G4cout<<"PMT threshold: "<<fPMTThreshold <<G4endl;
 
     auto analysisManager = G4AnalysisManager::Instance();
-    analysisManager->FillH1(1, fTotEPM);
+    analysisManager->FillH1(1, fHitCount);
     //G4AnalysisManager::Instance()->FillH1(2, fPMTsAboveThreshold);
 
     if(fHitCount > 0) {//dont bother unless there were hits
@@ -239,6 +246,7 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
     G4RunManager::GetRunManager()->GetNonConstCurrentRun());
 
   run->IncHitCount(fHitCount);
+
   run->IncPhotonCount_Scint(fPhotonCount_Scint);
   run->IncPhotonCount_Ceren(fPhotonCount_Ceren);
   run->IncEDep(fTotE);

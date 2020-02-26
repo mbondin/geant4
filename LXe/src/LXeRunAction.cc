@@ -58,7 +58,7 @@ LXeRunAction::LXeRunAction() : fRun(nullptr)//, fHistoManager(nullptr)
 
   // Creating histograms
   analysisManager->CreateH1("EScint","Edep in scintillator", 100, 0., 700*keV);
-  analysisManager->CreateH1("ESiPM","Edep in SiPM",100,0.,8*eV);
+  analysisManager->CreateH1("HitCount","Hit Count in SiPM",200,0.,1500);
 
 }
 
