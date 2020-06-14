@@ -37,7 +37,7 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-LXeRunAction::LXeRunAction() : fRun(nullptr)//, fHistoManager(nullptr)
+LXeRunAction::LXeRunAction() //: fRun(nullptr)//, fHistoManager(nullptr)
 {
   // Book predefined histograms
   //fHistoManager = new LXeHistoManager();
@@ -57,8 +57,10 @@ LXeRunAction::LXeRunAction() : fRun(nullptr)//, fHistoManager(nullptr)
 
 
   // Creating histograms
-  analysisManager->CreateH1("EScint","Edep in scintillator", 100, 0., 700*keV);
-  analysisManager->CreateH1("HitCount","Hit Count in SiPM",200,0.,1500);
+  analysisManager->CreateH1("EScint","Edep in scintillator",200, 0., 2.0*MeV);
+  //analysisManager->CreateH1("HitCount1","Hit Count in SiPM 1",150,0.,1500);
+  analysisManager->CreateH1("LCE","Light Collection Efficiency",150,0.,100);
+  analysisManager->CreateH1("TotalHC","Total Hit Count in SiPM",150,0.,1500);
 
 }
 

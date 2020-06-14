@@ -28,7 +28,7 @@
 /// \brief Selection of the analysis technology
 
 #ifndef LXeAnalysis_h
-#define LXeAnalysis_h 1
+#define LXeAnalysis_h 2
 
 #include "g4root.hh"
 //#include "g4csv.hh"

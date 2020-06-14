@@ -57,6 +57,7 @@ LXeScintHit::LXeScintHit(const LXeScintHit &right) : G4VHit()
   fEdep = right.fEdep;
   fPos = right.fPos;
   fPhysVol = right.fPhysVol;
+
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -65,6 +66,7 @@ const LXeScintHit& LXeScintHit::operator=(const LXeScintHit &right){
   fEdep = right.fEdep;
   fPos = right.fPos;
   fPhysVol = right.fPhysVol;
+
   return *this;
 }
 

@@ -34,9 +34,9 @@
 class G4LogicalVolume;
 class G4VPhysicalVolume;
 class G4Box;
-class G4Tubs;
+//class G4Tubs;
 class LXeMainVolume;
-class G4Sphere;
+//class G4Sphere;
 
 #include "G4Material.hh"
 #include "LXeDetectorMessenger.hh"
@@ -65,7 +65,7 @@ class LXeDetectorConstruction : public G4VUserDetectorConstruction
     void SetNX(G4int );
     void SetNY(G4int );
     void SetNZ(G4int );
-    void SetPMTRadius(G4double );
+    //void SetPMTRadius(G4double );
     void SetDefaults();
     void SetSaveThreshold(G4int );
 
@@ -78,26 +78,26 @@ class LXeDetectorConstruction : public G4VUserDetectorConstruction
     G4double GetScintY() const {return fScint_y;}
     G4double GetScintZ() const {return fScint_z;}
     G4double GetHousingThickness() const {return fD_mtl;}
-    G4double GetPMTRadius() const {return fOuterRadius_pmt;}
-    G4double GetSlabZ() const {return fSlab_z;}
- 
+  //  G4double GetPMTRadius() const {return fOuterRadius_pmt;}
+  //  G4double GetSlabZ() const {return fSlab_z;}
+/*
     void SetSphereOn(G4bool );
-    static G4bool GetSphereOn(){return fSphereOn;}
+    static G4bool GetSphereOn(){return fSphereOn;}*/
 
     void SetHousingReflectivity(G4double );
     G4double GetHousingReflectivity() const {return fRefl;}
 
-    void SetWLSSlabOn(G4bool b);
-    G4bool GetWLSSlabOn() const {return fWLSslab;}
+//    void SetWLSSlabOn(G4bool b);
+  //  G4bool GetWLSSlabOn() const {return fWLSslab;}
 
     void SetMainVolumeOn(G4bool b);
     G4bool GetMainVolumeOn() const {return fMainVolumeOn;}
 
-    void SetNFibers(G4int n);
-    G4int GetNFibers() const {return fNfibers;}
+  //  void SetNFibers(G4int n);
+    //G4int GetNFibers() const {return fNfibers;}
 
     void SetMainScintYield(G4double );
-    void SetWLSScintYield(G4double );
+    //void SetWLSScintYield(G4double );
 
   private:
 
@@ -111,18 +111,18 @@ class LXeDetectorConstruction : public G4VUserDetectorConstruction
 
     //Materials & Elements
     G4Material* fLXe;
-    G4Material* fAl;
-    G4Element* fN;
+    G4Material* fSi;
+    /*G4Element* fN;
     G4Element* fO;
-    G4Material* fAir;
+    G4Material* fAir;*/
     G4Material* fVacuum;
     G4Element* fC;
     G4Element* fH;
-    G4Material* fGlass;
+    /*G4Material* fGlass;
     G4Material* fPstyrene;
     G4Material* fPMMA;
     G4Material* fPethylene1;
-    G4Material* fPethylene2;
+    G4Material* fPethylene2;*/
 
     //Geometry
     G4double fScint_x;
@@ -133,18 +133,18 @@ class LXeDetectorConstruction : public G4VUserDetectorConstruction
     G4int fNy;
     G4int fNz;
     G4int fSaveThreshold;
-    G4double fOuterRadius_pmt;
+    /*G4double fOuterRadius_pmt;
     G4int fNfibers;
-    static G4bool fSphereOn;
+    static G4bool fSphereOn;*/
     G4double fRefl;
-    G4bool fWLSslab;
+  //  G4bool fWLSslab;
     G4bool fMainVolumeOn;
-    G4double fSlab_z;
+  //  G4double fSlab_z;
 
     LXeMainVolume* fMainVolume;
 
     G4MaterialPropertiesTable* fLXe_mt;
-    G4MaterialPropertiesTable* fMPTPStyrene;
+  //  G4MaterialPropertiesTable* fMPTPStyrene;
 
     //Sensitive Detectors
     G4Cache<LXeScintSD*> fScint_SD;

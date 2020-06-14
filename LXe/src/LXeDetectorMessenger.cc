@@ -53,7 +53,7 @@ LXeDetectorMessenger::LXeDetectorMessenger(LXeDetectorConstruction* detector)
 
   fVolumesDir = new G4UIdirectory("/LXe/detector/volumes/");
   fVolumesDir->SetGuidance("Enable/disable volumes");
- 
+
   //Various commands for modifying detector geometry
   fDimensionsCmd =
     new G4UIcmdWith3VectorAndUnit("/LXe/detector/dimensions",this);
@@ -71,13 +71,13 @@ LXeDetectorMessenger::LXeDetectorMessenger(LXeDetectorConstruction* detector)
   fHousingThicknessCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
   fHousingThicknessCmd->SetToBeBroadcasted(false);
 
-  fPmtRadiusCmd = new G4UIcmdWithADoubleAndUnit
+  /*fPmtRadiusCmd = new G4UIcmdWithADoubleAndUnit
     ("/LXe/detector/pmtRadius",this);
   fPmtRadiusCmd->SetGuidance("Set the radius of the PMTs.");
   fPmtRadiusCmd->SetParameterName("radius",false);
   fPmtRadiusCmd->SetDefaultUnit("cm");
   fPmtRadiusCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
-  fPmtRadiusCmd->SetToBeBroadcasted(false);
+  fPmtRadiusCmd->SetToBeBroadcasted(false);*/
 
   fNxCmd = new G4UIcmdWithAnInteger("/LXe/detector/nx",this);
   fNxCmd->SetGuidance("Set the number of PMTs along the x-dimension.");
@@ -97,30 +97,30 @@ LXeDetectorMessenger::LXeDetectorMessenger(LXeDetectorConstruction* detector)
   fNzCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
   fNzCmd->SetToBeBroadcasted(false);
 
-  fSphereCmd = new G4UIcmdWithABool("/LXe/detector/volumes/sphere",this);
+/*  fSphereCmd = new G4UIcmdWithABool("/LXe/detector/volumes/sphere",this);
   fSphereCmd->SetGuidance("Enable/Disable the sphere.");
   fSphereCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
-  fSphereCmd->SetToBeBroadcasted(false);
+  fSphereCmd->SetToBeBroadcasted(false);*/
 
   fReflectivityCmd = new G4UIcmdWithADouble("/LXe/detector/reflectivity",this);
   fReflectivityCmd->SetGuidance("Set the reflectivity of the housing.");
   fReflectivityCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
   fReflectivityCmd->SetToBeBroadcasted(false);
 
-  fWlsCmd = new G4UIcmdWithABool("/LXe/detector/volumes/wls",this);
+/*  fWlsCmd = new G4UIcmdWithABool("/LXe/detector/volumes/wls",this);
   fWlsCmd->SetGuidance("Enable/Disable the WLS slab");
   fWlsCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
-  fWlsCmd->SetToBeBroadcasted(false);
+  fWlsCmd->SetToBeBroadcasted(false);*/
 
   fLxeCmd = new G4UIcmdWithABool("/LXe/detector/volumes/lxe",this);
   fLxeCmd->SetGuidance("Enable/Disable the main detector volume.");
   fLxeCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
   fLxeCmd->SetToBeBroadcasted(false);
 
-  fNFibersCmd = new G4UIcmdWithAnInteger("/LXe/detector/nfibers",this);
+  /*fNFibersCmd = new G4UIcmdWithAnInteger("/LXe/detector/nfibers",this);
   fNFibersCmd->SetGuidance("Set the number of WLS fibers in the WLS slab.");
   fNFibersCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
-  fNFibersCmd->SetToBeBroadcasted(false);
+  fNFibersCmd->SetToBeBroadcasted(false);*/
 
   fMainScintYield=new G4UIcmdWithADouble("/LXe/detector/MainScintYield",this);
   fMainScintYield->SetGuidance("Set scinitillation yield of main volume.");
@@ -128,11 +128,11 @@ LXeDetectorMessenger::LXeDetectorMessenger(LXeDetectorConstruction* detector)
   fMainScintYield->AvailableForStates(G4State_PreInit,G4State_Idle);
   fMainScintYield->SetToBeBroadcasted(false);
 
-  fWLSScintYield = new G4UIcmdWithADouble("/LXe/detector/WLSScintYield",this);
+  /*fWLSScintYield = new G4UIcmdWithADouble("/LXe/detector/WLSScintYield",this);
   fWLSScintYield->SetGuidance("Set scintillation yield of WLS Slab");
   fWLSScintYield->SetGuidance("Specified in photons/MeV");
   fWLSScintYield->AvailableForStates(G4State_PreInit,G4State_Idle);
-  fWLSScintYield->SetToBeBroadcasted(false);
+  fWLSScintYield->SetToBeBroadcasted(false);*/
 
   fSaveThresholdCmd = new G4UIcmdWithAnInteger("/LXe/saveThreshold",this);
   fSaveThresholdCmd->
@@ -153,19 +153,19 @@ LXeDetectorMessenger::~LXeDetectorMessenger()
 {
   delete fDimensionsCmd;
   delete fHousingThicknessCmd;
-  delete fPmtRadiusCmd;
+//  delete fPmtRadiusCmd;
   delete fNxCmd;
   delete fNyCmd;
   delete fNzCmd;
   delete fDetectorDir;
   delete fVolumesDir;
-  delete fSphereCmd;
-  delete fWlsCmd;
+//  delete fSphereCmd;
+//  delete fWlsCmd;
   delete fLxeCmd;
-  delete fNFibersCmd;
+//  delete fNFibersCmd;
   delete fReflectivityCmd;
   delete fMainScintYield;
-  delete fWLSScintYield;
+//  delete fWLSScintYield;
   delete fSaveThresholdCmd;
   delete fDefaultsCmd;
 }
@@ -181,9 +181,9 @@ void LXeDetectorMessenger::SetNewValue(G4UIcommand* command, G4String newValue)
     fLXeDetector->SetHousingThickness(fHousingThicknessCmd
                                      ->GetNewDoubleValue(newValue));
   }
-  else if (command == fPmtRadiusCmd){
+  /*else if (command == fPmtRadiusCmd){
     fLXeDetector->SetPMTRadius(fPmtRadiusCmd->GetNewDoubleValue(newValue));
-  }
+  }*/
   else if (command == fNxCmd){
     fLXeDetector->SetNX(fNxCmd->GetNewIntValue(newValue));
   }
@@ -193,29 +193,29 @@ void LXeDetectorMessenger::SetNewValue(G4UIcommand* command, G4String newValue)
   else if (command == fNzCmd){
     fLXeDetector->SetNZ(fNzCmd->GetNewIntValue(newValue));
   }
-  else if (command == fSphereCmd){
+  /*else if (command == fSphereCmd){
     fLXeDetector->SetSphereOn(fSphereCmd->GetNewBoolValue(newValue));
-  }
+  }*/
   else if (command == fReflectivityCmd){
     fLXeDetector
       ->SetHousingReflectivity(fReflectivityCmd->GetNewDoubleValue(newValue));
   }
-  else if (command == fWlsCmd){
+/*  else if (command == fWlsCmd){
     fLXeDetector->SetWLSSlabOn(fWlsCmd->GetNewBoolValue(newValue));
-  }
+  }*/
   else if (command == fLxeCmd){
     fLXeDetector->SetMainVolumeOn(fLxeCmd->GetNewBoolValue(newValue));
   }
-  else if (command == fNFibersCmd){
+  /*else if (command == fNFibersCmd){
     fLXeDetector->SetNFibers(fNFibersCmd->GetNewIntValue(newValue));
-  }
+  }*/
   else if (command == fMainScintYield){
    fLXeDetector->
               SetMainScintYield(fMainScintYield->GetNewDoubleValue(newValue));
   }
-  else if (command == fWLSScintYield){
+/*  else if (command == fWLSScintYield){
     fLXeDetector->SetWLSScintYield(fWLSScintYield->GetNewDoubleValue(newValue));
-  }
+  }*/
   else if( command == fSaveThresholdCmd ){
     fLXeDetector->SetSaveThreshold(fSaveThresholdCmd->GetNewIntValue(newValue));
   }

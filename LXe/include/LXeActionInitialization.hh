@@ -32,6 +32,7 @@
 
 #include "G4VUserActionInitialization.hh"
 
+
 class LXeDetectorConstruction;
 
 /// Action initialization class.

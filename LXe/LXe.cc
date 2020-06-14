@@ -40,15 +40,19 @@
 #include "G4UImanager.hh"
 #include "G4String.hh"
 
-#include "FTFP_BERT.hh"
+#include "QGSP_BERT.hh"
 #include "G4OpticalPhysics.hh"
+
 #include "G4EmStandardPhysics_option4.hh"
+
+//#include "G4HadronElasticPhysicsHP.hh"
 
 #include "LXeDetectorConstruction.hh"
 #include "LXeActionInitialization.hh"
 
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
+#include "G4SystemOfUnits.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -70,8 +74,9 @@ int main(int argc, char** argv)
   LXeDetectorConstruction* det = new LXeDetectorConstruction();
   runManager->SetUserInitialization(det);
 
-  G4VModularPhysicsList* physicsList = new FTFP_BERT;
-  physicsList->ReplacePhysics(new G4EmStandardPhysics_option4());
+  G4VModularPhysicsList* physicsList = new QGSP_BERT;
+  //physicsList->ReplacePhysics(new G4EmStandardPhysics_option4());
+  //physicsList->RegisterPhysics(new G4HadronElasticPhysicsHP());
   G4OpticalPhysics* opticalPhysics = new G4OpticalPhysics();
   opticalPhysics->SetWLSTimeProfile("delta");
 
@@ -80,6 +85,7 @@ int main(int argc, char** argv)
 
   opticalPhysics->SetMaxNumPhotonsPerStep(100);
   opticalPhysics->SetMaxBetaChangePerStep(10.0);
+
 
   opticalPhysics->SetTrackSecondariesFirst(kCerenkov, true);
   opticalPhysics->SetTrackSecondariesFirst(kScintillation, true);
@@ -93,7 +99,7 @@ int main(int argc, char** argv)
   G4VisManager* visManager = new G4VisExecutive;
   visManager->Initialize();
 
-  //get the pointer to the User Interface manager 
+  //get the pointer to the User Interface manager
   G4UImanager* UImanager = G4UImanager::GetUIpointer();
 
   if (ui) {
@@ -105,7 +111,7 @@ int main(int argc, char** argv)
     ui->SessionStart();
     delete ui;
   } else {
-    //batch mode  
+    //batch mode
     G4String command = "/control/execute ";
     G4String fileName = argv[1];
     UImanager->ApplyCommand(command+fileName);

@@ -106,14 +106,16 @@ G4bool LXePMTSD::ProcessHits_constStep(const G4Step* aStep,
   //User replica number 1 since photocathode is a daughter volume
   //to the pmt which was replicated
   G4int pmtNumber=
-    aStep->GetPostStepPoint()->GetTouchable()->GetReplicaNumber(1);
+    aStep->GetPostStepPoint()->GetTouchable()->GetReplicaNumber();
   G4VPhysicalVolume* physVol=
-    aStep->GetPostStepPoint()->GetTouchable()->GetVolume(1);
+    aStep->GetPostStepPoint()->GetTouchable()->GetVolume();
 
   //Find the correct hit collection
-  G4int n=fPMTHitCollection->entries();
+  G4int n=fPMTHitCollection->entries(); //pmtHitCollection stores the no of pmts & their information
+  //G4cout<<"No of entries: "<<n<<G4endl;
   LXePMTHit* hit = nullptr;
   for(G4int i=0;i<n;i++){
+
     if((*fPMTHitCollection)[i]->GetPMTNumber()==pmtNumber){
       hit=(*fPMTHitCollection)[i];
       break;
@@ -132,17 +134,17 @@ G4bool LXePMTSD::ProcessHits_constStep(const G4Step* aStep,
 
   hit->IncPhotonCount(); //increment hit for the selected pmt
 
-  if(!LXeDetectorConstruction::GetSphereOn()){
-    hit->SetDrawit(true);
+  //if(!LXeDetectorConstruction::GetSphereOn()){
+    hit->SetDrawit(false);
     //If the sphere is disabled then this hit is automaticaly drawn
-  }
-  else{//sphere enabled
+  //}
+  /*else{//sphere enabled
     LXeUserTrackInformation* trackInfo=
       (LXeUserTrackInformation*)aStep->GetTrack()->GetUserInformation();
     if(trackInfo->GetTrackStatus()&hitSphere)
       //only draw this hit if the photon has hit the sphere first
       hit->SetDrawit(true);
-  }
+  }*/
 
   return true;
 }

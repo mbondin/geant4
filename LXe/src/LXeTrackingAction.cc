@@ -76,23 +76,23 @@ void LXeTrackingAction::PostUserTrackingAction(const G4Track* aTrack){
     //G4cout << "Creator Process Name: "<< G4String(creator->GetProcessName()) << G4endl;
     if(creator && creator->GetProcessName()=="OpWLS"){
       trajectory->WLS();
-      trajectory->SetDrawTrajectory(true);
+      trajectory->SetDrawTrajectory(false);
     }
 
-    if(LXeDetectorConstruction::GetSphereOn()){
+    /*if(LXeDetectorConstruction::GetSphereOn()){
       if((trackInformation->GetTrackStatus()&hitPMT)&&
          (trackInformation->GetTrackStatus()&hitSphere)){
         trajectory->SetDrawTrajectory(true);
       }
-    }
-    else{
+    }*/
+
       if(trackInformation->GetTrackStatus()&hitPMT)
-        trajectory->SetDrawTrajectory(true);
-    }
+        trajectory->SetDrawTrajectory(false);
+
   }
-  /*else //draw all other trajectories
-    trajectory->SetDrawTrajectory(true);*/
+  else //draw all other trajectories
+    trajectory->SetDrawTrajectory(true);
 
   if(trackInformation->GetForceDrawTrajectory())
-    trajectory->SetDrawTrajectory(true);
+    trajectory->SetDrawTrajectory(false);
 }

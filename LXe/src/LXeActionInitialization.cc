@@ -31,12 +31,12 @@
 
 #include "LXePrimaryGeneratorAction.hh"
 #include "LXeDetectorConstruction.hh"
-
 #include "LXeRunAction.hh"
 #include "LXeEventAction.hh"
 #include "LXeTrackingAction.hh"
 #include "LXeSteppingAction.hh"
 #include "LXeStackingAction.hh"
+
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -61,10 +61,11 @@ void LXeActionInitialization::BuildForMaster() const
 
 void LXeActionInitialization::Build() const
 {
-  SetUserAction(new LXePrimaryGeneratorAction());
+
 
   LXeEventAction* eventAction = new LXeEventAction(fDetector);
   SetUserAction(eventAction);
+  SetUserAction(new LXePrimaryGeneratorAction());
   SetUserAction(new LXeStackingAction(eventAction));
 
   SetUserAction(new LXeRunAction());

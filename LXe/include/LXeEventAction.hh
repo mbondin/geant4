@@ -60,46 +60,53 @@ class LXeEventAction : public G4UserEventAction
 
     void IncPhotonCount_Scint(){fPhotonCount_Scint++;}
     void IncPhotonCount_Ceren(){fPhotonCount_Ceren++;}
+    
     void IncEDep(G4double dep){fTotE+=dep;}
-    void IncAbsorption(){fAbsorptionCount++;}
-    void IncBoundaryAbsorption(){fBoundaryAbsorptionCount++;}
+    //void IncAbsorption(){fAbsorptionCount++;}
+    //void IncBoundaryAbsorption(){fBoundaryAbsorptionCount++;}
     void IncHitCount(G4int i=1){fHitCount+=i;}
+    void IncHC1(G4int i=1){fHC1+=i;}
+    void IncHC2(G4int i=1){fHC2+=i;}
+    void Inchits(G4int i=1){fhits+=i;}
 
     void IncEDepPM(G4double deppm){fTotEPM+=deppm;}
 
-    void SetEWeightPos(const G4ThreeVector& p){fEWeightPos=p;}
-    void SetReconPos(const G4ThreeVector& p){fReconPos=p;}
+    /*void SetEWeightPos(const G4ThreeVector& p){fEWeightPos=p;}
+    void SetReconPos(const G4ThreeVector& p){fReconPos=p;}*/
     void SetConvPos(const G4ThreeVector& p){fConvPos=p;fConvPosSet=true;}
-    void SetPosMax(const G4ThreeVector& p,G4double edep) {
+    /*void SetPosMax(const G4ThreeVector& p,G4double edep) {
       fPosMax = p;
       fEdepMax = edep;
-    }
+    }*/
 
     G4int GetPhotonCount_Scint()const {return fPhotonCount_Scint;}
     G4int GetPhotonCount_Ceren()const {return fPhotonCount_Ceren;}
     G4int GetHitCount()const {return fHitCount;}
+    G4int GetHC1()const {return fHC1;}
+    G4int GetHC2()const {return fHC2;}
+    G4int Gethits()const{return fhits;}
     G4double GetEDep()const {return fTotE;}
     G4double GetEDepPM()const {return fTotEPM;}
-    G4int GetAbsorptionCount()const {return fAbsorptionCount;}
-    G4int GetBoundaryAbsorptionCount() const {return fBoundaryAbsorptionCount;}
+    //G4int GetAbsorptionCount()const {return fAbsorptionCount;}
+    //G4int GetBoundaryAbsorptionCount() const {return fBoundaryAbsorptionCount;}
 
-    G4ThreeVector GetEWeightPos(){return fEWeightPos;}
-    G4ThreeVector GetReconPos(){return fReconPos;}
+    /*G4ThreeVector GetEWeightPos(){return fEWeightPos;}
+    G4ThreeVector GetReconPos(){return fReconPos;}*/
     G4ThreeVector GetConvPos(){return fConvPos;}
-    G4ThreeVector GetPosMax(){return fPosMax;}
-    G4double GetEDepMax(){return fEdepMax;}
+    /*G4ThreeVector GetPosMax(){return fPosMax;}
+    G4double GetEDepMax(){return fEdepMax;}*/
     G4double IsConvPosSet(){return fConvPosSet;}
 
     //Gets the total photon count produced
     G4int GetPhotonCount(){return fPhotonCount_Scint+fPhotonCount_Ceren;}
 
-    void IncPMTSAboveThreshold(){fPMTsAboveThreshold++;}
-    G4int GetPMTSAboveThreshold(){return fPMTsAboveThreshold;}
+    //void IncPMTSAboveThreshold(){fPMTsAboveThreshold++;}
+    //G4int GetPMTSAboveThreshold(){return fPMTsAboveThreshold;}
 
   private:
 
     LXeEventMessenger* fEventMessenger;
-    const LXeDetectorConstruction* fDetector;
+    //const LXeDetectorConstruction* fDetector;
 
     G4int fScintCollID;
     G4int fPMTCollID;
@@ -112,25 +119,30 @@ class LXeEventAction : public G4UserEventAction
     G4bool fForcenophotons;
 
     G4int fHitCount;
-    
+    G4int fHC1;
+    G4int fHC2;
+    G4int fhits;
+
     G4int fPhotonCount_Scint;
     G4int fPhotonCount_Ceren;
-    G4int fAbsorptionCount;
-    G4int fBoundaryAbsorptionCount;
+    G4double fLCE;
+    //G4int fAbsorptionCount;
+    //G4int fBoundaryAbsorptionCount;
 
     G4double fTotE;
     G4double fTotEPM;
 
+
     //These only have meaning if totE > 0
     //If totE = 0 then these wont be set by EndOfEventAction
-    G4ThreeVector fEWeightPos;
-    G4ThreeVector fReconPos; //Also relies on hitCount>0
+    /*G4ThreeVector fEWeightPos;
+    G4ThreeVector fReconPos;*/ //Also relies on hitCount>0
     G4ThreeVector fConvPos;//true (initial) converstion position
     G4bool fConvPosSet;
-    G4ThreeVector fPosMax;
-    G4double fEdepMax;
+    /*G4ThreeVector fPosMax;
+    G4double fEdepMax;*/
 
-    G4int fPMTsAboveThreshold;
+    //G4int fPMTsAboveThreshold;
 };
 
 #endif

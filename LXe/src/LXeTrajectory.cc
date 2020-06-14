@@ -80,7 +80,7 @@ void LXeTrajectory::DrawTrajectory() const
   // In this exampple it was always called with an argument of 50.
   const G4int i_mode = 50;
   // Consider using commands /vis/modeling/trajectories.
-  
+
   //Taken from G4VTrajectory and modified to select colours based on particle
   //type and to selectively eliminate drawing of certain trajectories.
 
@@ -92,18 +92,18 @@ void LXeTrajectory::DrawTrajectory() const
   // for auxiliary points, if any - whose screen size in pixels is
   // given by std::abs(i_mode)/1000.  E.g: i_mode = 5000 gives easily
   // visible markers.
- 
+
   G4VVisManager* pVVisManager = G4VVisManager::GetConcreteInstance();
   if (!pVVisManager) return;
- 
+
   const G4double markerSize = std::abs(i_mode)/1000;
   G4bool lineRequired (i_mode >= 0);
   G4bool markersRequired (markerSize > 0.);
- 
+
   G4Polyline trajectoryLine;
   G4Polymarker stepPoints;
   G4Polymarker auxiliaryPoints;
- 
+
   for (G4int i = 0; i < GetPointEntries() ; i++) {
     G4VTrajectoryPoint* aTrajectoryPoint = GetPoint(i);
     const std::vector<G4ThreeVector>* auxiliaries
@@ -127,10 +127,10 @@ void LXeTrajectory::DrawTrajectory() const
       stepPoints.push_back(pos);
     }
   }
- 
+
   if (lineRequired) {
     G4Colour colour;
- 
+
     if(fParticleDefinition==G4OpticalPhoton::OpticalPhotonDefinition()){
       if(fWls) //WLS photons are red
         colour = G4Colour(1.,0.,0.);
@@ -139,8 +139,8 @@ void LXeTrajectory::DrawTrajectory() const
       }
     }
     else //All other particles are blue
-      colour = G4Colour(0.,0.,1.);
- 
+      colour = G4Colour(1.,0.,0.);
+
     G4VisAttributes trajectoryLineAttribs(colour);
     trajectoryLine.SetVisAttributes(&trajectoryLineAttribs);
     pVVisManager->Draw(trajectoryLine);

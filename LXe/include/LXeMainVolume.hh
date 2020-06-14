@@ -32,8 +32,7 @@
 
 #include "G4PVPlacement.hh"
 #include "G4Box.hh"
-#include "G4Tubs.hh"
-#include "G4Sphere.hh"
+//#include "G4Sphere.hh"
 #include "G4Material.hh"
 #include "G4LogicalVolume.hh"
 #include "G4OpticalSurface.hh"
@@ -79,25 +78,25 @@ class LXeMainVolume : public G4PVPlacement
     G4int fNx;
     G4int fNy;
     G4int fNz;
-    G4double fOuterRadius_pmt;
-    G4bool fSphereOn;
+  //  G4double fOuterRadius_pmt;
+  //  G4bool fSphereOn;
     G4double fRefl;
 
     //Basic Volumes
     //
     G4Box* fScint_box;
     G4Box* fHousing_box;
-    G4Box* fPmt;
+    //G4Box* fPmt;
     G4Box* fPhotocath;
-    G4Sphere* fSphere;
+  //  G4Sphere* fSphere;
 
     // Logical volumes
     //
     G4LogicalVolume* fScint_log;
     G4LogicalVolume* fHousing_log;
-    G4LogicalVolume* fPmt_log;
+    //G4LogicalVolume* fPmt_log;
     G4LogicalVolume* fPhotocath_log;
-    G4LogicalVolume* fSphere_log;
+  //  G4LogicalVolume* fSphere_log;
 
     // Sensitive Detectors positions
     std::vector<G4ThreeVector> fPmtPositions;

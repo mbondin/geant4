@@ -38,6 +38,7 @@
 class G4Step;
 class G4HCofThisEvent;
 
+
 class LXeScintSD : public G4VSensitiveDetector
 {
   public:
@@ -46,16 +47,17 @@ class LXeScintSD : public G4VSensitiveDetector
     virtual ~LXeScintSD();
 
     virtual void Initialize(G4HCofThisEvent* );
+    virtual void Store(const G4Step* theStep, G4TouchableHistory* );
     virtual G4bool ProcessHits(G4Step* aStep, G4TouchableHistory* );
     virtual void EndOfEvent(G4HCofThisEvent* );
     virtual void clear();
     virtual void DrawAll();
     virtual void PrintAll();
- 
+
   private:
 
     LXeScintHitsCollection* fScintCollection;
- 
+
 };
 
 #endif

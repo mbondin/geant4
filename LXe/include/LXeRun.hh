@@ -52,6 +52,9 @@ class LXeRun : public G4Run
       fPhotonCount_Ceren  += count;
       fPhotonCount_Ceren2 += count*count;
     }
+    void IncLCE(G4double count){
+      fLCE += count;
+    }
     void IncEDep(G4double dep) {
       fTotE  += dep;
       fTotE2 += dep*dep;
@@ -60,23 +63,34 @@ class LXeRun : public G4Run
       fTotEPM += deppm;
       fTotEPM2 += deppm*deppm;
     }
-    void IncAbsorption(G4int count) {
+    /*void IncAbsorption(G4int count) {
       fAbsorptionCount  += count;
       fAbsorptionCount2 += count*count;
     }
     void IncBoundaryAbsorption(G4int count) {
       fBoundaryAbsorptionCount  += count;
       fBoundaryAbsorptionCount2 += count*count;
-    }
+    }*/
     void IncHitCount(G4int count) {
       fHitCount  += count;
       fHitCount2 += count*count;
     }
+    void IncHC1(G4int count){
+      fHC1 += count;
 
-    void IncHitsAboveThreshold(G4int count) {
+    }
+    void IncHC2(G4int count){
+      fHC2 += count;
+
+    }
+    void Inchits(G4int count){
+      fhits += count;
+    }
+
+    /*void IncHitsAboveThreshold(G4int count) {
       fPMTsAboveThreshold  += count;
       fPMTsAboveThreshold2 += count*count;
-    }
+    }*/
 
     virtual void Merge(const G4Run* run);
 
@@ -85,12 +99,15 @@ class LXeRun : public G4Run
 
   private:
     G4int fHitCount, fHitCount2;
-    
+    G4int fHC1, fHC2;
+    G4int fhits;
+
     G4int fPhotonCount_Scint, fPhotonCount_Scint2;
     G4int fPhotonCount_Ceren, fPhotonCount_Ceren2;
-    G4int fAbsorptionCount, fAbsorptionCount2;
-    G4int fBoundaryAbsorptionCount, fBoundaryAbsorptionCount2;
-    G4int fPMTsAboveThreshold, fPMTsAboveThreshold2;
+    G4double fLCE;
+    //G4int fAbsorptionCount, fAbsorptionCount2;
+    //G4int fBoundaryAbsorptionCount, fBoundaryAbsorptionCount2;
+    //G4int fPMTsAboveThreshold, fPMTsAboveThreshold2;
 
     G4double fTotE, fTotE2;
     G4double fTotEPM, fTotEPM2;

@@ -45,7 +45,7 @@
 class LXeScintHit : public G4VHit
 {
   public:
- 
+
     LXeScintHit();
     LXeScintHit(G4VPhysicalVolume* pVol);
     virtual ~LXeScintHit();
@@ -55,13 +55,15 @@ class LXeScintHit : public G4VHit
 
     inline void *operator new(size_t);
     inline void operator delete(void *aHit);
- 
+
     virtual void Draw();
     virtual void Print();
 
     inline void SetEdep(G4double de) { fEdep = de; }
     inline void AddEdep(G4double de) { fEdep += de; }
     inline G4double GetEdep() { return fEdep; }
+
+
 
     inline void SetPos(G4ThreeVector xyz) { fPos = xyz; }
     inline G4ThreeVector GetPos() { return fPos; }
@@ -72,6 +74,7 @@ class LXeScintHit : public G4VHit
     G4double fEdep;
     G4ThreeVector fPos;
     const G4VPhysicalVolume* fPhysVol;
+
 
 };
 

@@ -38,6 +38,7 @@
 class LXeEventAction;
 class LXeTrackingAction;
 class LXeSteppingMessenger;
+class LXeScintSD;
 
 class LXeSteppingAction : public G4UserSteppingAction
 {

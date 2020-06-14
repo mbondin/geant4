@@ -27,7 +27,7 @@
 /// \brief Implementation of the LXeHistoManager class
 //
 //
-// 
+//
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -65,16 +65,10 @@ void LXeHistoManager::Book()
 
   // Define histogram indices, titles
   std::vector<std::pair<G4String, G4String> > histograms =
-    { std::pair<G4String, G4String>("0", "dummy"),
-      std::pair<G4String, G4String>("1", "hits per event"),
-      std::pair<G4String, G4String>("2", "hits per event above threshold"),
-      std::pair<G4String, G4String>("3", "scintillation photons per event"),
-      std::pair<G4String, G4String>("4", "Cerenkov photons per event"),
-      std::pair<G4String, G4String>("5", "absorbed photons per event"),
-      std::pair<G4String, G4String>
-                      ("6", "photons absorbed at boundary per event"),
-      std::pair<G4String, G4String>
-                      ("7", "energy deposition in scintillator per event"),
+    {
+      std::pair<G4String, G4String>("0", "Edep in scintillator"),
+      std::pair<G4String, G4String>("1", "Hit Count in SiPM 1"),
+      std::pair<G4String, G4String>("2", "Hit Count in SiPM 2"),
      };
 
   // Default values (to be reset via /analysis/h1/set command)
@@ -82,7 +76,7 @@ void LXeHistoManager::Book()
   G4double vmin = 0.;
   G4double vmax = 100.;
 
-  // Create all histograms as inactivated 
+  // Create all histograms as inactivated
   // as we have not yet set nbins, vmin, vmax
   for (auto histogram : histograms) {
     G4int ih = analysisManager->

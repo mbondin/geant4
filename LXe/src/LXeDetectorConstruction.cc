@@ -33,7 +33,7 @@
 #include "LXeScintSD.hh"
 #include "LXeDetectorMessenger.hh"
 #include "LXeMainVolume.hh"
-#include "LXeWLSSlab.hh"
+//#include "LXeWLSSlab.hh"
 
 #include "G4SDManager.hh"
 #include "G4RunManager.hh"
@@ -50,8 +50,9 @@
 #include "G4VisAttributes.hh"
 #include "G4Material.hh"
 #include "G4Box.hh"
-#include "G4Tubs.hh"
-#include "G4Sphere.hh"
+#include "G4NistManager.hh"
+//#include "G4Tubs.hh"
+//#include "G4Sphere.hh"
 #include "G4LogicalVolume.hh"
 #include "G4ThreeVector.hh"
 #include "G4PVPlacement.hh"
@@ -60,21 +61,24 @@
 #include "G4PhysicalConstants.hh"
 #include "G4SystemOfUnits.hh"
 
-G4bool LXeDetectorConstruction::fSphereOn = true;
+//G4bool LXeDetectorConstruction::fSphereOn = true;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 LXeDetectorConstruction::LXeDetectorConstruction()
-: fLXe_mt(nullptr), fMPTPStyrene(nullptr)
+: fLXe_mt(nullptr)
 {
   fExperimentalHall_box = nullptr;
   fExperimentalHall_log = nullptr;
   fExperimentalHall_phys = nullptr;
 
-  fLXe = fAl = fAir = fVacuum = fGlass = nullptr;
+/*  fLXe = fSi = fAir  = fGlass = nullptr;
   fPstyrene = fPMMA = fPethylene1 = fPethylene2 = nullptr;
 
-  fN = fO = fC = fH = nullptr;
+  fN = fO = fC = fH = nullptr;*/
+  fVacuum = nullptr;
+  fSi = nullptr;
+  fH = fC = nullptr;
 
   fSaveThreshold = 0;
   SetDefaults();
@@ -94,19 +98,19 @@ void LXeDetectorConstruction::DefineMaterials(){
   G4double z;  // atomic number
   G4double density;
 
-  G4int polyPMMA = 1;
+/*  G4int polyPMMA = 1;
   G4int nC_PMMA = 3+2*polyPMMA;
   G4int nH_PMMA = 6+2*polyPMMA;
 
   G4int polyeth = 1;
   G4int nC_eth = 2*polyeth;
-  G4int nH_eth = 4*polyeth;
+  G4int nH_eth = 4*polyeth;*/
 
   //***Elements
   fH = new G4Element("H", "H", z=1., a=1.01*g/mole);
   fC = new G4Element("C", "C", z=6., a=12.01*g/mole);
-  fN = new G4Element("N", "N", z=7., a= 14.01*g/mole);
-  fO = new G4Element("O"  , "O", z=8., a= 16.00*g/mole);
+  /*fN = new G4Element("N", "N", z=7., a= 14.01*g/mole);
+  fO = new G4Element("O"  , "O", z=8., a= 16.00*g/mole);*/
 
   //***Materials
   //Liquid Xenon
@@ -114,16 +118,18 @@ void LXeDetectorConstruction::DefineMaterials(){
   //fTeflon = new G4Material("Teflon",density=2.2*g/cm3,2);
   //fTeflon->AddElement(fC,33.3*perCent);
   //fTeflon->AddElement(fN,66.7*perCent);
-
-  fLXe = new G4Material("LXe",density=1.096*g/cm3,2);
+  G4NistManager* manager = G4NistManager::Instance();
+  /*fLXe = new G4Material("LXe",density=1.096*g/cm3,2); //What does "2" represent?
   fLXe->AddElement(fH,48.1*perCent);
-  fLXe->AddElement(fC,51.9*perCent);
+  fLXe->AddElement(fC,51.9*perCent);*/
+  G4Material* fLXe= manager->FindOrBuildMaterial("G4_POLYSTYRENE");
   //Aluminum
-  fAl = new G4Material("Al",z=13.,a=26.98*g/mole,density=2.7*g/cm3);
+  fSi = new G4Material("Si",z=14.,a=28.0855*g/mole,density=2.33*g/cm3);
   //Vacuum
   fVacuum = new G4Material("Vacuum",z=1.,a=1.01*g/mole,
                           density=universe_mean_density,kStateGas,0.1*kelvin,
                           1.e-19*pascal);
+/*
   //Air
   fAir = new G4Material("Air", density= 1.29*mg/cm3, 2);
   fAir->AddElement(fN, 70*perCent);
@@ -148,7 +154,7 @@ void LXeDetectorConstruction::DefineMaterials(){
   //Double cladding(flourinated polyethylene)
   fPethylene2 = new G4Material("Pethylene2", density=1400*kg/m3,2);
   fPethylene2->AddElement(fH,nH_eth);
-  fPethylene2->AddElement(fC,nC_eth);
+  fPethylene2->AddElement(fC,nC_eth);*/
 
   //***Material properties tables
 
@@ -166,10 +172,10 @@ void LXeDetectorConstruction::DefineMaterials(){
   fLXe_mt->AddProperty("SLOWCOMPONENT", lxe_Energy, lxe_SCINT, lxenum);
   fLXe_mt->AddProperty("RINDEX",        lxe_Energy, lxe_RIND,  lxenum);
   fLXe_mt->AddProperty("ABSLENGTH",     lxe_Energy, lxe_ABSL,  lxenum);
-  fLXe_mt->AddConstProperty("SCINTILLATIONYIELD",8600./MeV);
+  fLXe_mt->AddConstProperty("SCINTILLATIONYIELD",8500./MeV);
   fLXe_mt->AddConstProperty("RESOLUTIONSCALE",1.0);
   fLXe_mt->AddConstProperty("FASTTIMECONSTANT",13.*ns);
-  fLXe_mt->AddConstProperty("SLOWTIMECONSTANT",35.*ns);
+  fLXe_mt->AddConstProperty("SLOWTIMECONSTANT",59.*ns);
   fLXe_mt->AddConstProperty("YIELDRATIO",1.0);
   fLXe->SetMaterialPropertiesTable(fLXe_mt);
 
@@ -177,7 +183,7 @@ void LXeDetectorConstruction::DefineMaterials(){
 
   fLXe->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
 
-  G4double glass_RIND[]={1.49,1.49,1.49};
+/*  G4double glass_RIND[]={1.49,1.49,1.49};
   assert(sizeof(glass_RIND) == sizeof(lxe_Energy));
   G4double glass_AbsLength[]={420.*cm,420.*cm,420.*cm};
   assert(sizeof(glass_AbsLength) == sizeof(lxe_Energy));
@@ -185,16 +191,16 @@ void LXeDetectorConstruction::DefineMaterials(){
   glass_mt->AddProperty("ABSLENGTH",lxe_Energy,glass_AbsLength,lxenum);
   glass_mt->AddProperty("RINDEX",lxe_Energy,glass_RIND,lxenum);
   fGlass->SetMaterialPropertiesTable(glass_mt);
-
-  G4double vacuum_Energy[]={2.0*eV,7.0*eV,7.14*eV};
+*/
+  G4double vacuum_Energy[]={2.66*eV , 3.01*eV, 3.36*eV};
   const G4int vacnum = sizeof(vacuum_Energy)/sizeof(G4double);
   G4double vacuum_RIND[]={1.,1.,1.};
   assert(sizeof(vacuum_RIND) == sizeof(vacuum_Energy));
   G4MaterialPropertiesTable *vacuum_mt = new G4MaterialPropertiesTable();
   vacuum_mt->AddProperty("RINDEX", vacuum_Energy, vacuum_RIND,vacnum);
   fVacuum->SetMaterialPropertiesTable(vacuum_mt);
-  fAir->SetMaterialPropertiesTable(vacuum_mt);//Give air the same rindex
-
+  //fAir->SetMaterialPropertiesTable(vacuum_mt);//Give air the same rindex
+/*
   G4double wls_Energy[] = {2.00*eV,2.87*eV,2.90*eV,3.47*eV};
   const G4int wlsnum = sizeof(wls_Energy)/sizeof(G4double);
 
@@ -242,7 +248,7 @@ void LXeDetectorConstruction::DefineMaterials(){
   G4MaterialPropertiesTable* clad2Property = new G4MaterialPropertiesTable();
   clad2Property->AddProperty("RINDEX",wls_Energy,RefractiveIndexClad2,wlsnum);
   clad2Property->AddProperty("ABSLENGTH",wls_Energy,AbsFiber,wlsnum);
-  fPethylene2->SetMaterialPropertiesTable(clad2Property);
+  fPethylene2->SetMaterialPropertiesTable(clad2Property);*/
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -252,13 +258,13 @@ G4VPhysicalVolume* LXeDetectorConstruction::Construct(){
   if (fExperimentalHall_phys) { return fExperimentalHall_phys; }
 
   //The experimental hall walls are all 1m away from housing walls
-  G4double expHall_x = fScint_x+fD_mtl+1.*m;
-  G4double expHall_y = fScint_y+fD_mtl+1.*m;
-  G4double expHall_z = fScint_z+fD_mtl+1.*m;
+  G4double expHall_x = fScint_x+(2.1*fD_mtl);
+  G4double expHall_y = fScint_y+(2.1*fD_mtl);
+  G4double expHall_z = fScint_z+(2.1*fD_mtl);
 
   //Create experimental hall
   fExperimentalHall_box
-    = new G4Box("expHall_box",expHall_x,expHall_y,expHall_z);
+    = new G4Box("expHall_box",expHall_x/2.,expHall_y/2.,expHall_z/2.);
   //G4double shape1_phimin = 0.*deg, shape1_phimax = 360.*deg;
   //fExperimentalHall_box = new G4Tubs("expHall_box", 0, expHall_x, expHall_y, shape1_phimin, shape1_phimax);
 
@@ -275,6 +281,7 @@ G4VPhysicalVolume* LXeDetectorConstruction::Construct(){
       = new LXeMainVolume(0,G4ThreeVector(),fExperimentalHall_log,false,0,this);
   }
 
+  /*
   //Place the WLS slab
   if(fWLSslab){
     G4VPhysicalVolume* slab = new LXeWLSSlab(0,G4ThreeVector(0.,0.,
@@ -307,7 +314,7 @@ G4VPhysicalVolume* LXeDetectorConstruction::Construct(){
     scintWrapProperty->AddProperty("EFFICIENCY",pp,efficiency,num);
     scintWrap->SetMaterialPropertiesTable(scintWrapProperty);
   }
-
+*/
 
 
   return fExperimentalHall_phys;
@@ -390,12 +397,12 @@ void LXeDetectorConstruction::SetNZ(G4int nz) {
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
+/*
 void LXeDetectorConstruction::SetPMTRadius(G4double outerRadius_pmt) {
   fOuterRadius_pmt=outerRadius_pmt;
   G4RunManager::GetRunManager()->ReinitializeGeometry();
 }
-
+*/
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeDetectorConstruction::SetDefaults() {
@@ -403,39 +410,39 @@ void LXeDetectorConstruction::SetDefaults() {
   //Resets to default values
   fD_mtl=0.0635*cm;
 
-  fScint_x = 2.5*cm;
-  fScint_y = 2.5*cm;
-  fScint_z = 7.5*cm;
+  fScint_x = 2.54*cm;
+  fScint_y = 2.54*cm;
+  fScint_z = 2.54*3.0*cm;
 
   fNx = 1;//2
   fNy = 1;//3
   fNz = 1;//3
 
-  fOuterRadius_pmt = 2.53*cm;
+  //fOuterRadius_pmt = 2.53*cm;
 
-  fSphereOn = false;
-  fRefl = 1.0;
+  //fSphereOn = false;
+  fRefl = 0.99;
 
-  fNfibers = 0;
-  fWLSslab = false;
+  //fNfibers = 0;
+  //fWLSslab = false;
   fMainVolumeOn = true;
   fMainVolume = nullptr;
-  fSlab_z = 2.5*mm;
+  //fSlab_z = 2.5*mm;
 
   G4UImanager::GetUIpointer()
     ->ApplyCommand("/LXe/detector/scintYieldFactor 1.");
 
-  if(fLXe_mt)fLXe_mt->AddConstProperty("SCINTILLATIONYIELD",12000./MeV);
-  if(fMPTPStyrene)fMPTPStyrene->AddConstProperty("SCINTILLATIONYIELD",10./keV);
+  if(fLXe_mt)fLXe_mt->AddConstProperty("SCINTILLATIONYIELD",8500./MeV);
+  //if(fMPTPStyrene)fMPTPStyrene->AddConstProperty("SCINTILLATIONYIELD",10./keV);
 
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void LXeDetectorConstruction::SetSphereOn(G4bool b) {
+/*oid LXeDetectorConstruction::SetSphereOn(G4bool b) {
   fSphereOn=b;
   G4RunManager::GetRunManager()->ReinitializeGeometry();
-}
+}*/
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -445,12 +452,12 @@ void LXeDetectorConstruction::SetHousingReflectivity(G4double r) {
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
+/*
 void LXeDetectorConstruction::SetWLSSlabOn(G4bool b) {
   fWLSslab=b;
   G4RunManager::GetRunManager()->ReinitializeGeometry();
 }
-
+*/
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeDetectorConstruction::SetMainVolumeOn(G4bool b) {
@@ -459,12 +466,12 @@ void LXeDetectorConstruction::SetMainVolumeOn(G4bool b) {
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
+/*
 void LXeDetectorConstruction::SetNFibers(G4int n) {
   fNfibers=n;
   G4RunManager::GetRunManager()->ReinitializeGeometry();
 }
-
+*/
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeDetectorConstruction::SetMainScintYield(G4double y) {
@@ -473,9 +480,9 @@ void LXeDetectorConstruction::SetMainScintYield(G4double y) {
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void LXeDetectorConstruction::SetWLSScintYield(G4double y) {
+/*void LXeDetectorConstruction::SetWLSScintYield(G4double y) {
   fMPTPStyrene->AddConstProperty("SCINTILLATIONYIELD",y/MeV);
-}
+}*/
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
