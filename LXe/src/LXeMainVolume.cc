@@ -43,7 +43,6 @@
 #include "G4RotationMatrix.hh"
 #include "G4LogicalSkinSurface.hh"
 #include "G4LogicalBorderSurface.hh"
-
 #include "G4SystemOfUnits.hh"
 
 
