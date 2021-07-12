@@ -31,8 +31,16 @@
 #include "globals.hh"
 
 #include "LXeMainVolume.hh"
-//#include "G4Tubs.hh"
+#include "G4Tubs.hh"
 #include "G4Box.hh"
+#include "G4VSolid.hh"
+#include "G4Trap.hh"
+#include "G4Trd.hh"
+#include "G4UnionSolid.hh"
+#include "G4MultiUnion.hh"
+#include "G4Tubs.hh"
+#include "G4SubtractionSolid.hh"
+#include "G4RotationMatrix.hh"
 #include "G4LogicalSkinSurface.hh"
 #include "G4LogicalBorderSurface.hh"
 
@@ -60,21 +68,56 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   G4double housing_x=fScint_x+2.1*fD_mtl;
   G4double housing_y=fScint_y+2.1*fD_mtl;
   G4double housing_z=fScint_z+2.1*fD_mtl;
+  G4double zz = 2.54;
 
   //*************************** housing and scintillator
   //fScint_box = new G4Tubs("scint_box", 0, fScint_x/2, fScint_y/2, 0.*deg, 360.*deg);//,fScint_x/2.,fScint_y/2.,fScint_z/2.);
   fScint_box =  new G4Box("scint_box", fScint_x/2., fScint_y/2., fScint_z/2.);
-  fHousing_box = new G4Box("housing_box", housing_x/2.,housing_y/2.,housing_z/2.);// 0.*deg, 360.*deg);
+  fHousing_box = new G4Box("housing_box", 1*m,1*m,1*m);// 0.*deg, 360.*deg);
                            //housing_z/2.);
 
-  fScint_log = new G4LogicalVolume(fScint_box,G4Material::GetMaterial("G4_POLYSTYRENE"),
+  G4Box* Box1 = new G4Box("Box1", 3.0*cm*zz,1.0*cm*zz,1.0*cm*zz);
+  G4Box* Box2 = new G4Box("Box2", 5*cm*zz,0.5*cm*zz,2*cm*zz);
+  G4Box* Box3 = new G4Box("Box3", 3.0*cm*zz,2*cm*zz,2*cm*zz);
+  G4Tubs* Cyl1 = new G4Tubs("Cyl1", 0, 1.50*cm*zz, 2.1*cm*zz, 0.0*M_PI*rad,2*M_PI*rad);
+  G4Tubs* Cyl2 = new G4Tubs("Cyl2", 0*cm*zz, 1.0*cm*zz, 0.26*cm*zz, 0.0*M_PI*rad,2*M_PI*rad);
+  G4Tubs* Cyl3 = new G4Tubs("Cyl2", 0*cm*zz, 0.125*cm*zz, 1*cm*zz, 0.0*M_PI*rad,2*M_PI*rad);
+  G4Trap* Trap1 = new G4Trap("Trap1",0.25*cm*zz,0*degree,0*degree,0.25*cm*zz,0.25*cm*zz,0.25*cm*zz,0*degree,1*cm*zz,1.0*cm*zz,1.0*cm*zz,0*degree);
+
+  G4RotationMatrix* rm0 = new G4RotationMatrix();
+  rm0->rotateX(90*deg);
+   G4RotationMatrix* rm1 = new G4RotationMatrix();
+  rm1->rotateX(90*deg);
+  rm1->rotateY(270*deg);
+   G4RotationMatrix* rm2 = new G4RotationMatrix();
+  rm2->rotateZ(1*deg);
+   G4RotationMatrix* rm3 = new G4RotationMatrix();
+  rm3->rotateZ(-1*deg);
+  G4RotationMatrix* rm4 = new G4RotationMatrix();
+  rm4->rotateY(90*deg);
+  G4UnionSolid* solid0 = new G4UnionSolid("solid0", Box1,Cyl2 , rm0,G4ThreeVector(3*cm*zz,0.75*cm*zz,0 * cm*zz));
+ G4UnionSolid* solid1 = new G4UnionSolid("solid5", solid0,Trap1 , rm1,G4ThreeVector(-3.25*cm*zz,0*cm*zz, 0* cm*zz));
+
+G4SubtractionSolid* solid2 = new G4SubtractionSolid("solid1", solid1, Cyl1, 0, G4ThreeVector(-1.25*cm*zz,-1.0*cm*zz,0));
+G4SubtractionSolid* solid3 = new G4SubtractionSolid("solid2", solid2 , Box2,rm2 , G4ThreeVector(0*m,1.45*cm*zz,0.0*cm*zz));
+G4SubtractionSolid* solid4 = new G4SubtractionSolid("solid3", solid3 , Box3, rm3 , G4ThreeVector(1.5*cm*zz,-1.50*cm*zz,0.0*cm*zz));
+G4SubtractionSolid* fsolid5 = new G4SubtractionSolid("solid3", solid4 , Cyl3,rm0 , G4ThreeVector(3*cm*zz,1.5*cm*zz,0.0*cm*zz));
+
+
+  fScint_log = new G4LogicalVolume(fsolid5,G4Material::GetMaterial("G4_POLYSTYRENE"),
                                    "scint_log",0,0,0);
   fHousing_log = new G4LogicalVolume(fHousing_box,
                                      G4Material::GetMaterial("Vacuum"),
                                      "housing_log",0,0,0);
 
-  new G4PVPlacement(0,G4ThreeVector(),fScint_log,"scintillator",
+  new G4PVPlacement(rm4,G4ThreeVector(),fScint_log,"scintillator",
                                  fHousing_log,false,0);
+
+
+
+
+
+
 
   //*************** Miscellaneous sphere to demonstrate skin surfaces
   /*fSphere = new G4Sphere("sphere",0.*mm,2.*cm,0.*deg,360.*deg,0.*deg,360.*deg);
@@ -132,10 +175,10 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   z = -fScint_z/2. - height_pmt;      //front
   PlacePMTs(fPhotocath_log,0,x,y,dx,dy,xmin,ymin,fNx,fNy,x,y,z,k);
 
-  G4RotationMatrix* rm_z = new G4RotationMatrix();
-  rm_z->rotateY(180*deg);
-  z = fScint_z/2. + height_pmt;       //back
-  PlacePMTs(fPhotocath_log,rm_z,x,y,dx,dy,xmin,ymin,fNx,fNy,x,y,z,k);
+  // G4RotationMatrix* rm_z = new G4RotationMatrix();
+  // rm_z->rotateY(180*deg);
+  // z = fScint_z/2. + height_pmt;       //back
+  // PlacePMTs(fPhotocath_log,rm_z,x,y,dx,dy,xmin,ymin,fNx,fNy,x,y,z,k);
 
   /*unnecessary for my purposes
   G4RotationMatrix* rm_y1 = new G4RotationMatrix();
