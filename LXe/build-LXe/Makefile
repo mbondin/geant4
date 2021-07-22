@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.20.0/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/arthurshurley/LXE
+CMAKE_SOURCE_DIR = /Users/arthurshurley/GitHub/geant4/LXe
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/arthurshurley/LXe/build-LXe
+CMAKE_BINARY_DIR = /Users/arthurshurley/GitHub/geant4/LXe/build-LXe
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arthurshurley/LXe/build-LXe/CMakeFiles /Users/arthurshurley/LXe/build-LXe//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arthurshurley/GitHub/geant4/LXe/build-LXe/CMakeFiles /Users/arthurshurley/GitHub/geant4/LXe/build-LXe//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arthurshurley/LXe/build-LXe/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/arthurshurley/GitHub/geant4/LXe/build-LXe/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

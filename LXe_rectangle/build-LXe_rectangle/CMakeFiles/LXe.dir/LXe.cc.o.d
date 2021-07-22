@@ -1,4 +1,5 @@
-CMakeFiles/LXe.dir/LXe.cc.o: /Users/arthurshurley/LXE_rectangle/LXe.cc \
+CMakeFiles/LXe.dir/LXe.cc.o: \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/LXe.cc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Types.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4GlobalConfig.hh \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/complex \
@@ -513,15 +514,15 @@ CMakeFiles/LXe.dir/LXe.cc.o: /Users/arthurshurley/LXE_rectangle/LXe.cc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4OpticalPhysics.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4OpticalParameters.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4EmStandardPhysics_option4.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXeDetectorConstruction.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXeDetectorMessenger.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeDetectorConstruction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeDetectorMessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VisAttributes.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/graphics_reps_defs.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Colour.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Color.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VisAttributes.icc \
-  /Users/arthurshurley/LXE_rectangle/include/LXeScintSD.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXeScintHit.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeScintSD.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeScintHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4THitsCollection.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VSensitiveDetector.hh \
@@ -529,10 +530,11 @@ CMakeFiles/LXe.dir/LXe.cc.o: /Users/arthurshurley/LXE_rectangle/LXe.cc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4SensitiveVolumeList.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4CollectionNameVector.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VSDFilter.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXePMTSD.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXePMTHit.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Gamma.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXePMTSD.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXePMTHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VUserDetectorConstruction.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXeActionInitialization.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeActionInitialization.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VUserActionInitialization.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VisExecutive.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VisManager.hh \

@@ -39,8 +39,10 @@
 #include "G4Transform3D.hh"
 #include "G4RotationMatrix.hh"
 #include "G4VPhysicalVolume.hh"
-
+#include "G4VTouchable.hh"
+#include "G4VSensitiveDetector.hh"
 #include "tls.hh"
+#include "G4Gamma.hh"
 
 class LXeScintHit : public G4VHit
 {
@@ -76,6 +78,38 @@ class LXeScintHit : public G4VHit
     const G4VPhysicalVolume* fPhysVol;
 
 
+};
+
+class GammaPassageCounter : public G4VSensitiveDetector
+{
+  public:
+    // Constructor/other member functions omitted
+
+    G4bool ProcessHits(G4Step* aStep, G4VTouchable* /*unused*/) 
+    {
+        // 1. Filter out gammas
+        if(aStep->GetTrack()->GetDefinition() != G4Gamma::GammaDefinition())
+        {
+          return false;
+        }
+
+        // 2. Check that step is a one-step passthrough (i.e. pure transportation)
+        G4bool IsEnter = aStep->GetPreStepPoint()->GetStepStatus() == fGeomBoundary;
+        G4bool IsExit  = aStep->GetPostStepPoint()->GetStepStatus() == fGeomBoundary;
+
+        if(!IsEnter && !IsExit) 
+        {
+          return false;
+        }
+
+        // 3. Have a direct passthrough gamma, so count it
+        fNPassthroughGammas += 1;
+
+        return true;
+    }
+
+  private:
+    size_t fNPassthroughGammas = 0; /// number of gammas that pass through volume with no interaction
 };
 
 typedef G4THitsCollection<LXeScintHit> LXeScintHitsCollection;

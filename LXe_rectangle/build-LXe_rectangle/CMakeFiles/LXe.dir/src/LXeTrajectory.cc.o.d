@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o: \
-  /Users/arthurshurley/LXE_rectangle/src/LXeTrajectory.cc \
-  /Users/arthurshurley/LXE_rectangle/include/LXeTrajectory.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/src/LXeTrajectory.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeTrajectory.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Trajectory.hh \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/stdlib.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \

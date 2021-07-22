@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeRun.cc.o: \
-  /Users/arthurshurley/LXE_trap/src/LXeRun.cc \
-  /Users/arthurshurley/LXE_trap/include/LXeRun.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeRun.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/include/LXeRun.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Run.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \

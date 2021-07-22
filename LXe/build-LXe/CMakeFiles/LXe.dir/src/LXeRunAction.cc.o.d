@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.o: \
-  /Users/arthurshurley/LXE/src/LXeRunAction.cc \
-  /Users/arthurshurley/LXE/include/LXeRunAction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/src/LXeRunAction.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeRunAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UserRunAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Types.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4GlobalConfig.hh \
@@ -231,7 +231,7 @@ CMakeFiles/LXe.dir/src/LXeRunAction.cc.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/istream \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/tls.hh \
-  /Users/arthurshurley/LXE/include/LXeRun.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeRun.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Run.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \
@@ -257,7 +257,7 @@ CMakeFiles/LXe.dir/src/LXeRunAction.cc.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array \
-  /Users/arthurshurley/LXE/include/LXeAnalysis.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeAnalysis.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/g4root.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/g4root_defs.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/tools/wroot/ntuple \

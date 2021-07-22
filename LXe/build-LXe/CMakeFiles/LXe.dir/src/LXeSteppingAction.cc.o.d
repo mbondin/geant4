@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o: \
-  /Users/arthurshurley/LXE/src/LXeSteppingAction.cc \
-  /Users/arthurshurley/LXE/include/LXeSteppingAction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/src/LXeSteppingAction.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeSteppingAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Types.hh \
@@ -415,8 +415,8 @@ CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Physics2DVector.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4SurfaceProperty.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4OpticalPhoton.hh \
-  /Users/arthurshurley/LXE/include/LXeEventAction.hh \
-  /Users/arthurshurley/LXE/include/LXeEventMessenger.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeEventAction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeEventMessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UImessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIdirectory.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIcommand.hh \
@@ -424,15 +424,15 @@ CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UItokenNum.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ApplicationState.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UserEventAction.hh \
-  /Users/arthurshurley/LXE/include/LXeTrackingAction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeTrackingAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UserTrackingAction.hh \
-  /Users/arthurshurley/LXE/include/LXeTrajectory.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeTrajectory.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Trajectory.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/trkgdefs.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VTrajectory.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TrajectoryPoint.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VTrajectoryPoint.hh \
-  /Users/arthurshurley/LXE/include/LXePMTSD.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXePMTSD.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VSensitiveDetector.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4HCofThisEvent.hh \
@@ -459,12 +459,12 @@ CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TouchableHistory.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4CollectionNameVector.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VSDFilter.hh \
-  /Users/arthurshurley/LXE/include/LXePMTHit.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXePMTHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4THitsCollection.hh \
-  /Users/arthurshurley/LXE/include/LXeUserTrackInformation.hh \
-  /Users/arthurshurley/LXE/include/LXeSteppingMessenger.hh \
-  /Users/arthurshurley/LXE/include/LXeScintSD.hh \
-  /Users/arthurshurley/LXE/include/LXeScintHit.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeUserTrackInformation.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeSteppingMessenger.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeScintSD.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeScintHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4SteppingManager.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Navigator.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4GRSVolume.hh \

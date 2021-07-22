@@ -100,6 +100,7 @@ G4bool LXePMTSD::ProcessHits_constStep(const G4Step* aStep,
      != G4OpticalPhoton::OpticalPhotonDefinition()) return false;
 
   G4double edepPM = aStep->GetTotalEnergyDeposit();
+  
   if(edepPM==0.) return false; //No edep so dont count as hit
 
   //G4cout<< "Energy deposited on SiPM: " <<edepPM << G4endl;

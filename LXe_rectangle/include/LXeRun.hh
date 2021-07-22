@@ -87,6 +87,11 @@ class LXeRun : public G4Run
       fhits += count;
     }
 
+    void IncNPassthroughGammas(G4int count){
+      fNPassthroughGammas += count;
+    }
+
+
     /*void IncHitsAboveThreshold(G4int count) {
       fPMTsAboveThreshold  += count;
       fPMTsAboveThreshold2 += count*count;
@@ -101,6 +106,7 @@ class LXeRun : public G4Run
     G4int fHitCount, fHitCount2;
     G4int fHC1, fHC2;
     G4int fhits;
+    G4int fNPassthroughGammas;
 
     G4int fPhotonCount_Scint, fPhotonCount_Scint2;
     G4int fPhotonCount_Ceren, fPhotonCount_Ceren2;

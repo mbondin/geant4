@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.o: \
-  /Users/arthurshurley/LXE_trap/src/LXeScintHit.cc \
-  /Users/arthurshurley/LXE_trap/include/LXeScintHit.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeScintHit.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/include/LXeScintHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \

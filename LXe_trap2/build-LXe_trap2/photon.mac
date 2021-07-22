@@ -1,0 +1,20 @@
+#This sets the gps up to shoot an optical photon
+
+/run/initialize
+#
+
+
+/gps/particle gamma
+/gps/pos/type Point
+/gps/pos/centre 0 -100 -100 cm
+/gps/ang/type iso
+/gps/ang/maxtheta 0.1 deg
+/gps/ang/rot1 0 1 -1
+/gps/ang/rot2 1 0 0
+/gps/ene/type Mono
+/gps/ene/mono 1 MeV
+
+
+/LXe/forceDrawPhotons true
+
+/run/beamOn 10

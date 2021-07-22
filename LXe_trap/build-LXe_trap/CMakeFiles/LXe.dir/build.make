@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.20.0/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/arthurshurley/LXE_trap
+CMAKE_SOURCE_DIR = /Users/arthurshurley/GitHub/geant4/LXe_trap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/arthurshurley/LXe_trap/build-LXe_trap
+CMAKE_BINARY_DIR = /Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LXe.dir/depend.make
@@ -72,338 +72,338 @@ include CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/LXe.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/LXe.cc.o: ../LXe.cc
 CMakeFiles/LXe.dir/LXe.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LXe.dir/LXe.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/LXe.cc.o -MF CMakeFiles/LXe.dir/LXe.cc.o.d -o CMakeFiles/LXe.dir/LXe.cc.o -c /Users/arthurshurley/LXE_trap/LXe.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LXe.dir/LXe.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/LXe.cc.o -MF CMakeFiles/LXe.dir/LXe.cc.o.d -o CMakeFiles/LXe.dir/LXe.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/LXe.cc
 
 CMakeFiles/LXe.dir/LXe.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/LXe.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/LXe.cc > CMakeFiles/LXe.dir/LXe.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/LXe.cc > CMakeFiles/LXe.dir/LXe.cc.i
 
 CMakeFiles/LXe.dir/LXe.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/LXe.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/LXe.cc -o CMakeFiles/LXe.dir/LXe.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/LXe.cc -o CMakeFiles/LXe.dir/LXe.cc.s
 
 CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o: ../src/LXeActionInitialization.cc
 CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o -MF CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o.d -o CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeActionInitialization.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o -MF CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o.d -o CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeActionInitialization.cc
 
 CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeActionInitialization.cc > CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeActionInitialization.cc > CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.i
 
 CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeActionInitialization.cc -o CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeActionInitialization.cc -o CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.s
 
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o: ../src/LXeDetectorConstruction.cc
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o -MF CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o.d -o CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeDetectorConstruction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o -MF CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o.d -o CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeDetectorConstruction.cc
 
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeDetectorConstruction.cc > CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeDetectorConstruction.cc > CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.i
 
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeDetectorConstruction.cc -o CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeDetectorConstruction.cc -o CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.s
 
 CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o: ../src/LXeDetectorMessenger.cc
 CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o -MF CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o.d -o CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeDetectorMessenger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o -MF CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o.d -o CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeDetectorMessenger.cc
 
 CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeDetectorMessenger.cc > CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeDetectorMessenger.cc > CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.i
 
 CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeDetectorMessenger.cc -o CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeDetectorMessenger.cc -o CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.s
 
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../src/LXeEventAction.cc
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LXe.dir/src/LXeEventAction.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeEventAction.cc.o -MF CMakeFiles/LXe.dir/src/LXeEventAction.cc.o.d -o CMakeFiles/LXe.dir/src/LXeEventAction.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeEventAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LXe.dir/src/LXeEventAction.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeEventAction.cc.o -MF CMakeFiles/LXe.dir/src/LXeEventAction.cc.o.d -o CMakeFiles/LXe.dir/src/LXeEventAction.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeEventAction.cc
 
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeEventAction.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeEventAction.cc > CMakeFiles/LXe.dir/src/LXeEventAction.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeEventAction.cc > CMakeFiles/LXe.dir/src/LXeEventAction.cc.i
 
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeEventAction.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeEventAction.cc -o CMakeFiles/LXe.dir/src/LXeEventAction.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeEventAction.cc -o CMakeFiles/LXe.dir/src/LXeEventAction.cc.s
 
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o: ../src/LXeEventMessenger.cc
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o -MF CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o.d -o CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeEventMessenger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o -MF CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o.d -o CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeEventMessenger.cc
 
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeEventMessenger.cc > CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeEventMessenger.cc > CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.i
 
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeEventMessenger.cc -o CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeEventMessenger.cc -o CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.s
 
 CMakeFiles/LXe.dir/src/LXeHistoManager.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeHistoManager.cc.o: ../src/LXeHistoManager.cc
 CMakeFiles/LXe.dir/src/LXeHistoManager.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LXe.dir/src/LXeHistoManager.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeHistoManager.cc.o -MF CMakeFiles/LXe.dir/src/LXeHistoManager.cc.o.d -o CMakeFiles/LXe.dir/src/LXeHistoManager.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeHistoManager.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LXe.dir/src/LXeHistoManager.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeHistoManager.cc.o -MF CMakeFiles/LXe.dir/src/LXeHistoManager.cc.o.d -o CMakeFiles/LXe.dir/src/LXeHistoManager.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeHistoManager.cc
 
 CMakeFiles/LXe.dir/src/LXeHistoManager.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeHistoManager.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeHistoManager.cc > CMakeFiles/LXe.dir/src/LXeHistoManager.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeHistoManager.cc > CMakeFiles/LXe.dir/src/LXeHistoManager.cc.i
 
 CMakeFiles/LXe.dir/src/LXeHistoManager.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeHistoManager.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeHistoManager.cc -o CMakeFiles/LXe.dir/src/LXeHistoManager.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeHistoManager.cc -o CMakeFiles/LXe.dir/src/LXeHistoManager.cc.s
 
 CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o: ../src/LXeMainVolume.cc
 CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o -MF CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o.d -o CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeMainVolume.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o -MF CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o.d -o CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeMainVolume.cc
 
 CMakeFiles/LXe.dir/src/LXeMainVolume.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeMainVolume.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeMainVolume.cc > CMakeFiles/LXe.dir/src/LXeMainVolume.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeMainVolume.cc > CMakeFiles/LXe.dir/src/LXeMainVolume.cc.i
 
 CMakeFiles/LXe.dir/src/LXeMainVolume.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeMainVolume.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeMainVolume.cc -o CMakeFiles/LXe.dir/src/LXeMainVolume.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeMainVolume.cc -o CMakeFiles/LXe.dir/src/LXeMainVolume.cc.s
 
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.o: ../src/LXePMTHit.cc
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LXe.dir/src/LXePMTHit.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXePMTHit.cc.o -MF CMakeFiles/LXe.dir/src/LXePMTHit.cc.o.d -o CMakeFiles/LXe.dir/src/LXePMTHit.cc.o -c /Users/arthurshurley/LXE_trap/src/LXePMTHit.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LXe.dir/src/LXePMTHit.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXePMTHit.cc.o -MF CMakeFiles/LXe.dir/src/LXePMTHit.cc.o.d -o CMakeFiles/LXe.dir/src/LXePMTHit.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXePMTHit.cc
 
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXePMTHit.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXePMTHit.cc > CMakeFiles/LXe.dir/src/LXePMTHit.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXePMTHit.cc > CMakeFiles/LXe.dir/src/LXePMTHit.cc.i
 
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXePMTHit.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXePMTHit.cc -o CMakeFiles/LXe.dir/src/LXePMTHit.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXePMTHit.cc -o CMakeFiles/LXe.dir/src/LXePMTHit.cc.s
 
 CMakeFiles/LXe.dir/src/LXePMTSD.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXePMTSD.cc.o: ../src/LXePMTSD.cc
 CMakeFiles/LXe.dir/src/LXePMTSD.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LXe.dir/src/LXePMTSD.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXePMTSD.cc.o -MF CMakeFiles/LXe.dir/src/LXePMTSD.cc.o.d -o CMakeFiles/LXe.dir/src/LXePMTSD.cc.o -c /Users/arthurshurley/LXE_trap/src/LXePMTSD.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LXe.dir/src/LXePMTSD.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXePMTSD.cc.o -MF CMakeFiles/LXe.dir/src/LXePMTSD.cc.o.d -o CMakeFiles/LXe.dir/src/LXePMTSD.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXePMTSD.cc
 
 CMakeFiles/LXe.dir/src/LXePMTSD.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXePMTSD.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXePMTSD.cc > CMakeFiles/LXe.dir/src/LXePMTSD.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXePMTSD.cc > CMakeFiles/LXe.dir/src/LXePMTSD.cc.i
 
 CMakeFiles/LXe.dir/src/LXePMTSD.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXePMTSD.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXePMTSD.cc -o CMakeFiles/LXe.dir/src/LXePMTSD.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXePMTSD.cc -o CMakeFiles/LXe.dir/src/LXePMTSD.cc.s
 
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: ../src/LXePrimaryGeneratorAction.cc
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o -MF CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o.d -o CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o -c /Users/arthurshurley/LXE_trap/src/LXePrimaryGeneratorAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o -MF CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o.d -o CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXePrimaryGeneratorAction.cc
 
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXePrimaryGeneratorAction.cc > CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXePrimaryGeneratorAction.cc > CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.i
 
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXePrimaryGeneratorAction.cc -o CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXePrimaryGeneratorAction.cc -o CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.s
 
 CMakeFiles/LXe.dir/src/LXeRun.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeRun.cc.o: ../src/LXeRun.cc
 CMakeFiles/LXe.dir/src/LXeRun.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LXe.dir/src/LXeRun.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeRun.cc.o -MF CMakeFiles/LXe.dir/src/LXeRun.cc.o.d -o CMakeFiles/LXe.dir/src/LXeRun.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeRun.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LXe.dir/src/LXeRun.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeRun.cc.o -MF CMakeFiles/LXe.dir/src/LXeRun.cc.o.d -o CMakeFiles/LXe.dir/src/LXeRun.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeRun.cc
 
 CMakeFiles/LXe.dir/src/LXeRun.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeRun.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeRun.cc > CMakeFiles/LXe.dir/src/LXeRun.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeRun.cc > CMakeFiles/LXe.dir/src/LXeRun.cc.i
 
 CMakeFiles/LXe.dir/src/LXeRun.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeRun.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeRun.cc -o CMakeFiles/LXe.dir/src/LXeRun.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeRun.cc -o CMakeFiles/LXe.dir/src/LXeRun.cc.s
 
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.o: ../src/LXeRunAction.cc
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LXe.dir/src/LXeRunAction.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeRunAction.cc.o -MF CMakeFiles/LXe.dir/src/LXeRunAction.cc.o.d -o CMakeFiles/LXe.dir/src/LXeRunAction.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeRunAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LXe.dir/src/LXeRunAction.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeRunAction.cc.o -MF CMakeFiles/LXe.dir/src/LXeRunAction.cc.o.d -o CMakeFiles/LXe.dir/src/LXeRunAction.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeRunAction.cc
 
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeRunAction.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeRunAction.cc > CMakeFiles/LXe.dir/src/LXeRunAction.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeRunAction.cc > CMakeFiles/LXe.dir/src/LXeRunAction.cc.i
 
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeRunAction.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeRunAction.cc -o CMakeFiles/LXe.dir/src/LXeRunAction.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeRunAction.cc -o CMakeFiles/LXe.dir/src/LXeRunAction.cc.s
 
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.o: ../src/LXeScintHit.cc
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintHit.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeScintHit.cc.o -MF CMakeFiles/LXe.dir/src/LXeScintHit.cc.o.d -o CMakeFiles/LXe.dir/src/LXeScintHit.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeScintHit.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintHit.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeScintHit.cc.o -MF CMakeFiles/LXe.dir/src/LXeScintHit.cc.o.d -o CMakeFiles/LXe.dir/src/LXeScintHit.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeScintHit.cc
 
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeScintHit.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeScintHit.cc > CMakeFiles/LXe.dir/src/LXeScintHit.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeScintHit.cc > CMakeFiles/LXe.dir/src/LXeScintHit.cc.i
 
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeScintHit.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeScintHit.cc -o CMakeFiles/LXe.dir/src/LXeScintHit.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeScintHit.cc -o CMakeFiles/LXe.dir/src/LXeScintHit.cc.s
 
 CMakeFiles/LXe.dir/src/LXeScintSD.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeScintSD.cc.o: ../src/LXeScintSD.cc
 CMakeFiles/LXe.dir/src/LXeScintSD.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintSD.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeScintSD.cc.o -MF CMakeFiles/LXe.dir/src/LXeScintSD.cc.o.d -o CMakeFiles/LXe.dir/src/LXeScintSD.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeScintSD.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintSD.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeScintSD.cc.o -MF CMakeFiles/LXe.dir/src/LXeScintSD.cc.o.d -o CMakeFiles/LXe.dir/src/LXeScintSD.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeScintSD.cc
 
 CMakeFiles/LXe.dir/src/LXeScintSD.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeScintSD.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeScintSD.cc > CMakeFiles/LXe.dir/src/LXeScintSD.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeScintSD.cc > CMakeFiles/LXe.dir/src/LXeScintSD.cc.i
 
 CMakeFiles/LXe.dir/src/LXeScintSD.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeScintSD.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeScintSD.cc -o CMakeFiles/LXe.dir/src/LXeScintSD.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeScintSD.cc -o CMakeFiles/LXe.dir/src/LXeScintSD.cc.s
 
 CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o: ../src/LXeStackingAction.cc
 CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o -MF CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o.d -o CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeStackingAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o -MF CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o.d -o CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeStackingAction.cc
 
 CMakeFiles/LXe.dir/src/LXeStackingAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeStackingAction.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeStackingAction.cc > CMakeFiles/LXe.dir/src/LXeStackingAction.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeStackingAction.cc > CMakeFiles/LXe.dir/src/LXeStackingAction.cc.i
 
 CMakeFiles/LXe.dir/src/LXeStackingAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeStackingAction.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeStackingAction.cc -o CMakeFiles/LXe.dir/src/LXeStackingAction.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeStackingAction.cc -o CMakeFiles/LXe.dir/src/LXeStackingAction.cc.s
 
 CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o: ../src/LXeSteppingAction.cc
 CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o -MF CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o.d -o CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeSteppingAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o -MF CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o.d -o CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeSteppingAction.cc
 
 CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeSteppingAction.cc > CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeSteppingAction.cc > CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.i
 
 CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeSteppingAction.cc -o CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeSteppingAction.cc -o CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.s
 
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o: ../src/LXeSteppingMessenger.cc
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o -MF CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o.d -o CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeSteppingMessenger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o -MF CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o.d -o CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeSteppingMessenger.cc
 
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeSteppingMessenger.cc > CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeSteppingMessenger.cc > CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.i
 
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeSteppingMessenger.cc -o CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeSteppingMessenger.cc -o CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.s
 
 CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o: ../src/LXeTrackingAction.cc
 CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o -MF CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o.d -o CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeTrackingAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o -MF CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o.d -o CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeTrackingAction.cc
 
 CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeTrackingAction.cc > CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeTrackingAction.cc > CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.i
 
 CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeTrackingAction.cc -o CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeTrackingAction.cc -o CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.s
 
 CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o: ../src/LXeTrajectory.cc
 CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o -MF CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o.d -o CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeTrajectory.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o -MF CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o.d -o CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeTrajectory.cc
 
 CMakeFiles/LXe.dir/src/LXeTrajectory.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeTrajectory.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeTrajectory.cc > CMakeFiles/LXe.dir/src/LXeTrajectory.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeTrajectory.cc > CMakeFiles/LXe.dir/src/LXeTrajectory.cc.i
 
 CMakeFiles/LXe.dir/src/LXeTrajectory.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeTrajectory.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeTrajectory.cc -o CMakeFiles/LXe.dir/src/LXeTrajectory.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeTrajectory.cc -o CMakeFiles/LXe.dir/src/LXeTrajectory.cc.s
 
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o: ../src/LXeUserTrackInformation.cc
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o -MF CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o.d -o CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeUserTrackInformation.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o -MF CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o.d -o CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeUserTrackInformation.cc
 
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeUserTrackInformation.cc > CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeUserTrackInformation.cc > CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.i
 
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeUserTrackInformation.cc -o CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeUserTrackInformation.cc -o CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.s
 
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o: ../src/LXeWLSFiber.cc
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o -MF CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o.d -o CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeWLSFiber.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o -MF CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o.d -o CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeWLSFiber.cc
 
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeWLSFiber.cc > CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeWLSFiber.cc > CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.i
 
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeWLSFiber.cc -o CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeWLSFiber.cc -o CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.s
 
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o: ../src/LXeWLSSlab.cc
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o -MF CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o.d -o CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o -c /Users/arthurshurley/LXE_trap/src/LXeWLSSlab.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o -MF CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o.d -o CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeWLSSlab.cc
 
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/LXE_trap/src/LXeWLSSlab.cc > CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeWLSSlab.cc > CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.i
 
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/LXE_trap/src/LXeWLSSlab.cc -o CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeWLSSlab.cc -o CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.s
 
 CMakeFiles/LXe.dir/src/various_geometries.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/various_geometries.cc.o: ../src/various\ geometries.cc
 CMakeFiles/LXe.dir/src/various_geometries.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/LXe.dir/src/various_geometries.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/various_geometries.cc.o -MF CMakeFiles/LXe.dir/src/various_geometries.cc.o.d -o CMakeFiles/LXe.dir/src/various_geometries.cc.o -c "/Users/arthurshurley/LXE_trap/src/various geometries.cc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/LXe.dir/src/various_geometries.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/various_geometries.cc.o -MF CMakeFiles/LXe.dir/src/various_geometries.cc.o.d -o CMakeFiles/LXe.dir/src/various_geometries.cc.o -c "/Users/arthurshurley/GitHub/geant4/LXe_trap/src/various geometries.cc"
 
 CMakeFiles/LXe.dir/src/various_geometries.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/various_geometries.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/arthurshurley/LXE_trap/src/various geometries.cc" > CMakeFiles/LXe.dir/src/various_geometries.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/arthurshurley/GitHub/geant4/LXe_trap/src/various geometries.cc" > CMakeFiles/LXe.dir/src/various_geometries.cc.i
 
 CMakeFiles/LXe.dir/src/various_geometries.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/various_geometries.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/arthurshurley/LXE_trap/src/various geometries.cc" -o CMakeFiles/LXe.dir/src/various_geometries.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/arthurshurley/GitHub/geant4/LXe_trap/src/various geometries.cc" -o CMakeFiles/LXe.dir/src/various_geometries.cc.s
 
 # Object files for target LXe
 LXe_OBJECTS = \
@@ -517,7 +517,7 @@ LXe: /Users/arthurshurley/geant4.10.07-install/lib/libG4global.dylib
 LXe: /Users/arthurshurley/geant4.10.07-install/lib/libG4clhep.dylib
 LXe: /Users/arthurshurley/geant4.10.07-install/lib/libG4ptl.0.0.2.dylib
 LXe: CMakeFiles/LXe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable LXe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable LXe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LXe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -529,6 +529,6 @@ CMakeFiles/LXe.dir/clean:
 .PHONY : CMakeFiles/LXe.dir/clean
 
 CMakeFiles/LXe.dir/depend:
-	cd /Users/arthurshurley/LXe_trap/build-LXe_trap && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/arthurshurley/LXE_trap /Users/arthurshurley/LXE_trap /Users/arthurshurley/LXe_trap/build-LXe_trap /Users/arthurshurley/LXe_trap/build-LXe_trap /Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles/LXe.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/arthurshurley/GitHub/geant4/LXe_trap /Users/arthurshurley/GitHub/geant4/LXe_trap /Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap /Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap /Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles/LXe.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/LXe.dir/depend
 

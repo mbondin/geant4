@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o: \
-  /Users/arthurshurley/LXE_rectangle/src/LXeTrackingAction.cc \
-  /Users/arthurshurley/LXE_rectangle/include/LXeTrajectory.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/src/LXeTrackingAction.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeTrajectory.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Trajectory.hh \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/stdlib.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
@@ -349,11 +349,11 @@ CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4StepPoint.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TrackVector.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Step.icc \
-  /Users/arthurshurley/LXE_rectangle/include/LXeTrackingAction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeTrackingAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UserTrackingAction.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXeUserTrackInformation.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXeDetectorConstruction.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXeDetectorMessenger.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeUserTrackInformation.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeDetectorConstruction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeDetectorMessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UImessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIdirectory.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIcommand.hh \
@@ -365,8 +365,8 @@ CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Colour.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Color.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VisAttributes.icc \
-  /Users/arthurshurley/LXE_rectangle/include/LXeScintSD.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXeScintHit.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeScintSD.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeScintHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4THitsCollection.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHitsCollection.hh \
@@ -394,8 +394,9 @@ CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TouchableHistory.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4CollectionNameVector.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VSDFilter.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXePMTSD.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXePMTHit.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Gamma.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXePMTSD.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXePMTHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VUserDetectorConstruction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Cache.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4CacheDetails.hh \
@@ -501,7 +502,6 @@ CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ParticleTypes.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ChargedGeantino.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Geantino.hh \
-  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Gamma.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4OpticalPhoton.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UnknownParticle.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4MuonPlus.hh \

@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o: \
-  /Users/arthurshurley/LXE/src/LXeWLSFiber.cc \
-  /Users/arthurshurley/LXE/include/LXeWLSFiber.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/src/LXeWLSFiber.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeWLSFiber.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4PVPlacement.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VPhysicalVolume.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Types.hh \
@@ -338,8 +338,8 @@ CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Physics2DVector.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Physics2DVector.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4SurfaceProperty.hh \
-  /Users/arthurshurley/LXE/include/LXeDetectorConstruction.hh \
-  /Users/arthurshurley/LXE/include/LXeDetectorMessenger.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeDetectorConstruction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeDetectorMessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UImessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIdirectory.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIcommand.hh \
@@ -351,8 +351,8 @@ CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Colour.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Color.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VisAttributes.icc \
-  /Users/arthurshurley/LXE/include/LXeScintSD.hh \
-  /Users/arthurshurley/LXE/include/LXeScintHit.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeScintSD.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeScintHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4THitsCollection.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHitsCollection.hh \
@@ -408,8 +408,8 @@ CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TouchableHistory.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4CollectionNameVector.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VSDFilter.hh \
-  /Users/arthurshurley/LXE/include/LXePMTSD.hh \
-  /Users/arthurshurley/LXE/include/LXePMTHit.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXePMTSD.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXePMTHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VUserDetectorConstruction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Cache.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4CacheDetails.hh \

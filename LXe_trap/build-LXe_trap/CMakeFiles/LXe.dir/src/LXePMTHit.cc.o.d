@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.o: \
-  /Users/arthurshurley/LXE_trap/src/LXePMTHit.cc \
-  /Users/arthurshurley/LXE_trap/include/LXePMTHit.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXePMTHit.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/include/LXePMTHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \

@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o: \
-  /Users/arthurshurley/LXE/src/LXeUserTrackInformation.cc \
-  /Users/arthurshurley/LXE/include/LXeUserTrackInformation.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/src/LXeUserTrackInformation.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeUserTrackInformation.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VUserTrackInformation.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \

@@ -95,11 +95,14 @@ void LXeRun::EndOfRun()
   G4cout << "\n ======================== run summary ======================\n";
 
   G4int prec = G4cout.precision();
-  int num_GPS = 5;
+  G4int num_GPS = 1;
   G4int n_evt = numberOfEvent;
-  G4cout << "The run was " << n_evt*num_GPS << " events." << G4endl;
-  G4cout << "The run was " << fhits << " hit events." <<G4endl;
+  G4double N_event = n_evt*num_GPS;
+  G4cout << "The run had " << n_evt*num_GPS << " events." << G4endl;
+  G4cout << "The run had " << fhits << " hit events." <<G4endl;
+  G4cout << "hits/events:" << 100*fhits/N_event << "%" <<G4endl;
   G4cout<<"No of photons produced: "<<fPhotonCount_Scint+fPhotonCount_Ceren<<G4endl;
+
   /*G4cout.precision(4);
   G4double hits = G4double(fHitCount)/fhits;
   G4double hits2 = G4double(fHitCount2)/fhits;
@@ -181,6 +184,8 @@ G4cout << "Tot Hits on SiPM: " << fHC1 << G4endl;
 // G4cout << "Tot Hits: " << fHitCount << G4endl;
 G4cout << "hit/photon: "<<(G4double(fHitCount*100)/(fPhotonCount_Scint+fPhotonCount_Ceren)) <<G4endl;
 G4cout << "Light Collection Efficiency: " << (fLCE)/fhits << G4endl;
+
+
 
 
 

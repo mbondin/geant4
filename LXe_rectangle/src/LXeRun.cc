@@ -40,7 +40,7 @@ LXeRun::LXeRun() : G4Run()
   fHitCount                = fHitCount2                = 0;
   fHC1  = fHC2 = 0;
   fhits = 0;
-
+  fNPassthroughGammas = 0;
   fPhotonCount_Scint       = fPhotonCount_Scint2       = 0;
   fPhotonCount_Ceren       = fPhotonCount_Ceren2       = 0;
   fLCE = 0.0;
@@ -68,6 +68,7 @@ void LXeRun::Merge(const G4Run* run)
   fHC1                      += localRun->fHC1;
   fHC2                      += localRun->fHC2;
   fhits                     += localRun->fhits;
+  fNPassthroughGammas       += localRun->fNPassthroughGammas;
   /*fPMTsAboveThreshold       += localRun->fPMTsAboveThreshold;
   fPMTsAboveThreshold2      += localRun->fPMTsAboveThreshold2;*/
   fPhotonCount_Scint        += localRun->fPhotonCount_Scint;
@@ -95,11 +96,14 @@ void LXeRun::EndOfRun()
   G4cout << "\n ======================== run summary ======================\n";
 
   G4int prec = G4cout.precision();
-  int num_GPS = 5;
+  
   G4int n_evt = numberOfEvent;
-  G4cout << "The run was " << n_evt*num_GPS << " events." << G4endl;
+  G4cout << "The run was " << n_evt << " events." << G4endl;
   G4cout << "The run was " << fhits << " hit events." <<G4endl;
   G4cout<<"No of photons produced: "<<fPhotonCount_Scint+fPhotonCount_Ceren<<G4endl;
+  G4cout<<"No of gamma pass through: "<<fNPassthroughGammas<<G4endl;
+
+
   /*G4cout.precision(4);
   G4double hits = G4double(fHitCount)/fhits;
   G4double hits2 = G4double(fHitCount2)/fhits;

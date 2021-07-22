@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o: \
-  /Users/arthurshurley/LXE_trap/src/LXeSteppingMessenger.cc \
-  /Users/arthurshurley/LXE_trap/include/LXeSteppingMessenger.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeSteppingMessenger.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/include/LXeSteppingMessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UImessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \
@@ -257,7 +257,7 @@ CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Vector/ThreeVector.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Utility/defs.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Vector/ThreeVector.icc \
-  /Users/arthurshurley/LXE_trap/include/LXeSteppingAction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/include/LXeSteppingAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UserSteppingAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4OpBoundaryProcess.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4RandomTools.hh \

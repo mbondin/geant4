@@ -4,66 +4,18 @@
 #
 
 
-
-/gps/particle gamma
-/gps/pos/type Point
-/gps/pos/centre 100 -100 100 cm
-/gps/ang/type iso
-/gps/ang/maxtheta 0 deg
-/gps/ang/rot1 1 1 0 
-/gps/ang/rot2 1 2 1
-/gps/ene/type Mono
-/gps/ene/mono 1 MeV
-
-
-/gps/source/add 1 
-/gps/particle gamma
-/gps/pos/type Point
-/gps/pos/centre 50 -100 100 cm
-/gps/ang/type iso
-/gps/ang/maxtheta 0 deg
-/gps/ang/rot1 2 0 -1 
-/gps/ang/rot2 2 1 0
-/gps/ene/type Mono
-/gps/ene/mono 1 MeV
-
-/gps/source/add 1 
 /gps/particle gamma
 /gps/pos/type Point
 /gps/pos/centre 0 -100 100 cm
 /gps/ang/type iso
-/gps/ang/maxtheta 0 deg
+/gps/ang/maxtheta 1 deg
 /gps/ang/rot1 0 -1 -1
 /gps/ang/rot2 1 0 0
 /gps/ene/type Mono
 /gps/ene/mono 1 MeV
 
-/gps/source/add 1 
-/gps/particle gamma
-/gps/pos/type Point
-/gps/pos/centre -50 -100 100 cm
-/gps/ang/type iso
-/gps/ang/maxtheta 0 deg
-/gps/ang/rot1 2 -1 0 
-/gps/ang/rot2 2 0 1
-/gps/ene/type Mono
-/gps/ene/mono 1 MeV
-
-/gps/source/add 1 
-/gps/particle gamma
-/gps/pos/type Point
-/gps/pos/centre -100 -100 100 cm
-/gps/ang/type iso
-/gps/ang/maxtheta 0 deg
-/gps/ang/rot1 1 2 3 
-/gps/ang/rot2 -5 4 -1
-/gps/ene/type Mono
-/gps/ene/mono 1 MeV
 
 
-
-
-/gps/source/multiplevertex true
-/tracking/verbose 0
+/LXe/forceDrawPhotons true
 
 /run/beamOn 10

@@ -61,7 +61,8 @@ LXeEventAction::LXeEventAction(const LXeDetectorConstruction* det)
   fHC1=0;
   fHC2=0;
   fhits=0;
-
+  
+  fNPassthroughGammas=0;
   fPhotonCount_Scint = 0;
   fPhotonCount_Ceren = 0;
   fLCE = 0.0;
@@ -88,7 +89,8 @@ void LXeEventAction::BeginOfEventAction(const G4Event*) {
   fHC1=0;
   fHC2=0;
   fhits=0;
-
+  fNPassthroughGammas=0;
+  
   fPhotonCount_Scint = 0;
   fPhotonCount_Ceren = 0;
   fLCE = 0.0;
@@ -194,6 +196,12 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
            << fTotE / keV << " (keV)" << G4endl;
     }*/
   }
+  
+  
+
+
+
+
 
   if(pmtHC){
     //G4ThreeVector reconPos(0.,0.,0.);
@@ -208,9 +216,11 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
       //G4cout<<"PMT number: "<<num_pmt<<G4endl;
       if (num_pmt==0){
         fHC1 += (*pmtHC)[i]->GetPhotonCount();
+
       }
       else{
         fHC2 += (*pmtHC)[i]->GetPhotonCount();
+        
       }
       fTotEPM += edepPM;
       fHitCount += (*pmtHC)[i]->GetPhotonCount();
@@ -223,6 +233,7 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
 
         (*pmtHC)[i]->SetDrawit(false);
       }*/
+      
     }
     //G4cout<<"Edep: "<<fTotEPM<<G4endl;
     //G4cout<<"PMT threshold: "<<fPMTThreshold <<G4endl;
@@ -281,6 +292,7 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
   run->IncHC1(fHC1);
   run->IncHC2(fHC2);
   run->Inchits(fhits);
+  run->IncNPassthroughGammas(fNPassthroughGammas);
 
   run->IncPhotonCount_Scint(fPhotonCount_Scint);
   run->IncPhotonCount_Ceren(fPhotonCount_Ceren);

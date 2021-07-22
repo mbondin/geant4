@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o: \
-  /Users/arthurshurley/LXE_rectangle/src/LXeDetectorMessenger.cc \
-  /Users/arthurshurley/LXE_rectangle/include/LXeDetectorMessenger.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/src/LXeDetectorMessenger.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeDetectorMessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UImessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \
@@ -257,7 +257,7 @@ CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Vector/ThreeVector.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Utility/defs.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Vector/ThreeVector.icc \
-  /Users/arthurshurley/LXE_rectangle/include/LXeDetectorConstruction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeDetectorConstruction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Material.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Units/PhysicalConstants.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Units/SystemOfUnits.h \
@@ -311,8 +311,8 @@ CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Vector/RotationZ.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Vector/RotationZ.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Vector/Rotation.icc \
-  /Users/arthurshurley/LXE_rectangle/include/LXeScintSD.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXeScintHit.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeScintSD.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeScintHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4THitsCollection.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHitsCollection.hh \
@@ -335,14 +335,14 @@ CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Geometry/Vector3D.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Geometry/Normal3D.h \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VTouchable.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VTouchable.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VSensitiveDetector.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Step.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4StepPoint.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4SteppingControl.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4StepStatus.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TouchableHandle.hh \
-  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VTouchable.hh \
-  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VTouchable.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ReferenceCountedHandle.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4StepPoint.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TrackVector.hh \
@@ -385,8 +385,9 @@ CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TouchableHistory.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4CollectionNameVector.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VSDFilter.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXePMTSD.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXePMTHit.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Gamma.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXePMTSD.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXePMTHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VUserDetectorConstruction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Cache.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4CacheDetails.hh \

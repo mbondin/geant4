@@ -1,7 +1,7 @@
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: \
-  /Users/arthurshurley/LXE/src/LXeEventAction.cc \
-  /Users/arthurshurley/LXE/include/LXeEventAction.hh \
-  /Users/arthurshurley/LXE/include/LXeEventMessenger.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/src/LXeEventAction.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeEventAction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeEventMessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UImessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \
@@ -259,7 +259,7 @@ CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Utility/defs.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Vector/ThreeVector.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UserEventAction.hh \
-  /Users/arthurshurley/LXE/include/LXeScintHit.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeScintHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4THitsCollection.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHitsCollection.hh \
@@ -303,8 +303,8 @@ CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Geometry/Vector3D.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Geometry/Normal3D.h \
-  /Users/arthurshurley/LXE/include/LXePMTHit.hh \
-  /Users/arthurshurley/LXE/include/LXeTrajectory.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXePMTHit.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeTrajectory.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Trajectory.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/trkgdefs.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VTrajectory.hh \
@@ -370,9 +370,9 @@ CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4StepPoint.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TrackVector.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Step.icc \
-  /Users/arthurshurley/LXE/include/LXeRun.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeRun.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Run.hh \
-  /Users/arthurshurley/LXE/include/LXeAnalysis.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeAnalysis.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/g4root.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/g4root_defs.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/tools/wroot/ntuple \
@@ -602,14 +602,14 @@ CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/tools/ntuple_binding \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TRNtupleManager.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/g4hntools_defs.hh \
-  /Users/arthurshurley/LXE/include/LXeDetectorConstruction.hh \
-  /Users/arthurshurley/LXE/include/LXeDetectorMessenger.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeDetectorConstruction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeDetectorMessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VisAttributes.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/graphics_reps_defs.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Colour.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Color.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VisAttributes.icc \
-  /Users/arthurshurley/LXE/include/LXeScintSD.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXeScintSD.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VSensitiveDetector.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4HCofThisEvent.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VReadOutGeometry.hh \
@@ -627,7 +627,7 @@ CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TouchableHistory.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4CollectionNameVector.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VSDFilter.hh \
-  /Users/arthurshurley/LXE/include/LXePMTSD.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe/include/LXePMTSD.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VUserDetectorConstruction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Cache.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4CacheDetails.hh \

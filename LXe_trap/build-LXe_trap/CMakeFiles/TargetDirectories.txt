@@ -1,7 +1,7 @@
-/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles/install/local.dir
-/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles/install/strip.dir
-/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles/install.dir
-/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles/list_install_components.dir
-/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles/LXe.dir
-/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles/rebuild_cache.dir
-/Users/arthurshurley/LXe_trap/build-LXe_trap/CMakeFiles/edit_cache.dir
+/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles/install/local.dir
+/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles/install/strip.dir
+/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles/install.dir
+/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles/list_install_components.dir
+/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles/LXe.dir
+/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles/rebuild_cache.dir
+/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/CMakeFiles/edit_cache.dir

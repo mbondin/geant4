@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.o: \
-  /Users/arthurshurley/LXE_rectangle/src/LXeScintHit.cc \
-  /Users/arthurshurley/LXE_rectangle/include/LXeScintHit.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/src/LXeScintHit.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeScintHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VHit.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \
@@ -294,6 +294,84 @@ CMakeFiles/LXe.dir/src/LXeScintHit.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Geometry/Vector3D.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Geometry/Normal3D.h \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VTouchable.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VTouchable.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VSensitiveDetector.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Step.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4StepPoint.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4SteppingControl.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4StepStatus.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TouchableHandle.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ReferenceCountedHandle.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Material.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Element.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Isotope.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4IonisParamElm.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4IsotopeVector.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ElementTable.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4MaterialPropertiesTable.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4MaterialPropertiesIndex.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4MaterialPropertyVector.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4PhysicsOrderedFreeVector.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4PhysicsVector.hh \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/fstream \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/stack \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/deque \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Log.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4PhysicsVectorType.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4PhysicsVector.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4MaterialPropertiesTable.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4IonisParamMat.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Exp.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4SandiaTable.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4OrderedTable.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4DataVector.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4DataVector.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ElementVector.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4MaterialTable.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4StepPoint.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TrackVector.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Profiler.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Profiler.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/PTL/Globals.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/PTL/Types.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/PTL/Utility.hh \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/set \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Step.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Track.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/trkdefs.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4DynamicParticle.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ParticleDefinition.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4PDefManager.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/pwdefs.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ParticleDefinition.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4LorentzVector.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ParticleMomentum.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ElectronOccupancy.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4DynamicParticle.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TrackStatus.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VUserTrackInformation.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4PhysicsModelCatalog.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Track.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4HCofThisEvent.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VReadOutGeometry.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4SensitiveVolumeList.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TouchableHistory.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4NavigationHistory.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4AffineTransform.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4AffineTransform.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4NavigationLevel.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4NavigationLevelRep.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4NavigationLevelRep.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4NavigationLevel.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4NavigationHistoryPool.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4NavigationHistory.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4TouchableHistory.icc \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4CollectionNameVector.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VSDFilter.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Gamma.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VVisManager.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Colour.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VisAttributes.hh \

@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o: \
-  /Users/arthurshurley/LXE_rectangle/src/LXeStackingAction.cc \
-  /Users/arthurshurley/LXE_rectangle/include/LXeStackingAction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/src/LXeStackingAction.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeStackingAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Types.hh \
@@ -247,8 +247,8 @@ CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/optional \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UserStackingAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ClassificationOfNewTrack.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXeEventAction.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXeEventMessenger.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeEventAction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeEventMessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UImessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIdirectory.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIcommand.hh \
@@ -262,7 +262,7 @@ CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Utility/defs.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Vector/ThreeVector.icc \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UserEventAction.hh \
-  /Users/arthurshurley/LXE_rectangle/include/LXeSteppingAction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeSteppingAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UserSteppingAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4OpBoundaryProcess.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4RandomTools.hh \

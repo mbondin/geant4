@@ -1,4 +1,4 @@
-# Install script for directory: /Users/arthurshurley/LXE_trap
+# Install script for directory: /Users/arthurshurley/GitHub/geant4/LXe_trap
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/Users/arthurshurley/LXe_trap/build-LXe_trap/LXe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/LXe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LXe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LXe")
     execute_process(COMMAND /usr/bin/install_name_tool
@@ -58,5 +58,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/arthurshurley/LXe_trap/build-LXe_trap/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/arthurshurley/GitHub/geant4/LXe_trap/build-LXe_trap/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

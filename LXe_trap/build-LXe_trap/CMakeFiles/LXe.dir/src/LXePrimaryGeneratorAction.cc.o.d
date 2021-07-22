@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: \
-  /Users/arthurshurley/LXE_trap/src/LXePrimaryGeneratorAction.cc \
-  /Users/arthurshurley/LXE_trap/include/LXePrimaryGeneratorAction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXePrimaryGeneratorAction.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/include/LXePrimaryGeneratorAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Event.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \

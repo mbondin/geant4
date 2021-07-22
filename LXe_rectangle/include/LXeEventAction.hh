@@ -68,7 +68,8 @@ class LXeEventAction : public G4UserEventAction
     void IncHC1(G4int i=1){fHC1+=i;}
     void IncHC2(G4int i=1){fHC2+=i;}
     void Inchits(G4int i=1){fhits+=i;}
-
+    void IncNPassthroughGammas(G4int i=1){fNPassthroughGammas+=i;}
+    
     void IncEDepPM(G4double deppm){fTotEPM+=deppm;}
 
     /*void SetEWeightPos(const G4ThreeVector& p){fEWeightPos=p;}
@@ -85,6 +86,7 @@ class LXeEventAction : public G4UserEventAction
     G4int GetHC1()const {return fHC1;}
     G4int GetHC2()const {return fHC2;}
     G4int Gethits()const{return fhits;}
+    G4int GetNPassthroughGammas()const{return fNPassthroughGammas;}
     G4double GetEDep()const {return fTotE;}
     G4double GetEDepPM()const {return fTotEPM;}
     //G4int GetAbsorptionCount()const {return fAbsorptionCount;}
@@ -122,6 +124,8 @@ class LXeEventAction : public G4UserEventAction
     G4int fHC1;
     G4int fHC2;
     G4int fhits;
+   
+    G4int fNPassthroughGammas;
 
     G4int fPhotonCount_Scint;
     G4int fPhotonCount_Ceren;

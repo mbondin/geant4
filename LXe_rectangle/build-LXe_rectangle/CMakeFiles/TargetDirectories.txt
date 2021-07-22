@@ -1,7 +1,7 @@
-/Users/arthurshurley/LXe_rectangle/build-LXe_rectangle/CMakeFiles/install/local.dir
-/Users/arthurshurley/LXe_rectangle/build-LXe_rectangle/CMakeFiles/install/strip.dir
-/Users/arthurshurley/LXe_rectangle/build-LXe_rectangle/CMakeFiles/install.dir
-/Users/arthurshurley/LXe_rectangle/build-LXe_rectangle/CMakeFiles/list_install_components.dir
-/Users/arthurshurley/LXe_rectangle/build-LXe_rectangle/CMakeFiles/LXe.dir
-/Users/arthurshurley/LXe_rectangle/build-LXe_rectangle/CMakeFiles/rebuild_cache.dir
-/Users/arthurshurley/LXe_rectangle/build-LXe_rectangle/CMakeFiles/edit_cache.dir
+/Users/arthurshurley/GitHub/geant4/LXe_rectangle/build-LXe_rectangle/CMakeFiles/install/local.dir
+/Users/arthurshurley/GitHub/geant4/LXe_rectangle/build-LXe_rectangle/CMakeFiles/install/strip.dir
+/Users/arthurshurley/GitHub/geant4/LXe_rectangle/build-LXe_rectangle/CMakeFiles/install.dir
+/Users/arthurshurley/GitHub/geant4/LXe_rectangle/build-LXe_rectangle/CMakeFiles/list_install_components.dir
+/Users/arthurshurley/GitHub/geant4/LXe_rectangle/build-LXe_rectangle/CMakeFiles/LXe.dir
+/Users/arthurshurley/GitHub/geant4/LXe_rectangle/build-LXe_rectangle/CMakeFiles/rebuild_cache.dir
+/Users/arthurshurley/GitHub/geant4/LXe_rectangle/build-LXe_rectangle/CMakeFiles/edit_cache.dir

@@ -115,7 +115,7 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 
   if(theTrack->GetParentID()==0){
     //This is a primary track
-
+    
     if(edep>0.0){
     /*LXeScintHit* scintHit = new LXeScintHit((G4VPhysicalVolume*)(theStep->GetPreStepPoint()->GetTouchable()->GetVolume()));
 

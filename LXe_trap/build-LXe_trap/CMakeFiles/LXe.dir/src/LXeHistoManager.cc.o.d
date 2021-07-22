@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeHistoManager.cc.o: \
-  /Users/arthurshurley/LXE_trap/src/LXeHistoManager.cc \
-  /Users/arthurshurley/LXE_trap/include/LXeHistoManager.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/src/LXeHistoManager.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe_trap/include/LXeHistoManager.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Types.hh \

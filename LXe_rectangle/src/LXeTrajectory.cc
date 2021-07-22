@@ -47,7 +47,7 @@ G4ThreadLocal G4Allocator<LXeTrajectory>* LXeTrajectoryAllocator = nullptr;
 
 LXeTrajectory::LXeTrajectory()
   :G4Trajectory(),fWls(false),fDrawit(false),
-   fForceNoDraw(false),fForceDraw(false)
+   fForceNoDraw(false),fForceDraw(true)
 {
   fParticleDefinition = nullptr;
 }

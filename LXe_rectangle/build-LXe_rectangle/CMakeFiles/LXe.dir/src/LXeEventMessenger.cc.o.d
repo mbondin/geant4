@@ -1,6 +1,6 @@
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o: \
-  /Users/arthurshurley/LXE_rectangle/src/LXeEventMessenger.cc \
-  /Users/arthurshurley/LXE_rectangle/include/LXeEventMessenger.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/src/LXeEventMessenger.cc \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeEventMessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UImessenger.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/globals.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ios.hh \
@@ -257,7 +257,7 @@ CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Vector/ThreeVector.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Utility/defs.h \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/CLHEP/Vector/ThreeVector.icc \
-  /Users/arthurshurley/LXE_rectangle/include/LXeEventAction.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle/include/LXeEventAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UserEventAction.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIcmdWithABool.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIcmdWithAnInteger.hh
