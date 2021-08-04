@@ -175,6 +175,9 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
     auto analysisManager = G4AnalysisManager::Instance();
     //int id= analysisManager->GetH1Id("EScinct");
     analysisManager->FillH1(0,fTotE);
+    analysisManager->FillNtupleDColumn(0, fTotE);
+    
+    
   }
 
     /*if(fTotE == 0.){
@@ -230,11 +233,14 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
     if (pmts>0){
     auto analysisManager = G4AnalysisManager::Instance();
     fLCE = (G4double(fHitCount*10000)/(fPhotonCount_Scint + fPhotonCount_Ceren));
-    //analysisManager->FillH1(1, fHC1);
-    analysisManager->FillH1(1, fLCE);
-    analysisManager->FillH1(2, fHitCount);
+    
+    analysisManager->FillH1(1, fHC1);
+    analysisManager->FillNtupleDColumn(1, fHC1);
+    analysisManager->FillH1(2, fPhotonCount_Scint+fPhotonCount_Ceren);
+    analysisManager->FillNtupleDColumn(2, fPhotonCount_Scint+fPhotonCount_Ceren);
     //G4cout<<"Hit COunt: "<<fHitCount<<G4endl;
     //G4AnalysisManager::Instance()->FillH1(2, fPMTsAboveThreshold);
+    analysisManager->AddNtupleRow();
   }
 
     /*if(fHitCount > 0) {//dont bother unless there were hits

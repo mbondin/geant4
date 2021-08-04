@@ -102,6 +102,7 @@ void LXeRun::EndOfRun()
   G4cout << "The run had " << fhits << " hit events." <<G4endl;
   G4cout << "hits/events:" << 100*fhits/N_event << "%" <<G4endl;
   G4cout<<"No of photons produced: "<<fPhotonCount_Scint+fPhotonCount_Ceren<<G4endl;
+  G4cout << "Tot Hits on SiPM: " << fHC1 << G4endl;
 
   /*G4cout.precision(4);
   G4double hits = G4double(fHitCount)/fhits;
@@ -179,11 +180,11 @@ void LXeRun::EndOfRun()
 G4cout << "Total energy deposition in SiPM per event:\t " << enpm/keV
        << " +- " << rms_enpm/keV << " keV." << G4endl;*/
 
-G4cout << "Tot Hits on SiPM: " << fHC1 << G4endl;
+
 // G4cout << "Tot Hits on back SiPM: " << fHC2 << G4endl;
 // G4cout << "Tot Hits: " << fHitCount << G4endl;
-G4cout << "hit/photon: "<<(G4double(fHitCount*100)/(fPhotonCount_Scint+fPhotonCount_Ceren)) <<G4endl;
-G4cout << "Light Collection Efficiency: " << (fLCE)/fhits << G4endl;
+// G4cout << "hit/photon: "<<(G4double(fHitCount*100)/(fPhotonCount_Scint+fPhotonCount_Ceren)) <<G4endl;
+// G4cout << "Light Collection Efficiency: " << (fLCE)/fhits << G4endl;
 
 
 

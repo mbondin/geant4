@@ -51,7 +51,7 @@ class LXeRunAction : public G4UserRunAction
   private:
 
     LXeRun*          fRun;
-    //LXeHistoManager* fHistoManager;
+    // LXeHistoManager* fHistoManager;
 };
 
 #endif

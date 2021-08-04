@@ -75,7 +75,7 @@ class LXeRun : public G4Run
       fHitCount  += count;
       fHitCount2 += count*count;
     }
-    void IncHC1(G4int count){
+    void IncHC1(G4double count){
       fHC1 += count;
 
     }
@@ -99,7 +99,7 @@ class LXeRun : public G4Run
 
   private:
     G4int fHitCount, fHitCount2;
-    G4int fHC1, fHC2;
+    G4double fHC1, fHC2;
     G4int fhits;
 
     G4int fPhotonCount_Scint, fPhotonCount_Scint2;

@@ -65,7 +65,7 @@ class LXeEventAction : public G4UserEventAction
     //void IncAbsorption(){fAbsorptionCount++;}
     //void IncBoundaryAbsorption(){fBoundaryAbsorptionCount++;}
     void IncHitCount(G4int i=1){fHitCount+=i;}
-    void IncHC1(G4int i=1){fHC1+=i;}
+    void IncHC1(G4double i=1){fHC1+=i;}
     void IncHC2(G4int i=1){fHC2+=i;}
     void Inchits(G4int i=1){fhits+=i;}
 
@@ -82,7 +82,7 @@ class LXeEventAction : public G4UserEventAction
     G4int GetPhotonCount_Scint()const {return fPhotonCount_Scint;}
     G4int GetPhotonCount_Ceren()const {return fPhotonCount_Ceren;}
     G4int GetHitCount()const {return fHitCount;}
-    G4int GetHC1()const {return fHC1;}
+    G4double GetHC1()const {return fHC1;}
     G4int GetHC2()const {return fHC2;}
     G4int Gethits()const{return fhits;}
     G4double GetEDep()const {return fTotE;}
@@ -119,12 +119,12 @@ class LXeEventAction : public G4UserEventAction
     G4bool fForcenophotons;
 
     G4int fHitCount;
-    G4int fHC1;
+    G4double fHC1;
     G4int fHC2;
     G4int fhits;
 
-    G4int fPhotonCount_Scint;
-    G4int fPhotonCount_Ceren;
+    G4double fPhotonCount_Scint;
+    G4double fPhotonCount_Ceren;
     G4double fLCE;
     //G4int fAbsorptionCount;
     //G4int fBoundaryAbsorptionCount;

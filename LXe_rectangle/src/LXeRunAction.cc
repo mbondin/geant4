@@ -54,13 +54,23 @@ LXeRunAction::LXeRunAction() //: fRun(nullptr)//, fHistoManager(nullptr)
   //analysisManager->SetHistoDirectoryName("histograms");
   //analysisManager->SetNtupleDirectoryName("ntuple");
   analysisManager->SetVerboseLevel(1);
-
-
+  // Default settings
+  analysisManager->SetNtupleMerging(true);
+  analysisManager->SetFileName("LXe");
   // Creating histograms
-  analysisManager->CreateH1("EScint","Edep in scintillator",200, 0., 2.0*MeV);
-  //analysisManager->CreateH1("HitCount1","Hit Count in SiPM 1",150,0.,1500);
-  analysisManager->CreateH1("LCE","Light Collection Efficiency",150,0.,100);
-  analysisManager->CreateH1("TotalHC","Total Hit Count in SiPM",150,0.,1500);
+  analysisManager->CreateH1("EScint","Edep in scintillator",200, 0., 1.*MeV);
+  analysisManager->CreateH1("HitCount1","Hit Count in SiPM 1",150,0.,500);
+  analysisManager->CreateH1("Photons","Photons created",150,0.,10000);
+  
+  //create Ntuple
+  analysisManager->CreateNtuple("LXe", "Data");
+  analysisManager->CreateNtupleDColumn("Energy_deposited");  // column Id = 0
+  analysisManager->CreateNtupleDColumn("SiPm_hits");  // column Id = 1
+  analysisManager->CreateNtupleDColumn("Photons_per_hit"); // column Id = 2
+  analysisManager->FinishNtuple();
+  // analysisManager->SetNtupleFileName(0, "LXeNtuple");
+
+
 
 }
 
@@ -86,7 +96,7 @@ void LXeRunAction::BeginOfRunAction(const G4Run*)
   // Get analysis manager
   auto analysisManager = G4AnalysisManager::Instance();
   //if (analysisManager->IsActive()) {
-  analysisManager->OpenFile("lxe");
+  analysisManager->OpenFile();
   //}
 }
 

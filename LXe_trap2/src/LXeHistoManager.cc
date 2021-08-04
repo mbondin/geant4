@@ -67,8 +67,8 @@ void LXeHistoManager::Book()
   std::vector<std::pair<G4String, G4String> > histograms =
     {
       std::pair<G4String, G4String>("0", "Edep in scintillator"),
-      std::pair<G4String, G4String>("1", "Hit Count in SiPM 1"),
-      std::pair<G4String, G4String>("2", "Hit Count in SiPM 2"),
+      std::pair<G4String, G4String>("1", "Hit Count in SiPM"),
+      std::pair<G4String, G4String>("2", "Photons created"),
      };
 
   // Default values (to be reset via /analysis/h1/set command)

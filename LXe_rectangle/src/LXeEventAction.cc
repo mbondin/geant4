@@ -61,8 +61,7 @@ LXeEventAction::LXeEventAction(const LXeDetectorConstruction* det)
   fHC1=0;
   fHC2=0;
   fhits=0;
-  
-  fNPassthroughGammas=0;
+
   fPhotonCount_Scint = 0;
   fPhotonCount_Ceren = 0;
   fLCE = 0.0;
@@ -89,8 +88,7 @@ void LXeEventAction::BeginOfEventAction(const G4Event*) {
   fHC1=0;
   fHC2=0;
   fhits=0;
-  fNPassthroughGammas=0;
-  
+
   fPhotonCount_Scint = 0;
   fPhotonCount_Ceren = 0;
   fLCE = 0.0;
@@ -177,6 +175,9 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
     auto analysisManager = G4AnalysisManager::Instance();
     //int id= analysisManager->GetH1Id("EScinct");
     analysisManager->FillH1(0,fTotE);
+    analysisManager->FillNtupleDColumn(0, fTotE);
+    
+    
   }
 
     /*if(fTotE == 0.){
@@ -196,12 +197,6 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
            << fTotE / keV << " (keV)" << G4endl;
     }*/
   }
-  
-  
-
-
-
-
 
   if(pmtHC){
     //G4ThreeVector reconPos(0.,0.,0.);
@@ -216,11 +211,9 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
       //G4cout<<"PMT number: "<<num_pmt<<G4endl;
       if (num_pmt==0){
         fHC1 += (*pmtHC)[i]->GetPhotonCount();
-
       }
       else{
         fHC2 += (*pmtHC)[i]->GetPhotonCount();
-        
       }
       fTotEPM += edepPM;
       fHitCount += (*pmtHC)[i]->GetPhotonCount();
@@ -233,7 +226,6 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
 
         (*pmtHC)[i]->SetDrawit(false);
       }*/
-      
     }
     //G4cout<<"Edep: "<<fTotEPM<<G4endl;
     //G4cout<<"PMT threshold: "<<fPMTThreshold <<G4endl;
@@ -241,11 +233,14 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
     if (pmts>0){
     auto analysisManager = G4AnalysisManager::Instance();
     fLCE = (G4double(fHitCount*10000)/(fPhotonCount_Scint + fPhotonCount_Ceren));
-    //analysisManager->FillH1(1, fHC1);
-    analysisManager->FillH1(1, fLCE);
-    analysisManager->FillH1(2, fHitCount);
+    
+    analysisManager->FillH1(1, fHC1);
+    analysisManager->FillNtupleDColumn(1, fHC1);
+    analysisManager->FillH1(2, fPhotonCount_Scint+fPhotonCount_Ceren);
+    analysisManager->FillNtupleDColumn(2, fPhotonCount_Scint+fPhotonCount_Ceren);
     //G4cout<<"Hit COunt: "<<fHitCount<<G4endl;
     //G4AnalysisManager::Instance()->FillH1(2, fPMTsAboveThreshold);
+    analysisManager->AddNtupleRow();
   }
 
     /*if(fHitCount > 0) {//dont bother unless there were hits
@@ -292,7 +287,6 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
   run->IncHC1(fHC1);
   run->IncHC2(fHC2);
   run->Inchits(fhits);
-  run->IncNPassthroughGammas(fNPassthroughGammas);
 
   run->IncPhotonCount_Scint(fPhotonCount_Scint);
   run->IncPhotonCount_Ceren(fPhotonCount_Ceren);
