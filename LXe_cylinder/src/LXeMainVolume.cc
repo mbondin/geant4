@@ -73,7 +73,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   //*************************** housing and scintillator
   //fScint_box = new G4Tubs("scint_box", 0, fScint_x/2, fScint_y/2, 0.*deg, 360.*deg);//,fScint_x/2.,fScint_y/2.,fScint_z/2.);
   fScint_box =  new G4Box("scint_box", fScint_x/2., fScint_y/2., fScint_z/2.);
-  fHousing_box = new G4Box("housing_box", 1*m,1*m,1*m);// 0.*deg, 360.*deg);
+  fHousing_box = new G4Box("housing_box", 2.54*cm*1.2,2.54*cm*1.2,2.54*cm*1.2);// 0.*deg, 360.*deg);
                            //housing_z/2.);
 
   // G4Box* Box1 = new G4Box("Box1", 3.5*cm*zz,1.0*cm*zz,1.0*cm*zz);

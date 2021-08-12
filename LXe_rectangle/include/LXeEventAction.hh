@@ -124,17 +124,19 @@ class LXeEventAction : public G4UserEventAction
     G4int fHC1;
     G4int fHC2;
     G4int fhits;
+
    
     G4int fNPassthroughGammas;
 
     G4int fPhotonCount_Scint;
     G4int fPhotonCount_Ceren;
-    G4double fLCE;
+    G4int fLCE;
     //G4int fAbsorptionCount;
     //G4int fBoundaryAbsorptionCount;
 
     G4double fTotE;
     G4double fTotEPM;
+    G4double SiPM_photon;
 
 
     //These only have meaning if totE > 0

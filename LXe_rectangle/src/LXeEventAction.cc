@@ -69,6 +69,7 @@ LXeEventAction::LXeEventAction(const LXeDetectorConstruction* det)
   //fBoundaryAbsorptionCount = 0;
   fTotE = 0.0;
   fTotEPM = 0.0;
+  SiPM_photon =0.0;
 
   fConvPosSet = false;
   //fEdepMax = 0.0;
@@ -96,7 +97,7 @@ void LXeEventAction::BeginOfEventAction(const G4Event*) {
   //fBoundaryAbsorptionCount = 0;
   fTotE = 0.0;
   fTotEPM = 0.0;
-
+  SiPM_photon = 0.0;
 
   fConvPosSet = false;
   //fEdepMax = 0.0;
@@ -174,7 +175,7 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
 
     auto analysisManager = G4AnalysisManager::Instance();
     //int id= analysisManager->GetH1Id("EScinct");
-    analysisManager->FillH1(0,fTotE);
+    // analysisManager->FillH1(0,fTotE);
     analysisManager->FillNtupleDColumn(0, fTotE);
     
     
@@ -234,12 +235,18 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
     auto analysisManager = G4AnalysisManager::Instance();
     fLCE = (G4double(fHitCount*10000)/(fPhotonCount_Scint + fPhotonCount_Ceren));
     
-    analysisManager->FillH1(1, fHC1);
+    // analysisManager->FillH1(1, fHC1);
     analysisManager->FillNtupleDColumn(1, fHC1);
-    analysisManager->FillH1(2, fPhotonCount_Scint+fPhotonCount_Ceren);
+    // analysisManager->FillH1(2, fPhotonCount_Scint+fPhotonCount_Ceren);
     analysisManager->FillNtupleDColumn(2, fPhotonCount_Scint+fPhotonCount_Ceren);
     //G4cout<<"Hit COunt: "<<fHitCount<<G4endl;
     //G4AnalysisManager::Instance()->FillH1(2, fPMTsAboveThreshold);
+    // G4double SiPM_hits =static_cast<G4double>(fHC1);
+    // G4double photons =static_cast<G4double>(fPhotonCount_Scint+fPhotonCount_Ceren);
+    // SiPM_photon = SiPM_hits/photons;
+    // analysisManager->FillH1(3, SiPM_photon);
+    // analysisManager->FillNtupleDColumn(3, SiPM_photon);
+
     analysisManager->AddNtupleRow();
   }
 
