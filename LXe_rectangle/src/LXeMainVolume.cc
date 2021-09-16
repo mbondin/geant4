@@ -71,7 +71,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   G4double adjust = (1.5-(1.5+ZZ)/2)/2;
 
   G4double length = 7.0*in*cm;
-  G4double height = 1.5*in*cm;
+  G4double height = 39* mm;
   G4double width  = 1.0*in*cm;
   
 
@@ -84,10 +84,10 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   //*************************** housing and scintillator
   
   fScint_box =  new G4Box("scint_box", width/2., height/2., length/2.);
-  fHousing_box = new G4Box("housing_box", width*17/32,height*17/32,length*17/32);
+  fHousing_box = new G4Box("housing_box", width,height,length);
 
-  G4Box* Box1 = new G4Box("Box1", 0.5*cm*in,0.75*cm*in,Box_Z);
-  G4Trd* Trd1 = new G4Trd("Trd1",0.25*cm*in,0.5*cm*in,0.25*cm*in,0.75*cm*in,Trap_Z);
+  G4Box* Box1 = new G4Box("Box1", 0.5*cm*in,height/2,Box_Z);
+  G4Trd* Trd1 = new G4Trd("Trd1",0.25*cm*in,0.5*cm*in,0.25*cm*in,height/2,Trap_Z);
   // G4Box* Box2 = new G4Box("Box2", 5*cm*in,0.5*cm*in,2*cm*in);
   // G4Box* Box3 = new G4Box("Box3", 3.0*cm*in,2*cm*in,2*cm*in);
   G4Tubs* Cyl1 = new G4Tubs("Cyl1", 0, 5*mm, 2.1*cm*in, 0.0*M_PI*rad,2*M_PI*rad);
