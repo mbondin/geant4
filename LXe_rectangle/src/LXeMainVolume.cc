@@ -308,8 +308,9 @@ void LXeMainVolume::SurfaceProperties(){
   scintHsngPT->AddProperty("REFLECTIVITY", ephoton, reflectivity, num);
   scintHsngPT->AddProperty("EFFICIENCY", ephoton, efficiency, num);
   G4OpticalSurface* OpScintHousingSurface =
-    new G4OpticalSurface("HousingSurface",unified,polishedteflonair,dielectric_metal);
+    new G4OpticalSurface("HousingSurface",unified,PolishedTeflon_LUT ,dielectric_dielectric);
   OpScintHousingSurface->SetMaterialPropertiesTable(scintHsngPT);
+
 
  /*
   //Sphere surface properties
