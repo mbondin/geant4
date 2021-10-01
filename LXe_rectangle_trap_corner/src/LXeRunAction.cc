@@ -56,7 +56,7 @@ LXeRunAction::LXeRunAction() //: fRun(nullptr)//, fHistoManager(nullptr)
   analysisManager->SetVerboseLevel(1);
   // Default settings
   // analysisManager->SetNtupleMerging(true);
-  analysisManager->SetFileName("LXe_Angle");
+  analysisManager->SetFileName("LXe_angle_LCE");
   // Creating histograms
   // analysisManager->CreateH1("EScint","Edep in scintillator",200, 0., 1.*MeV);
   // analysisManager->CreateH1("HitCount","Hit Count in SiPM ",150,0.,500);
@@ -64,11 +64,14 @@ LXeRunAction::LXeRunAction() //: fRun(nullptr)//, fHistoManager(nullptr)
   // analysisManager->CreateH1("SiPM_hit_per_photn","Photons created",150,0.,10);
   
   //create Ntuple
-  analysisManager->CreateNtuple("optimal", "Data");
+  analysisManager->CreateNtuple("0", "Data");
   analysisManager->CreateNtupleDColumn("LXe_Energy_deposited");  // column Id = 0
   analysisManager->CreateNtupleDColumn("LXe_SiPM_hits");  // column Id = 1
   analysisManager->CreateNtupleDColumn("LXe_Photons_Created"); // column Id = 2
- // analysisManager->CreateNtupleDColumn("LXe_D_0_SiPM_per_hit"); // column Id = 3
+  analysisManager->CreateNtupleDColumn("LXe_hit_x_pos"); // column Id = 3
+  analysisManager->CreateNtupleDColumn("LXe_hit_y_pos"); // column Id = 4
+  analysisManager->CreateNtupleDColumn("LXe_hit_z_pos"); // column Id = 5
+
   analysisManager->FinishNtuple();
   // analysisManager->SetNtupleFileName(0, "LXeNtuple");
 

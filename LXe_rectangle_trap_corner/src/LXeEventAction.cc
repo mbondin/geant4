@@ -155,12 +155,20 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
     G4double edep;
     //G4double edepMax=0;
 
+    auto analysisManager = G4AnalysisManager::Instance();
 
     for(int i=0;i<n_hit;i++){ //gather info on hits in scintillator
       //G4cout<<"GETEDEP: "<<(*scintHC)[i]->GetEdep()<<G4endl;
       edep=(*scintHC)[i]->GetEdep();
       fTotE += edep;
 
+      G4ThreeVector position=(*scintHC)[i]->GetPos();
+      G4double x_pos = position[0];
+      G4double y_pos = position[1];
+      G4double z_pos = position[2];
+      analysisManager->FillNtupleDColumn(3, x_pos);
+      analysisManager->FillNtupleDColumn(4, y_pos);
+      analysisManager->FillNtupleDColumn(5, z_pos);
       /*eWeightPos += (*scintHC)[i]->GetPos()*edep;//calculate energy weighted pos
       if(edep>edepMax){
         edepMax=edep;//store max energy deposit
@@ -173,7 +181,7 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
     if(n_hit>0){
       //G4cout<<"Tot Energy Scint: "<<fTotE <<G4endl;
 
-    auto analysisManager = G4AnalysisManager::Instance();
+    
     //int id= analysisManager->GetH1Id("EScinct");
     // analysisManager->FillH1(0,fTotE);
     analysisManager->FillNtupleDColumn(0, fTotE);

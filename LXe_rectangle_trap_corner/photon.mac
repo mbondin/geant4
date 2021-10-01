@@ -3,14 +3,14 @@
 /gps/particle gamma
 /gps/pos/type Point
 
-#-7.62, -6.35, -5.08, -3.81, -2.54, -1.27,
-# 0.  ,  1.27,  2.54, 3.81,  5.08,  6.35,  7.62
-
-/gps/pos/centre -0.9525 -10 0.00 cm
+#/gps/pos/centre -0 -3 -7.34 cm
+/gps/pos/centre -0.9525 -25 -0 cm
 
 
 /gps/ang/type iso
-/gps/ang/maxtheta 1 deg
+
+
+/gps/ang/maxtheta 24 deg
 /gps/ang/rot1 1 0 0
 /gps/ang/rot2 0 0 1
 /gps/ene/type Gauss
