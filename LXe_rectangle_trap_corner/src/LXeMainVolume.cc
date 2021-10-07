@@ -66,7 +66,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   CopyValues();
 
   
-  G4double increament_N = 23  ;
+  G4double increament_N = 6 ;
 
   G4double in = 2.54;  
   G4double height = 1.25*in*cm;
@@ -75,8 +75,8 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   // G4double shift = 0;
   G4double shift = 0.375*in*cm;
   G4double increament = 0.1; 
-  // G4double trap_h = increament_N*increament;
-  G4double trap_h = 0.945;
+  G4double trap_h = increament_N*increament;
+  // G4double trap_h = 0.945;
   G4double trap_H = trap_h*in*cm;
   G4double angle = atan((sqrt(2)*3)/(8*trap_h));
   G4double length = (6.5-trap_h)*in*cm;

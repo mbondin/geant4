@@ -560,4 +560,6 @@ CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VStateDependent.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIcommandStatus.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4PhysicalConstants.hh \
-  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4SystemOfUnits.hh
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4SystemOfUnits.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VPrimitiveScorer.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4MultiFunctionalDetector.hh

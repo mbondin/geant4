@@ -654,6 +654,30 @@ src/LXeTrajectory.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeTrajectory.cc.s
 .PHONY : src/LXeTrajectory.cc.s
 
+src/LXeUserScoreWriter.o: src/LXeUserScoreWriter.cc.o
+.PHONY : src/LXeUserScoreWriter.o
+
+# target to build an object file
+src/LXeUserScoreWriter.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o
+.PHONY : src/LXeUserScoreWriter.cc.o
+
+src/LXeUserScoreWriter.i: src/LXeUserScoreWriter.cc.i
+.PHONY : src/LXeUserScoreWriter.i
+
+# target to preprocess a source file
+src/LXeUserScoreWriter.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.i
+.PHONY : src/LXeUserScoreWriter.cc.i
+
+src/LXeUserScoreWriter.s: src/LXeUserScoreWriter.cc.s
+.PHONY : src/LXeUserScoreWriter.s
+
+# target to generate assembly for a file
+src/LXeUserScoreWriter.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.s
+.PHONY : src/LXeUserScoreWriter.cc.s
+
 src/LXeUserTrackInformation.o: src/LXeUserTrackInformation.cc.o
 .PHONY : src/LXeUserTrackInformation.o
 
@@ -823,6 +847,9 @@ help:
 	@echo "... src/LXeTrajectory.o"
 	@echo "... src/LXeTrajectory.i"
 	@echo "... src/LXeTrajectory.s"
+	@echo "... src/LXeUserScoreWriter.o"
+	@echo "... src/LXeUserScoreWriter.i"
+	@echo "... src/LXeUserScoreWriter.s"
 	@echo "... src/LXeUserTrackInformation.o"
 	@echo "... src/LXeUserTrackInformation.i"
 	@echo "... src/LXeUserTrackInformation.s"

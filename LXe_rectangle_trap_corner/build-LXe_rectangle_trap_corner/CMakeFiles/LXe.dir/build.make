@@ -349,10 +349,24 @@ CMakeFiles/LXe.dir/src/LXeTrajectory.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeTrajectory.cc.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeTrajectory.cc -o CMakeFiles/LXe.dir/src/LXeTrajectory.cc.s
 
+CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o: CMakeFiles/LXe.dir/flags.make
+CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o: ../src/LXeUserScoreWriter.cc
+CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/build-LXe_rectangle_trap_corner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o -MF CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o.d -o CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeUserScoreWriter.cc
+
+CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeUserScoreWriter.cc > CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.i
+
+CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeUserScoreWriter.cc -o CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.s
+
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o: ../src/LXeUserTrackInformation.cc
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/build-LXe_rectangle_trap_corner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/build-LXe_rectangle_trap_corner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o -MF CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o.d -o CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeUserTrackInformation.cc
 
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.i: cmake_force
@@ -366,7 +380,7 @@ CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.s: cmake_force
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o: ../src/LXeWLSFiber.cc
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/build-LXe_rectangle_trap_corner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/build-LXe_rectangle_trap_corner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o -MF CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o.d -o CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeWLSFiber.cc
 
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.i: cmake_force
@@ -380,7 +394,7 @@ CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.s: cmake_force
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o: ../src/LXeWLSSlab.cc
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/build-LXe_rectangle_trap_corner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/build-LXe_rectangle_trap_corner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o -MF CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o.d -o CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o -c /Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeWLSSlab.cc
 
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.i: cmake_force
@@ -394,7 +408,7 @@ CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.s: cmake_force
 CMakeFiles/LXe.dir/src/various_geometries.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/various_geometries.cc.o: ../src/various\ geometries.cc
 CMakeFiles/LXe.dir/src/various_geometries.cc.o: CMakeFiles/LXe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/build-LXe_rectangle_trap_corner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/LXe.dir/src/various_geometries.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/build-LXe_rectangle_trap_corner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/LXe.dir/src/various_geometries.cc.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LXe.dir/src/various_geometries.cc.o -MF CMakeFiles/LXe.dir/src/various_geometries.cc.o.d -o CMakeFiles/LXe.dir/src/various_geometries.cc.o -c "/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/various geometries.cc"
 
 CMakeFiles/LXe.dir/src/various_geometries.cc.i: cmake_force
@@ -427,6 +441,7 @@ LXe_OBJECTS = \
 "CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o" \
+"CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o" \
@@ -455,6 +470,7 @@ LXe: CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o
+LXe: CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o
@@ -517,7 +533,7 @@ LXe: /Users/arthurshurley/geant4.10.07-install/lib/libG4global.dylib
 LXe: /Users/arthurshurley/geant4.10.07-install/lib/libG4clhep.dylib
 LXe: /Users/arthurshurley/geant4.10.07-install/lib/libG4ptl.0.0.2.dylib
 LXe: CMakeFiles/LXe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/build-LXe_rectangle_trap_corner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable LXe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/build-LXe_rectangle_trap_corner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable LXe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LXe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

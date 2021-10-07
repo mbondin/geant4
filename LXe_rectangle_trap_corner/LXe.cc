@@ -39,7 +39,7 @@
 
 #include "G4UImanager.hh"
 #include "G4String.hh"
-
+#include "LXeUserScoreWriter.hh"
 #include "QGSP_BERT.hh"
 #include "G4OpticalPhysics.hh"
 
@@ -53,7 +53,7 @@
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
 #include "G4SystemOfUnits.hh"
-
+#include "G4ScoringManager.hh"
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 int main(int argc, char** argv)
@@ -70,6 +70,7 @@ int main(int argc, char** argv)
          <<  runManager->GetNumberOfThreads() << " threads =====" << G4endl;
 #else
   G4RunManager * runManager = new G4RunManager;
+
 #endif
   LXeDetectorConstruction* det = new LXeDetectorConstruction();
   runManager->SetUserInitialization(det);

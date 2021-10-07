@@ -39,6 +39,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o.d"
   "CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o"
   "CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o.d"
+  "CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o"
+  "CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o.d"
   "CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o"
   "CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o.d"
   "CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o"

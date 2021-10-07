@@ -28,6 +28,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeSteppingMessenger.cc" "CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o" "gcc" "CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o.d"
   "/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeTrackingAction.cc" "CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o" "gcc" "CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o.d"
   "/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeTrajectory.cc" "CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o" "gcc" "CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o.d"
+  "/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeUserScoreWriter.cc" "CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o" "gcc" "CMakeFiles/LXe.dir/src/LXeUserScoreWriter.cc.o.d"
   "/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeUserTrackInformation.cc" "CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o" "gcc" "CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o.d"
   "/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeWLSFiber.cc" "CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o" "gcc" "CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o.d"
   "/Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/src/LXeWLSSlab.cc" "CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o" "gcc" "CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o.d"

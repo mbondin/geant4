@@ -60,6 +60,7 @@
 #include "G4UImanager.hh"
 #include "G4PhysicalConstants.hh"
 #include "G4SystemOfUnits.hh"
+#include "G4VPrimitiveScorer.hh"
 
 //G4bool LXeDetectorConstruction::fSphereOn = true;
 

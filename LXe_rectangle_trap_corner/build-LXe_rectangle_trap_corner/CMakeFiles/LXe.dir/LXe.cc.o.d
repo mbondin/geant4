@@ -497,6 +497,8 @@ CMakeFiles/LXe.dir/LXe.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/icomsdefs.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VStateDependent.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIcommandStatus.hh \
+  /Users/arthurshurley/GitHub/geant4/LXe_rectangle_trap_corner/include/LXeUserScoreWriter.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VScoreWriter.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/QGSP_BERT.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VModularPhysicsList.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VPhysicsConstructor.hh \
@@ -602,4 +604,7 @@ CMakeFiles/LXe.dir/LXe.cc.o: \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4Qt3D.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4UIExecutive.hh \
   /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VUIshell.hh \
-  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4SystemOfUnits.hh
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4SystemOfUnits.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4ScoringManager.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4VScoringMesh.hh \
+  /Users/arthurshurley/geant4.10.07-install/include/Geant4/G4StatDouble.hh
