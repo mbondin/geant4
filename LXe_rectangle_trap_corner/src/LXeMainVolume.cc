@@ -66,19 +66,20 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   CopyValues();
 
   
-  G4double increament_N = 6 ;
+  G4double increament_N = 0.001 ;
 
   G4double in = 2.54;  
   G4double height = 1.25*in*cm;
   G4double width  = 1.25*in*cm;
   G4double side_L = 1.25*in*cm;
-  // G4double shift = 0;
-  G4double shift = 0.375*in*cm;
+  G4double shift = 0;
+  // G4double shift = 0.375*in*cm;
   G4double increament = 0.1; 
   G4double trap_h = increament_N*increament;
   // G4double trap_h = 0.945;
   G4double trap_H = trap_h*in*cm;
-  G4double angle = atan((sqrt(2)*3)/(8*trap_h));
+  G4double angle = 0 ;
+  // G4double angle = atan((sqrt(2)*3)/(8*trap_h));
   G4double length = (6.5-trap_h)*in*cm;
   G4double dt = 0.1;
 
@@ -96,7 +97,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   rm2->rotateZ(180*deg);
  
 
-  G4UnionSolid* solid0 = new G4UnionSolid("solid0", Box1,Trap1 , 0,G4ThreeVector(-0.1875*cm*in,-0.1875*cm*in, -length/2-trap_H/2));
+  G4UnionSolid* solid0 = new G4UnionSolid("solid0", Box1,Trap1 , 0,G4ThreeVector(-shift/2,-shift/2, -length/2-trap_H/2));
 
   fScint_log = new G4LogicalVolume(solid0,G4Material::GetMaterial("G4_POLYSTYRENE"),
                                    "scint_log",0,0,0);
