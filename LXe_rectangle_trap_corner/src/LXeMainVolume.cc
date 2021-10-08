@@ -66,7 +66,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   CopyValues();
 
   
-  G4double increament_N = 9 ;
+  G4double increament_N = 11 ;
 
   G4double in = 2.54;  
   G4double height = 1.25*in*cm;
