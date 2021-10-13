@@ -4,7 +4,7 @@
 /gps/pos/type Point
 
 /gps/pos/centre 0 -24.0475 0 cm
-#/gps/pos/centre -0.9525 -25 0 cm
+#w/gps/pos/centre -0.9525 -25 0 cm
 
 
 /gps/ang/type iso

@@ -1,0 +1,17 @@
+
+/run/initialize
+/gps/particle gamma
+/gps/pos/type Point
+
+/gps/pos/centre 0 -24.0475 0 cm
+#/gps/pos/centre -0.9525 -25 0 cm
+
+
+/gps/ang/type iso
+
+
+/gps/ang/maxtheta 24 deg
+/gps/ang/rot1 1 0 0
+/gps/ang/rot2 0 0 1
+/gps/ene/type Gauss
+/gps/ene/mono 662 keV 
