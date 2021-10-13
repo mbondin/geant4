@@ -56,7 +56,11 @@
 /vis/viewer/set/style wireframe
 #
 # Draw coordinate axes:
-/vis/scene/add/axes 0 0 -.1016 0.2032 m
+
+
+#### axis label
+#/vis/scene/add/axes 0 0 -.1016 0.2032 m
+
 #
 # Draw smooth trajectories at end of event, showing trajectory points
 # as markers 2 pixels wide:
