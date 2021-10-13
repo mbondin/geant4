@@ -86,8 +86,8 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
 
  //**
  //** 
-//** fra trap
-  G4double increament_n = 12;
+//** far trap
+  G4double increament_n = 25;
   
   G4double trap_h2 =increament_n*increament;
   G4double trap_H2 = trap_h2*in*cm;
@@ -100,14 +100,14 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
 
   G4double length = (8-trap_h-trap_h2)*in*cm;
   G4double dz1 = length/2;
-  G4double dt = 0.2;
+  G4double dt = 0.1;
 
 
   G4double hole_d = 1.5*mm; // small holes
   G4double hole_D = 7.88*mm; // larger cut out hole
   G4double depth = 1*mm;  // depth of larger cut out hole
-  G4double Z_end = 4.33*cm*in;
-  G4double motorZ = Z_end-27.8/2*mm;
+  G4double Z_end = 4.0*cm*in+trap_H2/2+trap_H/2;
+  G4double motorZ = Z_end-27.8*mm;
 
 
   //*************************** housing and scintillator
