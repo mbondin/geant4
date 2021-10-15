@@ -87,7 +87,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
  //**
  //** 
 //** far trap
-  G4double increament_n = 11;
+  G4double increament_n = 9;
   
   G4double trap_h2 =increament_n*increament;
   G4double trap_H2 = trap_h2*in*cm;
