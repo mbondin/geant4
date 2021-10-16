@@ -71,7 +71,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   G4double in = 2.54;  
 
   G4double side_L = 1.18*in*cm;
-  
+  G4double SiPM_width = 0.5*cm*in;
   
   G4double increament = 0.1; 
   G4double trap_h = increament_N*increament;
@@ -79,15 +79,15 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   G4double trap_H = trap_h*in*cm;
 
   // ******* choose o for center
-  G4double angle = 0 ;
-  // G4double angle = atan((sqrt(2)*3)/(8*trap_h));
+  G4double angle = atan((side_L-SiPM_width)/(2*trap_H)) ;
+  //G4double angle = atan((sqrt(2)*3)/(8*trap_h));
 
 
 
  //**
  //** 
 //** far trap
-  G4double increament_n = 0.001;
+  G4double increament_n = 11;
   
   G4double trap_h2 =increament_n*increament;
   G4double trap_H2 = trap_h2*in*cm;
@@ -97,7 +97,8 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   G4double TL2 = side_L;
   
   // G4double shift = trap_H2/6*(TL1*TL1+TL2*TL2+TL1*TL2);
-
+  //G4double shift0 = (SiPM_width*SiPM_width+0.5*(side_L*side_L+SiPM_width*SiPM_width))/(side_L+SiPM_width);
+  G4double shift0 =0.68*cm*in;
   G4double length = (8-trap_h-trap_h2)*in*cm;
   G4double dz1 = length/2;
   G4double dt = 0.1;
@@ -116,7 +117,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   fHousing_box = new G4Box("housing_box",side_L/2+dt*cm*in ,side_L/2+dt*cm*in,(4+dt)*in*cm);
 
   G4Box* Box1 = new G4Box("Box1", side_L/2,side_L/2,length/2);
-  G4Trap* Trap1 = new G4Trap("Trap1",trap_H/2,angle,45*degree,0.25*cm*in,0.25*cm*in,0.25*cm*in,0*degree,side_L/2,side_L/2,side_L/2,0*degree);
+  G4Trap* Trap1 = new G4Trap("Trap1",trap_H/2,angle,0,0.25*cm*in,0.25*cm*in,0.25*cm*in,0*degree,side_L/2,side_L/2,side_L/2,0*degree);
   G4Trap* Trap2 = new G4Trap("Trap2",trap_H2/2,angle2,0,side_L/2,TL1/2,TL1/2,0*degree,side_L/2,side_L/2,side_L/2,0*degree);
   G4Tubs* Cyl1 = new G4Tubs("Cyl1", 0, hole_d/2, 1.2*cm*in, 0.0*M_PI*rad,2*M_PI*rad);
   G4Tubs* Cyl2 = new G4Tubs("Cyl2", 0,hole_D/2, side_L/2, 0.0*M_PI*rad,2*M_PI*rad);
@@ -125,11 +126,16 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   rm1->rotateY(180*deg);
   rm1->rotateZ(90*deg);
   
+  G4RotationMatrix* rm3 = new G4RotationMatrix();
+  rm3->rotateZ(90*deg);
+
+
+
   G4RotationMatrix* rm2 = new G4RotationMatrix();
   rm2->rotateX(90*deg);
   // rm2->rotateZ(90*deg);
 
-  G4UnionSolid* solid0 = new G4UnionSolid("solid0", Box1,Trap1 , 0,G4ThreeVector(0,0, -length/2-trap_H/2));
+  G4UnionSolid* solid0 = new G4UnionSolid("solid0", Box1,Trap1 , rm3,G4ThreeVector(0,shift0/4, -length/2-trap_H/2));
   
   G4UnionSolid* solid1 = new G4UnionSolid("solid1", solid0,Trap2 , rm1,G4ThreeVector(0,(TL2-TL1)/4, length/2+trap_H2/2));
   G4SubtractionSolid* solid2 = new G4SubtractionSolid("solid1", solid1, Cyl2, rm2, G4ThreeVector(0,side_L-depth,motorZ));
@@ -149,7 +155,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
                                      G4Material::GetMaterial("Vacuum"),
                                      "housing_log",0,0,0);
 
-  new G4PVPlacement(0,G4ThreeVector(0,0,trap_H/2-trap_H2/2),fScint_log,"scintillator",
+  new G4PVPlacement(0,G4ThreeVector(0,-shift0/2,trap_H/2-trap_H2/2),fScint_log,"scintillator",
                                  fHousing_log,false,0);
 
 
