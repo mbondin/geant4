@@ -14,12 +14,12 @@
 # Run menu :
 /gui/addMenu run Run
 #/gui/addButton run "beamOn 1e2" "/run/beamOn 100"
-#/gui/addButton run "beamOn 1e3" "/run/beamOn 1000"
-#/gui/addButton run "beamOn 1e4" "/run/beamOn 10000"
+/gui/addButton run "beamOn 1e3" "/run/beamOn 1000"
+/gui/addButton run "beamOn 1e4" "/run/beamOn 10000"
 #/gui/addButton run "beamOn 1e5" "/run/beamOn 100000"
 #/gui/addButton run "beamOn 5e5" "/run/beamOn 500000"
 #/gui/addButton run "beamOn 1e6" "/run/beamOn 1000000"
-/gui/addButton run "beamOn 2e6" "/run/beamOn 2000000"
+/gui/addButton run "beamOn 3e6" "/run/beamOn 3000000"
 #/gui/addButton run run1 "/control/execute run1.mac"
 #/gui/addButton run run2 "/control/execute run2.mac"
 #

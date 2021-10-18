@@ -1,0 +1,10 @@
+#class tools::wcsv::ntuple
+#title Data
+#separator 44
+#vector_separator 59
+#column double LXe_Energy_deposited
+#column double LXe_SiPM_hits
+#column double LXe_Photons_Created
+#column double LXe_hit_x_pos
+#column double LXe_hit_y_pos
+#column double LXe_hit_z_pos
