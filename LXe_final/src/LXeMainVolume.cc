@@ -106,11 +106,15 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   G4double dt = 0.1;
 
 
-  G4double hole_d = 0.125*cm*in; // small holes 1
+  G4double hole_d = 0.35*cm; // small holes 1
   G4double hole_D = 7.88*mm; // larger cut out hole
-  G4double hole_dd = hole_d*3/2;
+  G4double hole_dd = 0.6*cm; // bolt head
 
-  G4double depth = 1*mm;  // depth of larger cut out hole
+  G4double hole_d_L = 1.0*cm; // small holes 1
+  
+  G4double hole_dd_L = 0.3*cm;
+
+  G4double depth = 0.5*mm;  // depth of larger cut out hole
   G4double Z_end = 4.0*cm*in+trap_H2/2+trap_H/2;
   G4double motorZ = Z_end-27.8*mm;
 
@@ -123,9 +127,9 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   G4Box* Box1 = new G4Box("Box1", side_L/2,side_L/2,length/2);
   G4Trap* Trap1 = new G4Trap("Trap1",trap_H/2,angle,0,0.25*cm*in,0.25*cm*in,0.25*cm*in,0*degree,side_L/2,side_L/2,side_L/2,0*degree);
   G4Trap* Trap2 = new G4Trap("Trap2",trap_H2/2,angle2,0,side_L/2,TL1/2,TL1/2,0*degree,side_L/2,side_L/2,side_L/2,0*degree);
-  G4Tubs* Cyl1 = new G4Tubs("Cyl1", 0, hole_d/2, 1.2*cm*in, 0.0*M_PI*rad,2*M_PI*rad);
+  G4Tubs* Cyl1 = new G4Tubs("Cyl1", 0, hole_d/2, hole_d_L/2 , 0.0*M_PI*rad,2*M_PI*rad);
   G4Tubs* Cyl2 = new G4Tubs("Cyl2", 0,hole_D/2, side_L/2, 0.0*M_PI*rad,2*M_PI*rad);
-  G4Tubs* Cyl3 = new G4Tubs("Cyl3", 0,hole_dd/2, side_L/2, 0.0*M_PI*rad,2*M_PI*rad);
+  G4Tubs* Cyl3 = new G4Tubs("Cyl3", 0,hole_dd/2, hole_dd_L/2 , 0.0*M_PI*rad,2*M_PI*rad);
   G4RotationMatrix* rm1 = new G4RotationMatrix();
   rm1->rotateY(180*deg);
   rm1->rotateZ(90*deg);
@@ -144,15 +148,15 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   G4UnionSolid* solid1 = new G4UnionSolid("solid1", solid0,Trap2 , rm1,G4ThreeVector(0,shift0, length/2+trap_H2/2));
   G4SubtractionSolid* solid2 = new G4SubtractionSolid("solid2", solid1, Cyl2, rm2, G4ThreeVector(0,side_L-depth,motorZ));
   
-  G4SubtractionSolid* solid3 = new G4SubtractionSolid("solid3", solid2, Cyl1, rm2, G4ThreeVector(5.48*mm,0,motorZ-5.48*mm));
-  G4SubtractionSolid* solid4 = new G4SubtractionSolid("solid4", solid3, Cyl1, rm2, G4ThreeVector(6.54*mm,0,motorZ+6.54*mm));
-  G4SubtractionSolid* solid5 = new G4SubtractionSolid("solid5", solid4, Cyl1, rm2, G4ThreeVector(-5.48*mm,0,motorZ+5.48*mm));
-  G4SubtractionSolid* solid6 = new G4SubtractionSolid("solid6", solid5, Cyl1, rm2, G4ThreeVector(-6.54*mm*mm,0,motorZ-6.54*mm));
+  G4SubtractionSolid* solid3 = new G4SubtractionSolid("solid3", solid2, Cyl1, rm2, G4ThreeVector(5.48*mm,(side_L - hole_d_L)/2,motorZ-5.48*mm));
+  G4SubtractionSolid* solid4 = new G4SubtractionSolid("solid4", solid3, Cyl1, rm2, G4ThreeVector(6.54*mm,(side_L - hole_d_L)/2,motorZ+6.54*mm));
+  G4SubtractionSolid* solid5 = new G4SubtractionSolid("solid5", solid4, Cyl1, rm2, G4ThreeVector(-5.48*mm,(side_L - hole_d_L)/2,motorZ+5.48*mm));
+  G4SubtractionSolid* solid6 = new G4SubtractionSolid("solid6", solid5, Cyl1, rm2, G4ThreeVector(-6.54*mm,(side_L - hole_d_L)/2,motorZ-6.54*mm));
 
-  G4SubtractionSolid* solid7 = new G4SubtractionSolid("solid7", solid6, Cyl3, rm2, G4ThreeVector(5.48*mm,-1.6*cm,motorZ-5.48*mm));
-  G4SubtractionSolid* solid8 = new G4SubtractionSolid("solid8", solid7, Cyl3, rm2, G4ThreeVector(6.54*mm,-1.6*cm,motorZ+6.54*mm));
-  G4SubtractionSolid* solid9 = new G4SubtractionSolid("solid9", solid8, Cyl3, rm2, G4ThreeVector(-5.48*mm,-1.6*cm,motorZ+5.48*mm));
-  G4SubtractionSolid* solid10 = new G4SubtractionSolid("solid10", solid9, Cyl3, rm2, G4ThreeVector(-6.54*mm*mm,-1.6*cm,motorZ-6.54*mm));
+  G4SubtractionSolid* solid7 = new G4SubtractionSolid("solid7", solid6, Cyl3, rm2, G4ThreeVector(5.48*mm,(side_L - hole_dd_L)/2-hole_d_L,motorZ-5.48*mm));
+  G4SubtractionSolid* solid8 = new G4SubtractionSolid("solid8", solid7, Cyl3, rm2, G4ThreeVector(6.54*mm,(side_L - hole_dd_L)/2-hole_d_L,motorZ+6.54*mm));
+  G4SubtractionSolid* solid9 = new G4SubtractionSolid("solid9", solid8, Cyl3, rm2, G4ThreeVector(-5.48*mm,(side_L - hole_dd_L)/2-hole_d_L,motorZ+5.48*mm));
+  G4SubtractionSolid* solid10 = new G4SubtractionSolid("solid10", solid9, Cyl3, rm2, G4ThreeVector(-6.54*mm,(side_L - hole_dd_L)/2-hole_d_L,motorZ-6.54*mm));
 
 
 
