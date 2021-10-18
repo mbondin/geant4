@@ -14,5 +14,5 @@
 /gps/ang/rot2 0 0 1
 /gps/ene/type Gauss
 /gps/ene/mono 662 keV 
-/gps/pos/centre 0 -15 0 cm
-/gps/ang/maxtheta 39 deg
+/gps/ang/maxtheta 22 deg
+/gps/pos/centre 0 -12 6 cm
