@@ -92,7 +92,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   // G4double trap_h2 =increament_n*increament;
   // G4double trap_H2 = trap_h2*in*cm;
   const double PI = 3.141592653589793238463;
-  G4double trap_angle = PI/4;
+  G4double trap_angle = PI/3;
   G4double trap_H2 = (side_L-SiPM_width)*tan(trap_angle);
   G4double TL1 = SiPM_width;
   G4double angle2 = atan((side_L-TL1)/trap_H2/2);
