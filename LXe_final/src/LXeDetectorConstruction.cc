@@ -123,6 +123,7 @@ void LXeDetectorConstruction::DefineMaterials(){
   /*fLXe = new G4Material("LXe",density=1.096*g/cm3,2); //What does "2" represent?
   fLXe->AddElement(fH,48.1*perCent);
   fLXe->AddElement(fC,51.9*perCent);*/
+  G4Material* fholes= manager->FindOrBuildMaterial("G4_POLYSTYRENE");
   G4Material* fLXe= manager->FindOrBuildMaterial("G4_POLYSTYRENE");
   //Aluminum
   fSi = new G4Material("Si",z=14.,a=28.0855*g/mole,density=2.33*g/cm3);
