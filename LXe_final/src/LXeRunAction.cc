@@ -56,7 +56,7 @@ LXeRunAction::LXeRunAction() //: fRun(nullptr)//, fHistoManager(nullptr)
   analysisManager->SetVerboseLevel(1);
   // Default settings
   // analysisManager->SetNtupleMerging(true);
-  analysisManager->SetFileName("LXe_F");
+  analysisManager->SetFileName("LXe_with_holes");
   // Creating histograms
   // analysisManager->CreateH1("EScint","Edep in scintillator",200, 0., 1.*MeV);
   // analysisManager->CreateH1("HitCount","Hit Count in SiPM ",150,0.,500);

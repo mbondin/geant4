@@ -112,7 +112,8 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
 
   G4double hole_d_L = 1.8*cm; // small holes 1
   
-  G4double hole_dd_L = 0.3*cm;
+  // G4double hole_dd_L = 0.3*cm;
+  G4double hole_dd_L = 1.9*cm;
 
   G4double depth = 0.5*mm;  // depth of larger cut out hole
   G4double Z_end = 4.0*cm*in+trap_H2/2+trap_H/2;
