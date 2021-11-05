@@ -67,13 +67,13 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
 
   G4double in = 2.54;
   G4double side_L = 1.5*in*cm;
-  G4double length = 8*in*cm;
+  G4double length = 10*in*cm;
 
 
   //*************************** housing and scintillator
   
   
-  fHousing_box = new G4Box("housing_box",side_L*17/32,side_L*5/4 ,length*17/32);
+  fHousing_box = new G4Box("housing_box",side_L*17/32,side_L*3/2 ,length*17/32);
 
   G4Box* Box1 = new G4Box("Box1", side_L/2,side_L/2,length/2);
   // G4Trap* Trap1 = new G4Trap("Trap1",trap_H/2,angle,0,0.25*cm*in,0.25*cm*in,0.25*cm*in,0*degree,side_L/2,side_L/2,side_L/2,0*degree);
