@@ -67,7 +67,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
 
   G4double in = 2.54;
   G4double side_L = 1.5*in*cm;
-  G4double length = 10*in*cm;
+  G4double length = 8*in*cm;
 
 
   //*************************** housing and scintillator
