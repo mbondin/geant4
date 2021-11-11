@@ -100,7 +100,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   // G4double shift = trap_H2/6*(TL1*TL1+TL2*TL2+TL1*TL2);
   // G4double shift0 = (SiPM_width*SiPM_width+0.5*(side_L*side_L+SiPM_width*SiPM_width))/(side_L+SiPM_width);
   G4double shift0 =(TL2-TL1)/4;
-  G4double LL = 9;
+  G4double LL = 11;
   G4double length = (LL*in*cm-trap_H-trap_H2);
   G4double dz1 = length/2;
   G4double dt = 0.1;
