@@ -66,115 +66,111 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   CopyValues();
 
   
-  // G4double increament_N = 6 ;
+   G4double increament_N = 6 ;
 
-  // G4double in = 2.54;  
+  G4double in = 2.54;  
 
-  // G4double side_L = 2.9*cm;
-  // G4double SiPM_width = 1.4*cm;
+  G4double side_L = 1.25*in*cm;
+  G4double SiPM_width = 1.4*cm;
   
-  // G4double increament = 0.1; 
-  // G4double trap_h = increament_N*increament;
-  // // G4double trap_h = 0.945;
-  // G4double trap_H = trap_h*in*cm;
+  G4double increament = 0.1; 
+  G4double trap_h = increament_N*increament;
+  // G4double trap_h = 0.945;
+  G4double trap_H = trap_h*in*cm;
 
-  // // ******* choose o for center
-  // G4double angle = atan((side_L-SiPM_width)/(2*trap_H)) ;
+  // ******* choose o for center
+  G4double angle = atan((side_L-SiPM_width)/(2*trap_H)) ;
   //G4double angle = atan((sqrt(2)*3)/(8*trap_h));
 
 
 
- //*
- //*
-
+ //**
+ //** 
+//** far trap
   // G4double increament_n = 0.0001;
   
   // G4double trap_h2 =increament_n*increament;
   // G4double trap_H2 = trap_h2*in*cm;
-  // const double PI = 3.141592653589793238463;
-  // G4double trap_angle = PI/4;
-  // G4double trap_H2 = (side_L-SiPM_width)*tan(trap_angle);
-  // G4double TL1 = SiPM_width;
-  // G4double angle2 = atan((side_L-TL1)/trap_H2/2);
-  // G4double TL2 = side_L;
+  const double PI = 3.141592653589793238463;
+  G4double trap_angle = PI/4;
+  G4double trap_H2 = (side_L-SiPM_width)*tan(trap_angle);
+  G4double TL1 = SiPM_width;
+  G4double angle2 = atan((side_L-TL1)/trap_H2/2);
+  G4double TL2 = side_L;
   
   // G4double shift = trap_H2/6*(TL1*TL1+TL2*TL2+TL1*TL2);
   // G4double shift0 = (SiPM_width*SiPM_width+0.5*(side_L*side_L+SiPM_width*SiPM_width))/(side_L+SiPM_width);
-  // G4double shift0 =(TL2-TL1)/4;
-  // G4double length = (8*in*cm-trap_H-trap_H2);
-  // G4double dz1 = length/2;
-  // G4double dt = 0.1;
+  G4double shift0 =(TL2-TL1)/4;
+  G4double LL = 11;
+  G4double length = (LL*in*cm-trap_H-trap_H2);
+  G4double dz1 = length/2;
+  G4double dt = 0.1;
 
 
-  // G4double hole_d = 0.35*cm; // small holes 1
-  // G4double hole_D = 7.88*mm; // larger cut out hole
-  // G4double hole_dd = 0.6*cm; // bolt head
+  G4double hole_d = 0.35*cm; // small holes 1
+  G4double hole_D = 7.88*mm; // larger cut out hole
+  G4double hole_dd = 0.6*cm; // bolt head
 
-  // G4double hole_d_L = 1.8*cm; // small holes 1
+  G4double hole_d_L = 1.8*cm; // small holes 1
   
-  // // G4double hole_dd_L = 0.3*cm;
-  // G4double hole_dd_L = 1.9*cm;
+  // G4double hole_dd_L = 0.3*cm;
+  G4double hole_dd_L = 1.9*cm;
 
-  // G4double depth = 0.5*mm;  // depth of larger cut out hole
-  // G4double Z_end = 4.0*cm*in+trap_H2/2+trap_H/2;
-  // G4double motorZ = Z_end-27.8*mm;
+  G4double depth = 0.5*mm;  // depth of larger cut out hole
+  G4double Z_end = 4.0*cm*in+trap_H2/2+trap_H/2;
+  G4double motorZ = Z_end-27.8*mm;
 
-   G4double in = 2.54;
-  G4double side_L = 1.25*in*cm;
-  G4double length = 10*in*cm;
+
   //*************************** housing and scintillator
   
   
-  fHousing_box = new G4Box("housing_box",side_L*17/32,side_L*5/4 ,length*17/32);
+  fHousing_box = new G4Box("housing_box",side_L*3,side_L*6 ,length);
 
   G4Box* Box1 = new G4Box("Box1", side_L/2,side_L/2,length/2);
-  // G4Trap* Trap1 = new G4Trap("Trap1",trap_H/2,angle,0,0.25*cm*in,0.25*cm*in,0.25*cm*in,0*degree,side_L/2,side_L/2,side_L/2,0*degree);
-  // G4Trap* Trap2 = new G4Trap("Trap2",trap_H2/2,angle2,0,side_L/2,TL1/2,TL1/2,0*degree,side_L/2,side_L/2,side_L/2,0*degree);
-  // G4Tubs* Cyl1 = new G4Tubs("Cyl1", 0, hole_d/2, hole_d_L/2 , 0.0*M_PI*rad,2*M_PI*rad);
-  // G4Tubs* Cyl2 = new G4Tubs("Cyl2", 0,hole_D/2, side_L/2, 0.0*M_PI*rad,2*M_PI*rad);
-  // G4Tubs* Cyl3 = new G4Tubs("Cyl3", 0,hole_dd/2, hole_dd_L/2 , 0.0*M_PI*rad,2*M_PI*rad);
-  // G4RotationMatrix* rm1 = new G4RotationMatrix();
-  // rm1->rotateY(180*deg);
-  // rm1->rotateZ(90*deg);
+  G4Trap* Trap1 = new G4Trap("Trap1",trap_H/2,angle,0,0.25*cm*in,0.25*cm*in,0.25*cm*in,0*degree,side_L/2,side_L/2,side_L/2,0*degree);
+  G4Trap* Trap2 = new G4Trap("Trap2",trap_H2/2,angle2,0,side_L/2,TL1/2,TL1/2,0*degree,side_L/2,side_L/2,side_L/2,0*degree);
+  G4Tubs* Cyl1 = new G4Tubs("Cyl1", 0, hole_d/2, hole_d_L/2 , 0.0*M_PI*rad,2*M_PI*rad);
+  G4Tubs* Cyl2 = new G4Tubs("Cyl2", 0,hole_D/2, side_L/2, 0.0*M_PI*rad,2*M_PI*rad);
+  G4Tubs* Cyl3 = new G4Tubs("Cyl3", 0,hole_dd/2, hole_dd_L/2 , 0.0*M_PI*rad,2*M_PI*rad);
+  G4RotationMatrix* rm1 = new G4RotationMatrix();
+  rm1->rotateY(180*deg);
+  rm1->rotateZ(90*deg);
   
   // G4RotationMatrix* rm3 = new G4RotationMatrix();
   // rm3->rotateZ(180*deg);
 
 
 
-  // G4RotationMatrix* rm2 = new G4RotationMatrix();
-  // rm2->rotateX(90*deg);
+  G4RotationMatrix* rm2 = new G4RotationMatrix();
+  rm2->rotateX(90*deg);
   // rm2->rotateZ(90*deg);
 
-  // G4UnionSolid* solid0 = new G4UnionSolid("solid0", Box1,Trap1 , 0,G4ThreeVector(-shift0,0, -length/2-trap_H/2));
+  G4UnionSolid* solid0 = new G4UnionSolid("solid0", Box1,Trap1 , 0,G4ThreeVector(-shift0,0, -length/2-trap_H/2));
   
-  // G4UnionSolid* solid1 = new G4UnionSolid("solid1", solid0,Trap2 , rm1,G4ThreeVector(0,shift0, length/2+trap_H2/2));
-  // G4SubtractionSolid* solid2 = new G4SubtractionSolid("solid2", solid1, Cyl2, rm2, G4ThreeVector(0,side_L-depth,motorZ));
+  G4UnionSolid* solid1 = new G4UnionSolid("solid1", solid0,Trap2 , rm1,G4ThreeVector(0,shift0, length/2+trap_H2/2));
+  G4SubtractionSolid* solid2 = new G4SubtractionSolid("solid2", solid1, Cyl2, rm2, G4ThreeVector(0,side_L-depth,motorZ));
   
-  // G4SubtractionSolid* solid3 = new G4SubtractionSolid("solid3", solid2, Cyl1, rm2, G4ThreeVector(5.48*mm,(side_L - hole_d_L)/2,motorZ-5.48*mm));
-  // G4SubtractionSolid* solid4 = new G4SubtractionSolid("solid4", solid3, Cyl1, rm2, G4ThreeVector(6.54*mm,(side_L - hole_d_L)/2,motorZ+6.54*mm));
-  // G4SubtractionSolid* solid5 = new G4SubtractionSolid("solid5", solid4, Cyl1, rm2, G4ThreeVector(-5.48*mm,(side_L - hole_d_L)/2,motorZ+5.48*mm));
-  // G4SubtractionSolid* solid6 = new G4SubtractionSolid("solid6", solid5, Cyl1, rm2, G4ThreeVector(-6.54*mm,(side_L - hole_d_L)/2,motorZ-6.54*mm));
+  G4SubtractionSolid* solid3 = new G4SubtractionSolid("solid3", solid2, Cyl1, rm2, G4ThreeVector(5.48*mm,(side_L - hole_d_L)/2,motorZ-5.48*mm));
+  G4SubtractionSolid* solid4 = new G4SubtractionSolid("solid4", solid3, Cyl1, rm2, G4ThreeVector(6.54*mm,(side_L - hole_d_L)/2,motorZ+6.54*mm));
+  G4SubtractionSolid* solid5 = new G4SubtractionSolid("solid5", solid4, Cyl1, rm2, G4ThreeVector(-5.48*mm,(side_L - hole_d_L)/2,motorZ+5.48*mm));
+  G4SubtractionSolid* solid6 = new G4SubtractionSolid("solid6", solid5, Cyl1, rm2, G4ThreeVector(-6.54*mm,(side_L - hole_d_L)/2,motorZ-6.54*mm));
 
-  // G4SubtractionSolid* solid7 = new G4SubtractionSolid("solid7", solid6, Cyl3, rm2, G4ThreeVector(5.48*mm,(side_L - hole_dd_L)/2-hole_d_L,motorZ-5.48*mm));
-  // G4SubtractionSolid* solid8 = new G4SubtractionSolid("solid8", solid7, Cyl3, rm2, G4ThreeVector(6.54*mm,(side_L - hole_dd_L)/2-hole_d_L,motorZ+6.54*mm));
-  // G4SubtractionSolid* solid9 = new G4SubtractionSolid("solid9", solid8, Cyl3, rm2, G4ThreeVector(-5.48*mm,(side_L - hole_dd_L)/2-hole_d_L,motorZ+5.48*mm));
-  // G4SubtractionSolid* solid10 = new G4SubtractionSolid("solid10", solid9, Cyl3, rm2, G4ThreeVector(-6.54*mm,(side_L - hole_dd_L)/2-hole_d_L,motorZ-6.54*mm));
+  G4SubtractionSolid* solid7 = new G4SubtractionSolid("solid7", solid6, Cyl3, rm2, G4ThreeVector(5.48*mm,(side_L - hole_dd_L)/2-hole_d_L,motorZ-5.48*mm));
+  G4SubtractionSolid* solid8 = new G4SubtractionSolid("solid8", solid7, Cyl3, rm2, G4ThreeVector(6.54*mm,(side_L - hole_dd_L)/2-hole_d_L,motorZ+6.54*mm));
+  G4SubtractionSolid* solid9 = new G4SubtractionSolid("solid9", solid8, Cyl3, rm2, G4ThreeVector(-5.48*mm,(side_L - hole_dd_L)/2-hole_d_L,motorZ+5.48*mm));
+  G4SubtractionSolid* solid10 = new G4SubtractionSolid("solid10", solid9, Cyl3, rm2, G4ThreeVector(-6.54*mm,(side_L - hole_dd_L)/2-hole_d_L,motorZ-6.54*mm));
 
 
 
   
-  fScint_log = new G4LogicalVolume(Box1,G4Material::GetMaterial("G4_POLYSTYRENE"),
+  fScint_log = new G4LogicalVolume(solid1,G4Material::GetMaterial("G4_POLYSTYRENE"),
                                    "scint_log",0,0,0);
   fHousing_log = new G4LogicalVolume(fHousing_box,
                                      G4Material::GetMaterial("Vacuum"),
                                      "housing_log",0,0,0);
 
-  // 
-  // new G4PVPlacement(0,G4ThreeVector(shift0*2,0,trap_H/2-trap_H2/2),fScint_log,"scintillator",fHousing_log,false,0);
-
-  new G4PVPlacement(0,G4ThreeVector(0,0,0),fScint_log,"scintillator",fHousing_log,false,0);
-
+  new G4PVPlacement(0,G4ThreeVector(shift0*2,0,trap_H/2-trap_H2/2),fScint_log,"scintillator",
+                                 fHousing_log,false,0);
 
 
 
