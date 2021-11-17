@@ -414,7 +414,7 @@ void LXeDetectorConstruction::SetDefaults() {
 
   fScint_x = 2.54*cm;
   fScint_y = 2.54*cm;
-  fScint_z = 2.54* 11.0 *cm;
+  fScint_z = 2.54*5.4 *cm;
 
   fNx = 1;//2
   fNy = 1;//3

@@ -65,8 +65,8 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
 {
   CopyValues();
 
-  
-   G4double increament_N = 6 ;
+  // G4double increament_N = 0.001 ;
+   G4double increament_N = 6.988 ;
 
   G4double in = 2.54;  
 
@@ -92,7 +92,10 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   // G4double trap_h2 =increament_n*increament;
   // G4double trap_H2 = trap_h2*in*cm;
   const double PI = 3.141592653589793238463;
+  
+  
   G4double trap_angle = PI/4;
+  
   G4double trap_H2 = (side_L-SiPM_width)*tan(trap_angle);
   G4double TL1 = SiPM_width;
   G4double angle2 = atan((side_L-TL1)/trap_H2/2);
@@ -101,7 +104,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   // G4double shift = trap_H2/6*(TL1*TL1+TL2*TL2+TL1*TL2);
   // G4double shift0 = (SiPM_width*SiPM_width+0.5*(side_L*side_L+SiPM_width*SiPM_width))/(side_L+SiPM_width);
   G4double shift0 =(TL2-TL1)/4;
-  G4double LL = 11;
+  G4double LL = 7.8;
   G4double length = (LL*in*cm-trap_H-trap_H2);
   G4double dz1 = length/2;
   G4double dt = 0.1;
@@ -117,8 +120,8 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   G4double hole_dd_L = 1.9*cm;
 
   G4double depth = 0.5*mm;  // depth of larger cut out hole
-  G4double Z_end = 4.0*cm*in+trap_H2/2+trap_H/2;
-  G4double motorZ = Z_end-27.8*mm;
+  G4double Z_end = LL*in*cm/2;
+  G4double motorZ = Z_end-27.8/2*mm;
 
 
   //*************************** housing and scintillator
@@ -163,7 +166,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
 
 
   
-  fScint_log = new G4LogicalVolume(solid1,G4Material::GetMaterial("G4_POLYSTYRENE"),
+  fScint_log = new G4LogicalVolume(solid10,G4Material::GetMaterial("G4_POLYSTYRENE"),
                                    "scint_log",0,0,0);
   fHousing_log = new G4LogicalVolume(fHousing_box,
                                      G4Material::GetMaterial("Vacuum"),
