@@ -68,7 +68,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   // G4double increament_N = 0.001 ;
    // G4double increament_N = 6.988 ;
   G4double in = 2.54;  
-  G4double LL = 4.760328787389854 ;
+  G4double LL = 10.071439417948786 ;
   G4double lL =LL*in*cm;
   
   G4double volumE = 12.186;
