@@ -167,7 +167,7 @@ void LXeDetectorConstruction::DefineMaterials(){
   assert(sizeof(lxe_SCINT) == sizeof(lxe_Energy));
   G4double lxe_RIND[]  = { 1.59 , 1.59, 1.59 };
   assert(sizeof(lxe_RIND) == sizeof(lxe_Energy));
-  G4double lxe_ABSL[]  = { 18.*cm*0.7, 18.*cm*0.7, 18.*cm*0.7};
+  G4double lxe_ABSL[]  = { 18.*cm, 18.*cm, 18.*cm};
   assert(sizeof(lxe_ABSL) == sizeof(lxe_Energy));
   fLXe_mt = new G4MaterialPropertiesTable();
   fLXe_mt->AddProperty("FASTCOMPONENT", lxe_Energy, lxe_SCINT, lxenum);
