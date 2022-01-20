@@ -1,7 +1,8 @@
 
 /run/initialize
-/gps/particle gamma
-/gps/pos/type Point
+/gps/particle ion
+/gps/ion 11 22
+#/gps/pos/type Point
 
 
 
@@ -12,7 +13,7 @@
 
 /gps/ang/rot1 1 0 0
 /gps/ang/rot2 0 0 1
-/gps/ene/type Gauss
-/gps/ene/mono 622 keV 
+#/gps/ene/type Gauss
+#/gps/ene/mono 622 keV 
 /gps/ang/maxtheta 9 deg
-/gps/pos/centre 0 -15 0 cm
+/gps/pos/centre 0 -10 0 cm

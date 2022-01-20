@@ -64,7 +64,7 @@ LXeRunAction::LXeRunAction() //: fRun(nullptr)//, fHistoManager(nullptr)
   // analysisManager->CreateH1("SiPM_hit_per_photn","Photons created",150,0.,10);
   
   //create Ntuple
-  analysisManager->CreateNtuple("662keV_source", "Data");
+  analysisManager->CreateNtuple("Na22_2", "Data");
   analysisManager->CreateNtupleDColumn("LXe_Energy_deposited");  // column Id = 0
   analysisManager->CreateNtupleDColumn("LXe_SiPM_hits");  // column Id = 1
   analysisManager->CreateNtupleDColumn("LXe_Photons_Created"); // column Id = 2
