@@ -1,19 +1,31 @@
 
 /run/initialize
-/gps/particle ion
-/gps/ion 11 22
-#/gps/pos/type Point
 
 
 
-
+# energy 1
+/gps/source/intensity 10.
+/gps/particle gamma
+/gps/pos/type Point
 /gps/ang/type iso
-
-
-
 /gps/ang/rot1 1 0 0
 /gps/ang/rot2 0 0 1
-#/gps/ene/type Gauss
-#/gps/ene/mono 622 keV 
+/gps/ene/mono 511 keV 
 /gps/ang/maxtheta 9 deg
 /gps/pos/centre 0 -10 0 cm
+
+# energy 2
+/gps/source/add 10.
+/gps/particle gamma
+/gps/pos/type Point
+/gps/ang/type iso
+/gps/ang/rot1 1 0 0
+/gps/ang/rot2 0 0 1
+/gps/ene/mono 1274.537 keV 
+/gps/ang/maxtheta 9 deg
+/gps/pos/centre 0 -10 0 cm
+
+
+
+# run both
+/gps/source/multiplevertex true
